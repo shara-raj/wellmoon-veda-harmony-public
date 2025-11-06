@@ -140,14 +140,20 @@ const Hero = () => {
                   {/* Rotating text on top of white ring */}
                   <svg className="absolute inset-0 w-full h-full" viewBox="0 0 208 208">
                     <defs>
-                      <path id="circlePath" d="M 104, 104 m -76, 0 a 76,76 0 1,1 152,0 a 76,76 0 1,1 -152,0" />
+                      <path id="circlePath" d="M 104, 104 m -82, 0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0" />
                     </defs>
                     <text
-                      className="text-[10px] fill-foreground font-medium tracking-wider uppercase"
-                      style={{ fontFamily: "Inter, sans-serif" }}
+                      className="text-[9.5px] fill-foreground font-semibold tracking-wide uppercase"
+                      style={{ 
+                        fontFamily: "Inter, sans-serif",
+                        letterSpacing: "0.05em",
+                        wordSpacing: "0.2em"
+                      }}
+                      dominantBaseline="middle"
+                      textAnchor="start"
                     >
-                      <textPath href="#circlePath" startOffset="0%">
-                        UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH ⭐⭐⭐⭐⭐
+                      <textPath href="#circlePath" startOffset="0%" spacing="auto">
+                        UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH  ⭐⭐⭐⭐⭐
                       </textPath>
                     </text>
                   </svg>
