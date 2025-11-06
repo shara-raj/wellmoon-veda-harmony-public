@@ -134,13 +134,16 @@ const Hero = () => {
                 style={{ transform: `translate(-50%, -50%) rotate(${rotation}deg)` }}
               >
                 <div className="relative w-52 h-52">
-                  {/* Outer rotating text ring */}
+                  {/* White ring with black border */}
+                  <div className="absolute inset-0 m-auto w-44 h-44 rounded-full bg-white border-2 border-black"></div>
+
+                  {/* Rotating text on top of white ring */}
                   <svg className="absolute inset-0 w-full h-full" viewBox="0 0 208 208">
                     <defs>
-                      <path id="circlePath" d="M 104, 104 m -92, 0 a 92,92 0 1,1 184,0 a 92,92 0 1,1 -184,0" />
+                      <path id="circlePath" d="M 104, 104 m -76, 0 a 76,76 0 1,1 152,0 a 76,76 0 1,1 -152,0" />
                     </defs>
                     <text
-                      className="text-[11px] fill-foreground font-medium tracking-wider uppercase"
+                      className="text-[10px] fill-foreground font-medium tracking-wider uppercase"
                       style={{ fontFamily: "Inter, sans-serif" }}
                     >
                       <textPath href="#circlePath" startOffset="0%">
@@ -148,9 +151,6 @@ const Hero = () => {
                       </textPath>
                     </text>
                   </svg>
-
-                  {/* White ring with black border */}
-                  <div className="absolute inset-0 m-auto w-44 h-44 rounded-full bg-white border-2 border-black"></div>
 
                   {/* Inner circle with meditation image and black border */}
                   <div className="absolute inset-0 m-auto w-32 h-32 rounded-full overflow-hidden border-2 border-black">
