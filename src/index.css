@@ -58,12 +58,6 @@ All colors MUST be HSL.
     --text-primary: 30 15% 20%;
     --text-muted: 30 10% 45%;
     
-    /* Badge Colors */
-    --badge-beige: 30 28% 66%;
-    --badge-text: 197 32% 29%;
-    --badge-border: 240 5% 84%;
-    --badge-star: 45 93% 58%;
-    
     /* Gradients */
     --gradient-subtle: linear-gradient(135deg, hsl(40 30% 96%) 0%, hsl(140 15% 94%) 100%);
     --gradient-sage: linear-gradient(135deg, hsl(140 25% 45%) 0%, hsl(140 30% 35%) 100%);
