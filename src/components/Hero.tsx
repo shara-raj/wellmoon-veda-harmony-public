@@ -156,7 +156,7 @@ const Hero = () => {
                     </defs>
                     <text 
                       className="text-[11px] font-semibold tracking-wider uppercase" 
-                      fill="#304E5E"
+                      fill="#000000"
                       style={{ 
                         fontFamily: 'Inter, sans-serif',
                         letterSpacing: '0.12em'
@@ -173,12 +173,9 @@ const Hero = () => {
                   </svg>
 
                   {/* Outer black border (2px) */}
-                  <div className="absolute inset-0 m-auto w-52 h-52 rounded-full border-2 border-black"></div>
+                  <div className="absolute inset-0 m-auto w-52 h-52 rounded-full border-2 border-black bg-white"></div>
 
-                  {/* White ring (10px width) */}
-                  <div className="absolute inset-0 m-auto w-[204px] h-[204px] rounded-full bg-white"></div>
-
-                  {/* Inner black border (2px) */}
+                  {/* Inner black border (2px) - separates text ring from inner circle */}
                   <div className="absolute inset-0 m-auto w-[184px] h-[184px] rounded-full border-2 border-black"></div>
 
                   {/* Inner beige circle with meditation image - stays upright */}
