@@ -142,35 +142,78 @@ const Hero = () => {
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
                 style={{ transform: `translate(-50%, -50%) rotate(${rotation}deg)` }}
               >
-                <div className="relative w-48 h-48">
+                <div className="relative w-64 h-64">
                   {/* Outer rotating text ring */}
                   <svg
                     className="absolute inset-0 w-full h-full"
-                    viewBox="0 0 192 192"
+                    viewBox="0 0 256 256"
                   >
                     <defs>
                       <path
                         id="circlePath"
-                        d="M 96, 96 m -84, 0 a 84,84 0 1,1 168,0 a 84,84 0 1,1 -168,0"
+                        d="M 128, 128 m -108, 0 a 108,108 0 1,1 216,0 a 108,108 0 1,1 -216,0"
                       />
                     </defs>
-                    <text className="text-[11px] fill-foreground font-medium tracking-wider uppercase" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      <textPath href="#circlePath" startOffset="0%">
-                        UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH ⭐⭐⭐⭐⭐
+                    <text 
+                      className="text-[13px] font-semibold tracking-wider uppercase" 
+                      fill="#304E5E"
+                      style={{ 
+                        fontFamily: 'Inter, sans-serif',
+                        letterSpacing: '0.15em'
+                      }}
+                    >
+                      <textPath 
+                        href="#circlePath" 
+                        startOffset="0%"
+                        textAnchor="start"
+                      >
+                        UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH
                       </textPath>
                     </text>
                   </svg>
 
-                  {/* White ring with black border */}
-                  <div className="absolute inset-0 m-auto w-36 h-36 rounded-full bg-white border-2 border-black"></div>
+                  {/* White ring with gray border */}
+                  <div className="absolute inset-0 m-auto w-52 h-52 rounded-full bg-white border-[3px]" style={{ borderColor: '#d4d4d8' }}></div>
 
-                  {/* Inner circle with meditation image */}
-                  <div className="absolute inset-0 m-auto w-32 h-32 rounded-full overflow-hidden">
+                  {/* Beige inner circle */}
+                  <div className="absolute inset-0 m-auto w-44 h-44 rounded-full" style={{ backgroundColor: '#c1a68b' }}></div>
+
+                  {/* Five golden stars at the bottom */}
+                  <div className="absolute inset-0 m-auto w-52 h-52">
+                    {[0, 1, 2, 3, 4].map((index) => {
+                      const angle = 180 + (index * 36) - 72; // Start at bottom left, space evenly
+                      const radius = 104; // Position on white ring
+                      const x = 128 + radius * Math.cos((angle * Math.PI) / 180);
+                      const y = 128 + radius * Math.sin((angle * Math.PI) / 180);
+                      
+                      return (
+                        <div
+                          key={index}
+                          className="absolute"
+                          style={{
+                            left: `${x}px`,
+                            top: `${y}px`,
+                            transform: 'translate(-50%, -50%)',
+                          }}
+                        >
+                          <span className="text-2xl" style={{ color: '#f4c430' }}>⭐</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* Inner circle with meditation image - stays upright */}
+                  <div 
+                    className="absolute inset-0 m-auto w-44 h-44 rounded-full overflow-hidden flex items-center justify-center"
+                    style={{ 
+                      backgroundColor: '#c1a68b',
+                      transform: `rotate(${-rotation}deg)`
+                    }}
+                  >
                     <img
                       src={meditationBadge}
-                      alt="Meditation Badge"
-                      className="w-full h-full object-cover"
-                      style={{ transform: `rotate(${-rotation}deg)` }}
+                      alt="Meditation silhouette"
+                      className="w-28 h-28 object-contain"
                     />
                   </div>
                 </div>
