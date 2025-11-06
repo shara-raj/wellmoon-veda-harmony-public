@@ -155,11 +155,11 @@ const Hero = () => {
                       />
                     </defs>
                     <text 
-                      className="text-[13px] font-semibold tracking-wider uppercase" 
+                      className="text-[11px] font-semibold tracking-wider uppercase" 
                       fill="#304E5E"
                       style={{ 
                         fontFamily: 'Inter, sans-serif',
-                        letterSpacing: '0.15em'
+                        letterSpacing: '0.12em'
                       }}
                     >
                       <textPath 
@@ -172,39 +172,18 @@ const Hero = () => {
                     </text>
                   </svg>
 
-                  {/* White ring with gray border */}
-                  <div className="absolute inset-0 m-auto w-52 h-52 rounded-full bg-white border-[3px]" style={{ borderColor: '#d4d4d8' }}></div>
+                  {/* Outer black border (2px) */}
+                  <div className="absolute inset-0 m-auto w-52 h-52 rounded-full border-2 border-black"></div>
 
-                  {/* Beige inner circle */}
-                  <div className="absolute inset-0 m-auto w-44 h-44 rounded-full" style={{ backgroundColor: '#c1a68b' }}></div>
+                  {/* White ring (10px width) */}
+                  <div className="absolute inset-0 m-auto w-[204px] h-[204px] rounded-full bg-white"></div>
 
-                  {/* Five golden stars at the bottom */}
-                  <div className="absolute inset-0 m-auto w-52 h-52">
-                    {[0, 1, 2, 3, 4].map((index) => {
-                      const angle = 160 + (index * 10); // Tighter arc at bottom: 160° to 200°
-                      const radius = 100; // Position on white ring
-                      const x = 128 + radius * Math.cos((angle * Math.PI) / 180);
-                      const y = 128 + radius * Math.sin((angle * Math.PI) / 180);
-                      
-                      return (
-                        <div
-                          key={index}
-                          className="absolute"
-                          style={{
-                            left: `${x}px`,
-                            top: `${y}px`,
-                            transform: 'translate(-50%, -50%)',
-                          }}
-                        >
-                          <span className="text-xl" style={{ color: '#f4c430' }}>⭐</span>
-                        </div>
-                      );
-                    })}
-                  </div>
+                  {/* Inner black border (2px) */}
+                  <div className="absolute inset-0 m-auto w-[184px] h-[184px] rounded-full border-2 border-black"></div>
 
-                  {/* Inner circle with meditation image - stays upright */}
+                  {/* Inner beige circle with meditation image - stays upright */}
                   <div 
-                    className="absolute inset-0 m-auto w-44 h-44 rounded-full overflow-hidden flex items-center justify-center"
+                    className="absolute inset-0 m-auto w-[180px] h-[180px] rounded-full overflow-hidden flex items-center justify-center"
                     style={{ 
                       backgroundColor: '#c1a68b',
                       transform: `rotate(${-rotation}deg)`
@@ -213,7 +192,7 @@ const Hero = () => {
                     <img
                       src={meditationBadge}
                       alt="Meditation silhouette"
-                      className="w-28 h-28 object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
