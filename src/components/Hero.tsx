@@ -133,21 +133,50 @@ const Hero = () => {
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
                 style={{ transform: `translate(-50%, -50%) rotate(${rotation}deg)` }}
               >
-                <div className="relative w-52 h-52">
-                  {/* White ring with black border */}
-                  <div className="absolute inset-0 m-auto w-44 h-44 rounded-full bg-white border-2 border-black"></div>
+                <div className="relative w-64 h-64">
+                  {/* Beige background circle */}
+                  <div className="absolute inset-0 m-auto w-56 h-56 rounded-full bg-[hsl(var(--badge-beige))]"></div>
 
-                  {/* Rotating text on top of white ring */}
-                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 208 208">
+                  {/* White ring with soft gray border */}
+                  <div className="absolute inset-0 m-auto w-48 h-48 rounded-full bg-white border-2 border-[hsl(var(--badge-border))]"></div>
+
+                  {/* Five golden stars on lower curve */}
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 256 256">
+                    <g>
+                      {/* Stars positioned on lower arc */}
+                      {[180, 205, 230, 255, 280].map((angle, i) => {
+                        const radius = 100;
+                        const rad = (angle * Math.PI) / 180;
+                        const x = 128 + radius * Math.cos(rad);
+                        const y = 128 + radius * Math.sin(rad);
+                        return (
+                          <text
+                            key={i}
+                            x={x}
+                            y={y}
+                            className="text-xl fill-[hsl(var(--badge-star))]"
+                            textAnchor="middle"
+                            dominantBaseline="middle"
+                          >
+                            ⭐
+                          </text>
+                        );
+                      })}
+                    </g>
+                  </svg>
+
+                  {/* Rotating text on white ring */}
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 256 256">
                     <defs>
-                      <path id="circlePath" d="M 104, 104 m -82, 0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0" />
+                      <path id="circlePath" d="M 128, 128 m -96, 0 a 96,96 0 1,1 192,0 a 96,96 0 1,1 -192,0" />
                     </defs>
                     <text
-                      className="text-[9.5px] fill-foreground font-semibold tracking-wide uppercase"
+                      className="text-[11px] font-semibold tracking-wide uppercase"
                       style={{
                         fontFamily: "Inter, sans-serif",
-                        letterSpacing: "0.05em",
-                        wordSpacing: "0.2em",
+                        letterSpacing: "0.08em",
+                        wordSpacing: "0.3em",
+                        fill: "hsl(var(--badge-text))",
                       }}
                       dominantBaseline="middle"
                       textAnchor="start"
@@ -158,11 +187,11 @@ const Hero = () => {
                     </text>
                   </svg>
 
-                  {/* Inner circle with meditation image and black border */}
-                  <div className="absolute inset-0 m-auto w-32 h-32 rounded-full overflow-hidden border-2 border-black">
+                  {/* Center meditation image (counter-rotates to stay upright) */}
+                  <div className="absolute inset-0 m-auto w-36 h-36 rounded-full overflow-hidden border-2 border-[hsl(var(--badge-border))]">
                     <img
                       src={meditationBadge}
-                      alt="Meditation Badge"
+                      alt="Meditation practice symbol"
                       className="w-full h-full object-cover"
                       style={{ transform: `rotate(${-rotation}deg)` }}
                     />
