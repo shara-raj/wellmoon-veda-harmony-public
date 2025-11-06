@@ -143,7 +143,13 @@ const Hero = () => {
                 style={{ transform: `translate(-50%, -50%) rotate(${rotation}deg)` }}
               >
                 <div className="relative w-48 h-48">
-                  {/* Outer rotating text ring */}
+                  {/* Outer dark border circle */}
+                  <div className="absolute inset-0 w-full h-full rounded-full bg-foreground"></div>
+                  
+                  {/* White ring */}
+                  <div className="absolute inset-1 w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-full bg-white"></div>
+
+                  {/* Rotating text on white ring */}
                   <svg
                     className="absolute inset-0 w-full h-full"
                     viewBox="0 0 192 192"
@@ -154,21 +160,30 @@ const Hero = () => {
                         d="M 96, 96 m -84, 0 a 84,84 0 1,1 168,0 a 84,84 0 1,1 -168,0"
                       />
                     </defs>
-                    <text className="text-[11px] fill-foreground font-medium tracking-wider uppercase" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    <text className="text-[11px] fill-black font-semibold tracking-wider uppercase" style={{ fontFamily: 'Inter, sans-serif' }}>
                       <textPath href="#circlePath" startOffset="0%">
-                        UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH ⭐⭐⭐⭐⭐
+                        UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH
                       </textPath>
                     </text>
                   </svg>
 
-                  {/* White ring with black border */}
-                  <div className="absolute inset-0 m-auto w-36 h-36 rounded-full bg-white border-2 border-black"></div>
+                  {/* Gold stars at bottom */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg key={star} className="w-5 h-5 fill-gold" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                    ))}
+                  </div>
 
-                  {/* Inner circle with meditation image */}
-                  <div className="absolute inset-0 m-auto w-32 h-32 rounded-full overflow-hidden">
+                  {/* Inner beige circle */}
+                  <div className="absolute inset-0 m-auto w-36 h-36 rounded-full bg-beige"></div>
+
+                  {/* Meditation image in center */}
+                  <div className="absolute inset-0 m-auto w-32 h-32 rounded-full overflow-hidden flex items-center justify-center">
                     <img
                       src={meditationBadge}
-                      alt="Meditation Badge"
+                      alt="Meditation symbol"
                       className="w-full h-full object-cover"
                       style={{ transform: `rotate(${-rotation}deg)` }}
                     />
