@@ -144,16 +144,16 @@ const Hero = () => {
                     </defs>
                     <text
                       className="text-[9.5px] fill-foreground font-semibold tracking-wide uppercase"
-                      style={{ 
+                      style={{
                         fontFamily: "Inter, sans-serif",
                         letterSpacing: "0.05em",
-                        wordSpacing: "0.2em"
+                        wordSpacing: "0.2em",
                       }}
                       dominantBaseline="middle"
                       textAnchor="start"
                     >
                       <textPath href="#circlePath" startOffset="0%" spacing="auto">
-                        UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH  ⭐⭐⭐⭐⭐
+                        UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐⭐
                       </textPath>
                     </text>
                   </svg>
