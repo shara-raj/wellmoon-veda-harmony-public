@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import mudraImage from "@/assets/mudra-hands.jpg";
 import yogaImage from "@/assets/woman-yoga.jpg";
 import meditatingImage from "@/assets/woman-meditating.jpg";
-import moonBadge from "@/assets/moon-badge.jpg";
+import meditationBadge from "@/assets/meditation-badge.png";
 
 const Hero = () => {
   const [rotation, setRotation] = useState(0);
@@ -139,33 +139,36 @@ const Hero = () => {
               {/* Rotating Badge */}
               <div
                 ref={badgeRef}
-                className="absolute top-1/2 right-12 -translate-y-1/2"
-                style={{ transform: `translateY(-50%) rotate(${rotation}deg)` }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
+                style={{ transform: `translate(-50%, -50%) rotate(${rotation}deg)` }}
               >
-                <div className="relative w-40 h-40">
+                <div className="relative w-48 h-48">
                   {/* Outer rotating text ring */}
                   <svg
                     className="absolute inset-0 w-full h-full"
-                    viewBox="0 0 160 160"
+                    viewBox="0 0 192 192"
                   >
                     <defs>
                       <path
                         id="circlePath"
-                        d="M 80, 80 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
+                        d="M 96, 96 m -84, 0 a 84,84 0 1,1 168,0 a 84,84 0 1,1 -168,0"
                       />
                     </defs>
-                    <text className="text-[10px] fill-foreground font-medium tracking-wider uppercase" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    <text className="text-[11px] fill-foreground font-medium tracking-wider uppercase" style={{ fontFamily: 'Inter, sans-serif' }}>
                       <textPath href="#circlePath" startOffset="0%">
                         UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH ⭐⭐⭐⭐⭐
                       </textPath>
                     </text>
                   </svg>
 
-                  {/* Inner circle with image */}
-                  <div className="absolute inset-0 m-auto w-28 h-28 rounded-full overflow-hidden border-2 border-foreground">
+                  {/* White ring with black border */}
+                  <div className="absolute inset-0 m-auto w-36 h-36 rounded-full bg-white border-2 border-black"></div>
+
+                  {/* Inner circle with meditation image */}
+                  <div className="absolute inset-0 m-auto w-32 h-32 rounded-full overflow-hidden">
                     <img
-                      src={moonBadge}
-                      alt="WellMoon Badge"
+                      src={meditationBadge}
+                      alt="Meditation Badge"
                       className="w-full h-full object-cover"
                       style={{ transform: `rotate(${-rotation}deg)` }}
                     />
