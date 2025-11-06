@@ -153,7 +153,10 @@ const Hero = () => {
                       textAnchor="start"
                     >
                       <textPath href="#circlePath" startOffset="0%" spacing="auto">
-                        UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐⭐
+                        UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH ⭐⭐⭐⭐⭐
+                      </textPath>
+                      <textPath href="#circlePath" startOffset="0%" spacing="auto">
+                        ⭐⭐⭐⭐⭐
                       </textPath>
                     </text>
                   </svg>
