@@ -181,8 +181,8 @@ const Hero = () => {
                   {/* Five golden stars at the bottom */}
                   <div className="absolute inset-0 m-auto w-52 h-52">
                     {[0, 1, 2, 3, 4].map((index) => {
-                      const angle = 180 + (index * 36) - 72; // Start at bottom left, space evenly
-                      const radius = 104; // Position on white ring
+                      const angle = 160 + (index * 10); // Tighter arc at bottom: 160° to 200°
+                      const radius = 100; // Position on white ring
                       const x = 128 + radius * Math.cos((angle * Math.PI) / 180);
                       const y = 128 + radius * Math.sin((angle * Math.PI) / 180);
                       
@@ -196,7 +196,7 @@ const Hero = () => {
                             transform: 'translate(-50%, -50%)',
                           }}
                         >
-                          <span className="text-2xl" style={{ color: '#f4c430' }}>⭐</span>
+                          <span className="text-xl" style={{ color: '#f4c430' }}>⭐</span>
                         </div>
                       );
                     })}
