@@ -96,7 +96,7 @@ export default {
         },
         "breathe": {
           "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.03)" },
+          "50%": { transform: "scale(1.06)" },
         },
       },
       animation: {
