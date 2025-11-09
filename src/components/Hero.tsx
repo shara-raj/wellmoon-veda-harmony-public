@@ -7,9 +7,9 @@ import yogaImage from "@/assets/woman-yoga.jpg";
 import meditatingImage from "@/assets/woman-meditating.jpg";
 import meditationBadge from "@/assets/meditation-badge.png";
 import meditationCenter from "@/assets/meditation-center.png";
-import avatar1 from "@/assets/avatar-1.png";
-import avatar2 from "@/assets/avatar-2.png";
-import avatar3 from "@/assets/avatar-3.png";
+import customer1 from "@/assets/customer-1.jpg";
+import customer2 from "@/assets/customer-2.jpg";
+import customer3 from "@/assets/customer-3.jpg";
 
 const Hero = () => {
   const [rotation, setRotation] = useState(0);
@@ -29,8 +29,8 @@ const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Avatar images for social proof
-  const avatars = [avatar1, avatar2, avatar3];
+  // Real customer photos for social proof
+  const avatars = [customer1, customer2, customer3];
 
   return (
     <>
