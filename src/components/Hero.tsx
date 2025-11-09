@@ -108,7 +108,7 @@ const Hero = () => {
 
           {/* Right Column - Collage & Badge (Desktop Only) */}
           <div className="hidden lg:block relative">
-            <div className="relative w-full h-[600px] animate-fade-in animate-breathe" style={{ animationDelay: '0.2s' }}>
+            <div className="relative w-full max-w-[500px] h-[600px] mx-auto animate-fade-in animate-breathe" style={{ animationDelay: '0.2s' }}>
               {/* Photo 1 - Mudra (Left - overlaps right) */}
               <div className="absolute top-0 left-0 w-64 h-80 rounded-3xl overflow-hidden shadow-medium z-20">
                 <img
