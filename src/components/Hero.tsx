@@ -185,7 +185,7 @@ const Hero = () => {
 
                   {/* Center image - stays upright */}
                   <div 
-                    className="absolute inset-0 m-auto w-18 h-18 rounded-full overflow-hidden"
+                    className="absolute inset-0 m-auto w-14 h-14 rounded-full overflow-hidden"
                   >
                     <img
                       src={meditationCenter}
