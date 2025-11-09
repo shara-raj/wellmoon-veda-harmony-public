@@ -145,7 +145,7 @@ const Hero = () => {
               >
                 <div className="relative w-64 h-64">
                   {/* White ring with soft shadow */}
-                  <div className="absolute inset-0 m-auto w-[5.375rem] h-[5.375rem] rounded-full bg-white shadow-soft border border-black"></div>
+                  <div className="absolute inset-0 m-auto w-22 h-22 rounded-full bg-white shadow-soft border border-black"></div>
 
                   {/* Rotating text inside the ring */}
                   <svg
@@ -160,7 +160,7 @@ const Hero = () => {
                     <defs>
                       <path
                         id="circlePath"
-                        d="M 128, 128 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"
+                        d="M 128, 128 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
                       />
                     </defs>
                     <text 
