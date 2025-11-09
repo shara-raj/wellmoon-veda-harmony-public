@@ -109,11 +109,11 @@ const Hero = () => {
           {/* Right Column - Collage & Badge (Desktop Only) */}
           <div className="hidden lg:block relative">
             <div className="relative w-full max-w-[500px] h-[600px] mx-auto animate-fade-in animate-breathe" style={{ animationDelay: '0.2s' }}>
-              {/* Photo 1 - Mudra (Left - overlaps right) */}
-              <div className="absolute top-0 left-0 w-64 h-80 rounded-3xl overflow-hidden shadow-medium z-20">
+              {/* Photo 1 - Meditation (Top Left - overlaps right) */}
+              <div className="absolute top-0 left-0 w-64 h-80 rounded-full overflow-hidden shadow-medium z-20">
                 <img
-                  src={mudraImage}
-                  alt="Healing mudra hand gesture"
+                  src={meditatingImage}
+                  alt="Woman meditating"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -127,11 +127,11 @@ const Hero = () => {
                 />
               </div>
 
-              {/* Photo 3 - Meditation (Bottom - overlaps top) */}
-              <div className="absolute bottom-0 left-12 w-64 h-80 rounded-full overflow-hidden shadow-medium z-30">
+              {/* Photo 3 - Mudra (Bottom - overlaps top) */}
+              <div className="absolute bottom-0 left-12 w-64 h-80 rounded-3xl overflow-hidden shadow-medium z-30">
                 <img
-                  src={meditatingImage}
-                  alt="Woman meditating"
+                  src={mudraImage}
+                  alt="Healing mudra hand gesture"
                   className="w-full h-full object-cover"
                 />
               </div>
