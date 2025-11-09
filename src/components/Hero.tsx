@@ -38,9 +38,23 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-subtle overflow-hidden"
+      className="relative min-h-screen pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden"
     >
-      <div className="container mx-auto px-4 lg:px-8">
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/hero-bg.mp4" type="video/mp4" />
+      </video>
+      
+      {/* Black Overlay - 50% transparency */}
+      <div className="absolute inset-0 bg-black/50"></div>
+      
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div className="space-y-8 animate-fade-in">
