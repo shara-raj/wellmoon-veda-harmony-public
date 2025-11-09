@@ -36,26 +36,29 @@ const Hero = () => {
   ];
 
   return (
-    <section
-      id="home"
-      className="relative min-h-screen pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden"
-    >
-      {/* Video Background */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+    <>
+      {/* Video Background - Extended to cover header and hero */}
+      <div className="fixed top-0 left-0 w-full h-screen z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Overlay - #B0967E at 30% transparency (70% opacity) */}
+        <div className="absolute inset-0 bg-[#B0967E]/70"></div>
+      </div>
+
+      <section
+        id="home"
+        className="relative min-h-screen pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden z-10"
       >
-        <source src="/videos/hero-bg.mp4" type="video/mp4" />
-      </video>
-      
-      {/* White Overlay - 40% transparency */}
-      <div className="absolute inset-0 bg-white/40"></div>
-      
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
@@ -63,7 +66,7 @@ const Hero = () => {
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-serif font-semibold text-foreground leading-tight">
                 Yoga Helps Calm The Mind
               </h1>
-              <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
+              <p className="text-lg text-[#000000] max-w-xl leading-relaxed">
                 At WellMoon Veda, we blend ancient Vedic practices with modern research to help women find balance,
                 clarity, and inner calm. Explore yoga, mudra, pranayama, sound healing, and aura balancing — guided and
                 science-informed.
@@ -194,9 +197,10 @@ const Hero = () => {
               </div>
             </div>
           </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
