@@ -43,16 +43,28 @@ const HealingPaths = () => {
             >
               <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 transition-colors duration-300 mx-auto relative overflow-hidden">
                 {path.icon === "image" && (
-                  <div className="absolute inset-0 animate-rotate-slow opacity-30">
-                    <div className="absolute inset-0" style={{
-                      background: 'conic-gradient(from 0deg, transparent 0deg, hsl(var(--sage-dark)) 30deg, transparent 60deg, transparent 120deg, hsl(var(--sage-dark)) 150deg, transparent 180deg, transparent 240deg, hsl(var(--sage-dark)) 270deg, transparent 300deg)'
-                    }}></div>
+                  <div className="absolute inset-0 animate-rotate-slow">
+                    <svg className="w-full h-full" viewBox="0 0 64 64">
+                      {Array.from({ length: 24 }).map((_, i) => (
+                        <line
+                          key={i}
+                          x1="32"
+                          y1="32"
+                          x2="32"
+                          y2="8"
+                          stroke="#C7AF97"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          transform={`rotate(${i * 15} 32 32)`}
+                        />
+                      ))}
+                    </svg>
                   </div>
                 )}
                 {path.icon === "image" ? (
-                  <img src={path.iconSrc} alt="" className="w-10 h-10 object-contain relative z-10" />
+                  <img src={path.iconSrc} alt="" className="w-10 h-10 object-contain relative z-10" style={{ filter: 'brightness(0) saturate(100%) invert(11%) sepia(8%) saturate(665%) hue-rotate(357deg) brightness(97%) contrast(90%)' }} />
                 ) : (
-                  <path.icon className="w-10 h-10 text-sage-dark transition-colors duration-300" />
+                  <path.icon className="w-10 h-10 transition-colors duration-300" style={{ color: '#2b2a28' }} />
                 )}
               </div>
               <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
