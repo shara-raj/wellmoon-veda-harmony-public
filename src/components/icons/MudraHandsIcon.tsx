@@ -3,38 +3,92 @@ const MudraHandsIcon = ({ className = "w-10 h-10" }: { className?: string }) => 
     <svg
       viewBox="0 0 100 100"
       className={className}
-      fill="none"
-      stroke="#2b2a28"
-      strokeWidth="2"
+      fill="#F5F0E8"
+      stroke="#B5A391"
+      strokeWidth="3"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      {/* Left Hand in Namaskara */}
+      {/* Left Hand */}
       <g className="animate-mudra-left">
-        {/* Palm */}
-        <path d="M 42 40 L 42 75 Q 42 78 44 78 L 47.5 78 Q 47.5 78 47.5 75 L 47.5 40" />
+        <path d="
+          M 35 75
+          Q 33 75 32 73
+          L 28 55
+          Q 27 50 27 45
+          L 27 30
+          Q 27 22 30 18
+          Q 32 15 35 15
+          Q 37 15 38 18
+          L 40 22
+          Q 41 20 42 18
+          Q 43 15 45 15
+          Q 47 15 48 18
+          Q 49 20 49 25
+          L 49 35
+          Q 50 30 50 28
+          Q 50 25 51 23
+          Q 52 20 54 20
+          Q 56 20 57 23
+          L 58 28
+          L 58 35
+          L 57 50
+          Q 56 60 53 68
+          Q 51 73 48 75
+          L 35 75
+          Z
+        " />
         {/* Thumb */}
-        <path d="M 42 50 Q 39 48 39 45 L 39 42 Q 39 40 40.5 40 Q 42 40 42 42 L 42 45" />
-        {/* Index finger */}
-        <path d="M 43 40 L 43 25 Q 43 22 44.5 22 Q 46 22 46 25 L 46 40" />
-        {/* Middle finger */}
-        <path d="M 45 40 L 45 20 Q 45 17 46.5 17 Q 48 17 48 20 L 48 40" />
-        {/* Ring finger */}
-        <path d="M 47 40 L 47 25 Q 47 22 48.5 22 Q 50 22 50 25 L 50 40" />
+        <path d="
+          M 32 55
+          Q 30 54 28 52
+          L 25 45
+          Q 24 42 24 40
+          Q 24 37 26 36
+          Q 28 35 30 37
+          L 32 42
+        " />
       </g>
       
-      {/* Right Hand in Namaskara */}
+      {/* Right Hand */}
       <g className="animate-mudra-right">
-        {/* Palm */}
-        <path d="M 58 40 L 58 75 Q 58 78 56 78 L 52.5 78 Q 52.5 78 52.5 75 L 52.5 40" />
+        <path d="
+          M 65 75
+          Q 67 75 68 73
+          L 72 55
+          Q 73 50 73 45
+          L 73 30
+          Q 73 22 70 18
+          Q 68 15 65 15
+          Q 63 15 62 18
+          L 60 22
+          Q 59 20 58 18
+          Q 57 15 55 15
+          Q 53 15 52 18
+          Q 51 20 51 25
+          L 51 35
+          Q 50 30 50 28
+          Q 50 25 49 23
+          Q 48 20 46 20
+          Q 44 20 43 23
+          L 42 28
+          L 42 35
+          L 43 50
+          Q 44 60 47 68
+          Q 49 73 52 75
+          L 65 75
+          Z
+        " />
         {/* Thumb */}
-        <path d="M 58 50 Q 61 48 61 45 L 61 42 Q 61 40 59.5 40 Q 58 40 58 42 L 58 45" />
-        {/* Index finger */}
-        <path d="M 57 40 L 57 25 Q 57 22 55.5 22 Q 54 22 54 25 L 54 40" />
-        {/* Middle finger */}
-        <path d="M 55 40 L 55 20 Q 55 17 53.5 17 Q 52 17 52 20 L 52 40" />
-        {/* Ring finger */}
-        <path d="M 53 40 L 53 25 Q 53 22 51.5 22 Q 50 22 50 25 L 50 40" />
+        <path d="
+          M 68 55
+          Q 70 54 72 52
+          L 75 45
+          Q 76 42 76 40
+          Q 76 37 74 36
+          Q 72 35 70 37
+          L 68 42
+        " />
       </g>
     </svg>
   );

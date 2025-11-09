@@ -64,12 +64,12 @@
 
   @keyframes mudra-left {
     0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(3px); }
+    50% { transform: translateX(4.5px); }
   }
 
   @keyframes mudra-right {
     0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(-3px); }
+    50% { transform: translateX(-4.5px); }
   }
 
   @keyframes bowl-stick {
