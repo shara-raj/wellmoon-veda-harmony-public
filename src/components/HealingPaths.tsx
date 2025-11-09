@@ -41,9 +41,16 @@ const HealingPaths = () => {
               className="group bg-card rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle text-center hover:scale-105"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 rounded-full bg-sage-light flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300 mx-auto">
+              <div className="w-14 h-14 rounded-full bg-sage-light flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300 mx-auto relative overflow-hidden">
+                {path.icon === "image" && (
+                  <div className="absolute inset-0 animate-rotate-slow opacity-30">
+                    <div className="absolute inset-0" style={{
+                      background: 'conic-gradient(from 0deg, transparent 0deg, hsl(var(--sage-dark)) 30deg, transparent 60deg, transparent 120deg, hsl(var(--sage-dark)) 150deg, transparent 180deg, transparent 240deg, hsl(var(--sage-dark)) 270deg, transparent 300deg)'
+                    }}></div>
+                  </div>
+                )}
                 {path.icon === "image" ? (
-                  <img src={path.iconSrc} alt="" className="w-8 h-8 object-contain animate-yoga-stretch" />
+                  <img src={path.iconSrc} alt="" className="w-8 h-8 object-contain relative z-10" />
                 ) : (
                   <path.icon className="w-7 h-7 text-sage-dark group-hover:text-primary-foreground transition-colors duration-300" />
                 )}
