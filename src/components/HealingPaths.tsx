@@ -41,7 +41,7 @@ const HealingPaths = () => {
           {paths.map((path, index) => (
             <div
               key={path.title}
-              className="group bg-card p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle text-center hover:scale-105 hover:bg-[#e0cbb6]"
+              className="group bg-card p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle text-center hover:scale-105 hover:bg-[#e0cbb6]/30"
               style={{ animationDelay: `${index * 0.1}s`, borderRadius: '36px' }}
             >
               <div className="mb-6 mx-auto flex items-center justify-center relative">
