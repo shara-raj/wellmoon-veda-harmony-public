@@ -143,15 +143,15 @@ const Hero = () => {
                 ref={badgeRef}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40"
               >
-                <div className="relative w-128 h-128">
+                <div className="relative w-64 h-64">
                   {/* White ring with soft shadow */}
-                  <div className="absolute inset-0 m-auto w-104 h-104 rounded-full bg-white shadow-soft"></div>
+                  <div className="absolute inset-0 m-auto w-52 h-52 rounded-full bg-white shadow-soft"></div>
 
                   {/* Rotating text inside the ring */}
                   <svg
                     className="absolute inset-0 w-full h-full"
-                    viewBox="0 0 512 512"
-                    style={{
+                    viewBox="0 0 256 256"
+                    style={{ 
                       transform: `rotate(${rotation}deg)`,
                       transformOrigin: '50% 50%',
                       transformBox: 'fill-box'
@@ -160,7 +160,7 @@ const Hero = () => {
                     <defs>
                       <path
                         id="circlePath"
-                        d="M 256, 256 m -208, 0 a 208,208 0 1,1 416,0 a 208,208 0 1,1 -416,0"
+                        d="M 128, 128 m -104, 0 a 104,104 0 1,1 208,0 a 104,104 0 1,1 -208,0"
                       />
                     </defs>
                     <text 
@@ -185,7 +185,7 @@ const Hero = () => {
 
                   {/* Center image - stays upright */}
                   <div 
-                    className="absolute inset-0 m-auto w-88 h-88 rounded-full overflow-hidden"
+                    className="absolute inset-0 m-auto w-44 h-44 rounded-full overflow-hidden"
                   >
                     <img
                       src={meditationCenter}
