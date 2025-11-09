@@ -23,7 +23,7 @@ const Navigation = () => {
 
   return (
     <nav className="relative z-50 bg-transparent">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-4 lg:px-8 pb-[10px]">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2">

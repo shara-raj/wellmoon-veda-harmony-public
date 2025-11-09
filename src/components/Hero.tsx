@@ -138,7 +138,7 @@ const Hero = () => {
               {/* Photo 2 - Yoga (Right) */}
               <div
                 className="absolute top-20 w-72 h-96 rounded-3xl overflow-hidden shadow-medium"
-                style={{ left: "calc(16rem + 0.5px)" }}
+                style={{ left: "calc(16rem + 5px)" }}
               >
                 <img src={yogaImage} alt="Woman practicing yoga" className="w-full h-full object-cover" />
               </div>
@@ -146,7 +146,7 @@ const Hero = () => {
               {/* Photo 3 - Mudra (Bottom) */}
               <div
                 className="absolute left-12 w-64 h-80 rounded-3xl overflow-hidden shadow-medium"
-                style={{ top: "calc(20rem + 0.5px)" }}
+                style={{ top: "calc(20rem + 5px)" }}
               >
                 <img src={mudraImage} alt="Healing mudra hand gesture" className="w-full h-full object-cover" />
               </div>
