@@ -26,13 +26,11 @@ const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Avatar URLs for social proof
+  // Avatar URLs for social proof - 3 happy faces with white background
   const avatars = [
-    "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
-    "https://api.dicebear.com/7.x/avataaars/svg?seed=Maya",
-    "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya",
-    "https://api.dicebear.com/7.x/avataaars/svg?seed=Aria",
-    "https://api.dicebear.com/7.x/avataaars/svg?seed=Luna",
+    "https://api.dicebear.com/7.x/avataaars/svg?seed=Happy1&backgroundColor=ffffff",
+    "https://api.dicebear.com/7.x/avataaars/svg?seed=Happy2&backgroundColor=ffffff",
+    "https://api.dicebear.com/7.x/avataaars/svg?seed=Happy3&backgroundColor=ffffff",
   ];
 
   return (
