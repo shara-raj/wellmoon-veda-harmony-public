@@ -161,7 +161,7 @@ const Hero = () => {
                     fill="currentColor"
                     style={{
                       fontFamily: "Poppins, sans-serif",
-                      fontSize: "13px",
+                      fontSize: "11px",
                       fontWeight: "500",
                       letterSpacing: "1px",
                       textTransform: "uppercase",
