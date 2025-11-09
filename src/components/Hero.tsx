@@ -15,15 +15,15 @@ const Hero = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Only run on desktop (>= 1024px) and if user hasn't set reduced motion
-      if (window.innerWidth >= 1024 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (window.innerWidth >= 1024 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         const scrollY = window.scrollY;
         // Rotate clockwise as user scrolls down
         setRotation(scrollY * 0.1);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Avatar URLs for social proof
@@ -36,20 +36,23 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-subtle overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-subtle overflow-hidden"
+    >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
-              <p className="text-sm font-medium tracking-wider uppercase text-primary">
-                Woman's Wellness
-              </p>
+              <p className="text-sm font-medium tracking-wider uppercase text-primary">Woman's Wellness</p>
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-serif font-semibold text-foreground leading-tight">
                 Yoga Helps Calm The Mind
               </h1>
               <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-                At WellMoon Veda, we blend ancient Vedic practices with modern research to help women find balance, clarity, and inner calm. Explore yoga, mudra, pranayama, sound healing, and aura balancing — guided and science-informed.
+                At WellMoon Veda, we blend ancient Vedic practices with modern research to help women find balance,
+                clarity, and inner calm. Explore yoga, mudra, pranayama, sound healing, and aura balancing — guided and
+                science-informed.
               </p>
             </div>
 
@@ -75,7 +78,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft"
-                onClick={() => document.getElementById('subscribe')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById("subscribe")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Subscribe Now
               </Button>
@@ -83,7 +86,7 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 className="border-2"
-                onClick={() => document.getElementById('healing-paths')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById("healing-paths")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Know More
               </Button>
@@ -109,92 +112,73 @@ const Hero = () => {
 
           {/* Right Column - Collage & Badge (Desktop Only) */}
           <div className="hidden lg:block relative">
-            <div className="relative w-full max-w-[500px] h-[600px] mx-auto animate-fade-in animate-breathe" style={{ animationDelay: '0.2s' }}>
+            <div
+              className="relative w-full max-w-[500px] h-[600px] mx-auto animate-fade-in animate-breathe"
+              style={{ animationDelay: "0.2s" }}
+            >
               {/* Photo 1 - Meditation (Top Left) */}
               <div className="absolute top-0 left-0 w-64 h-80 rounded-full overflow-hidden shadow-medium">
-                <img
-                  src={meditatingImage}
-                  alt="Woman meditating"
-                  className="w-full h-full object-cover"
-                />
+                <img src={meditatingImage} alt="Woman meditating" className="w-full h-full object-cover" />
               </div>
 
               {/* Photo 2 - Yoga (Right) */}
-              <div className="absolute top-20 w-72 h-96 rounded-3xl overflow-hidden shadow-medium" style={{ left: 'calc(16rem + 0.5px)' }}>
-                <img
-                  src={yogaImage}
-                  alt="Woman practicing yoga"
-                  className="w-full h-full object-cover"
-                />
+              <div
+                className="absolute top-20 w-72 h-96 rounded-3xl overflow-hidden shadow-medium"
+                style={{ left: "calc(16rem + 0.5px)" }}
+              >
+                <img src={yogaImage} alt="Woman practicing yoga" className="w-full h-full object-cover" />
               </div>
 
               {/* Photo 3 - Mudra (Bottom) */}
-              <div className="absolute left-12 w-64 h-80 rounded-3xl overflow-hidden shadow-medium" style={{ top: 'calc(20rem + 0.5px)' }}>
-                <img
-                  src={mudraImage}
-                  alt="Healing mudra hand gesture"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              </div>
-
-              {/* Rotating Badge */}
               <div
-                ref={badgeRef}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40"
+                className="absolute left-12 w-64 h-80 rounded-3xl overflow-hidden shadow-medium"
+                style={{ top: "calc(20rem + 0.5px)" }}
               >
-                <div className="relative w-64 h-64">
-                  {/* White ring with soft shadow */}
-                  <div className="absolute inset-0 m-auto w-[132px] h-[132px] rounded-full bg-white shadow-soft border border-black"></div>
+                <img src={mudraImage} alt="Healing mudra hand gesture" className="w-full h-full object-cover" />
+              </div>
+            </div>
 
-                  {/* Rotating text inside the ring */}
-                  <svg
-                    className="absolute inset-0 w-full h-full"
-                    viewBox="0 0 256 256"
-                    style={{ 
-                      transform: `rotate(${rotation}deg)`,
-                      transformOrigin: '50% 50%',
-                      transformBox: 'fill-box'
+            {/* Rotating Badge */}
+            <div ref={badgeRef} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
+              <div className="relative w-64 h-64">
+                {/* White ring with soft shadow */}
+                <div className="absolute inset-0 m-auto w-[132px] h-[132px] rounded-full bg-white shadow-soft border border-black"></div>
+
+                {/* Rotating text inside the ring */}
+                <svg
+                  className="absolute inset-0 w-full h-full"
+                  viewBox="0 0 256 256"
+                  style={{
+                    transform: `rotate(${rotation}deg)`,
+                    transformOrigin: "50% 50%",
+                    transformBox: "fill-box",
+                  }}
+                >
+                  <defs>
+                    <path id="circlePath" d="M 128, 128 m -50, 0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0" />
+                  </defs>
+                  <text
+                    fill="currentColor"
+                    style={{
+                      fontFamily: "Poppins, sans-serif",
+                      fontSize: "13px",
+                      fontWeight: "500",
+                      letterSpacing: "1px",
+                      textTransform: "uppercase",
                     }}
                   >
-                    <defs>
-                      <path
-                        id="circlePath"
-                        d="M 128, 128 m -50, 0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"
-                      />
-                    </defs>
-                    <text 
-                      fill="currentColor"
-                      style={{ 
-                        fontFamily: 'Poppins, sans-serif',
-                        fontSize: '13px',
-                        fontWeight: '500',
-                        letterSpacing: '1px',
-                        textTransform: 'uppercase'
-                      }}
-                    >
-                      <textPath 
-                        href="#circlePath" 
-                        startOffset="50%"
-                        textAnchor="middle"
-                      >
-                        UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH
-                      </textPath>
-                    </text>
-                  </svg>
+                    <textPath href="#circlePath" startOffset="50%" textAnchor="middle">
+                      UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH ⭐
+                    </textPath>
+                  </text>
+                </svg>
 
-                  {/* Center image - stays upright */}
-                  <div 
-                    className="absolute inset-0 m-auto w-[5.125rem] h-[5.125rem] rounded-full overflow-hidden border border-black"
-                  >
-                    <img
-                      src={meditationCenter}
-                      alt="Meditation silhouette"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Center image - stays upright */}
+                <div className="absolute inset-0 m-auto w-[5.125rem] h-[5.125rem] rounded-full overflow-hidden border border-black">
+                  <img src={meditationCenter} alt="Meditation silhouette" className="w-full h-full object-cover" />
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </div>
