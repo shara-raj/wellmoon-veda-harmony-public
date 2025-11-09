@@ -15,7 +15,7 @@ const Subscribe = () => {
   };
 
   return (
-    <section id="subscribe" className="py-20 lg:py-32 bg-gradient-sage relative overflow-hidden">
+    <section id="subscribe" className="py-20 lg:py-32 bg-gradient-sage relative overflow-hidden" style={{ backgroundImage: 'url(/images/pattern.png)', backgroundRepeat: 'repeat' }}>
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary-foreground/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-primary-foreground/10 rounded-full blur-3xl"></div>
