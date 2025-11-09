@@ -145,7 +145,7 @@ const Hero = () => {
               >
                 <div className="relative w-64 h-64">
                   {/* White ring with soft shadow */}
-                  <div className="absolute inset-0 m-auto w-52 h-52 rounded-full bg-white shadow-soft"></div>
+                  <div className="absolute inset-0 m-auto w-52 h-52 rounded-full bg-white shadow-soft border border-black"></div>
 
                   {/* Rotating text inside the ring */}
                   <svg
@@ -185,7 +185,7 @@ const Hero = () => {
 
                   {/* Center image - stays upright */}
                   <div 
-                    className="absolute inset-0 m-auto w-14 h-14 rounded-full overflow-hidden"
+                    className="absolute inset-0 m-auto w-26 h-26 rounded-full overflow-hidden border border-black"
                   >
                     <img
                       src={meditationCenter}
