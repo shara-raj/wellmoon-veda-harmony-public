@@ -51,8 +51,8 @@ const Hero = () => {
         <source src="/videos/hero-bg.mp4" type="video/mp4" />
       </video>
       
-      {/* White Overlay - 50% transparency */}
-      <div className="absolute inset-0 bg-white/50"></div>
+      {/* White Overlay - 40% transparency */}
+      <div className="absolute inset-0 bg-white/40"></div>
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
