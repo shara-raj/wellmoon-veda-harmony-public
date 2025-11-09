@@ -41,7 +41,7 @@ const HealingPaths = () => {
               className="group bg-card rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle text-center hover:scale-105"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-15 h-15 rounded-full bg-white flex items-center justify-center mb-6 transition-colors duration-300 mx-auto relative overflow-hidden">
+              <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 transition-colors duration-300 mx-auto relative overflow-hidden">
                 {path.icon === "image" && (
                   <div className="absolute inset-0 animate-rotate-slow opacity-30">
                     <div className="absolute inset-0" style={{
