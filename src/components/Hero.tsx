@@ -111,7 +111,7 @@ const Hero = () => {
           <div className="hidden lg:block relative">
             <div className="relative w-full max-w-[500px] h-[600px] mx-auto animate-fade-in animate-breathe" style={{ animationDelay: '0.2s' }}>
               {/* Photo 1 - Meditation (Top Left) */}
-              <div className="absolute top-0 left-0 w-64 h-80 rounded-full overflow-hidden shadow-medium">
+              <div className="absolute top-0 left-0 w-18 h-18 rounded-full overflow-hidden shadow-medium">
                 <img
                   src={meditatingImage}
                   alt="Woman meditating"
