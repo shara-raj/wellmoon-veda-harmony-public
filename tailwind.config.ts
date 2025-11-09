@@ -106,7 +106,7 @@ export default {
         "fade-in-subtle": "fade-in-subtle 0.4s ease-out",
         "scale-in": "scale-in 0.5s ease-out",
         "rotate-slow": "rotate 20s linear infinite",
-        "breathe": "breathe 3.5s ease-in-out infinite",
+        "breathe": "breathe 6s ease-in-out infinite",
       },
       backgroundImage: {
         'gradient-subtle': 'var(--gradient-subtle)',
