@@ -68,13 +68,13 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={plan.name}
-              className={`bg-card rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle flex flex-col ${
+              className={`bg-card rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle flex flex-col text-center ${
                 plan.featured ? 'ring-2 ring-primary scale-105' : ''
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {plan.featured && (
-                <div className="bg-primary text-primary-foreground text-sm font-medium px-4 py-1 rounded-full w-fit mb-4">
+                <div className="bg-primary text-primary-foreground text-sm font-medium px-4 py-1 rounded-full w-fit mb-4 mx-auto">
                   Most Popular
                 </div>
               )}
@@ -89,7 +89,7 @@ const Pricing = () => {
               
               <ul className="space-y-3 mb-8 flex-grow">
                 {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3">
+                  <li key={i} className="flex items-center justify-center gap-3">
                     <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <span className="text-foreground">{feature}</span>
                   </li>

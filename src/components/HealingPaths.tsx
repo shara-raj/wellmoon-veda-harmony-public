@@ -36,10 +36,10 @@ const HealingPaths = () => {
           {paths.map((path, index) => (
             <div
               key={path.title}
-              className="group bg-card rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle"
+              className="group bg-card rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle text-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 rounded-full bg-sage-light flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+              <div className="w-14 h-14 rounded-full bg-sage-light flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300 mx-auto">
                 <path.icon className="w-7 h-7 text-sage-dark group-hover:text-primary-foreground transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
