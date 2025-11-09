@@ -1,10 +1,11 @@
-import { Flower2, Hand, Sparkles } from "lucide-react";
+import { Hand, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import TreePoseIcon from "@/components/icons/TreePoseIcon";
 
 const HealingPaths = () => {
   const paths = [
     {
-      icon: Flower2,
+      icon: TreePoseIcon,
       title: "Wellness Yoga",
       description: "Asanas and postures designed for hormonal harmony, strength, and inner peace.",
     },
