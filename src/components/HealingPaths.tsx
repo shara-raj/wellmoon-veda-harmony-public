@@ -56,7 +56,7 @@ const HealingPaths = () => {
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           opacity="0.5"
-                          transform={`rotate(${i * 15} 32 32)`}
+                          transform={`rotate(${i * 30} 32 32)`}
                         />
                       ))}
                     </svg>
