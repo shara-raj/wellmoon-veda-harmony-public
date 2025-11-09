@@ -1,25 +1,26 @@
 const SingingBowlIcon = ({ className = "w-10 h-10" }: { className?: string }) => {
   return (
     <svg
-      viewBox="0 0 100 100"
+      viewBox="0 0 120 120"
       className={className}
       fill="none"
-      stroke="#2b2a28"
-      strokeWidth="2"
+      stroke="#333"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      {/* Outer circle */}
-      <circle cx="45" cy="55" r="25" />
-      {/* Middle circle */}
-      <circle cx="45" cy="55" r="18" />
-      {/* Inner circle */}
-      <circle cx="45" cy="55" r="10" />
+      {/* Concentric circles - sound waves */}
+      <circle cx="60" cy="60" r="8" />
+      <circle cx="60" cy="60" r="16" />
+      <circle cx="60" cy="60" r="24" />
+      <circle cx="60" cy="60" r="32" />
       
-      {/* Stick/Mallet - with animation */}
-      <g className="animate-bowl-stick" style={{ transformOrigin: '58px 42px' }}>
-        <line x1="58" y1="42" x2="72" y2="28" strokeWidth="2.5" />
-        <circle cx="73" cy="27" r="3" fill="#2b2a28" stroke="#2b2a28" />
+      {/* Mallet/striker from lower right - with animation */}
+      <g className="animate-bowl-stick">
+        {/* Handle */}
+        <line x1="75" y1="75" x2="88" y2="88" strokeWidth="2" />
+        {/* Mallet head */}
+        <circle cx="90" cy="90" r="3" fill="#333" />
       </g>
     </svg>
   );
