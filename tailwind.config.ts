@@ -61,7 +61,7 @@ export default {
         taupe: "hsl(var(--taupe))",
       },
       fontFamily: {
-        serif: ['Cormorant Garamond', 'serif'],
+        serif: ['Fraunces', 'serif'],
         sans: ['Inter', 'sans-serif'],
         quicksand: ['Quicksand', 'Poppins', 'sans-serif'],
       },
