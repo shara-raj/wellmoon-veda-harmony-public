@@ -9,58 +9,90 @@ const MudraHandsIcon = ({ className = "w-10 h-10" }: { className?: string }) => 
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      {/* Left Hand - Side view, palm facing right */}
+      {/* Left Hand */}
       <g className="animate-mudra-left">
-        {/* Thumb (extends forward) */}
-        <path d="M 35 65 Q 32 63 30 58 Q 29 54 30 50 Q 31 48 33 49 Q 35 50 35 54 L 36 60" />
-        
-        {/* Fingers curved together */}
         <path d="
-          M 38 35
-          Q 38 30 39 27
-          Q 40 24 42 24
-          Q 44 24 45 27
-          L 46 40
-          Q 46 48 45 55
-          L 44 62
-          Q 43 67 42 70
-          L 40 75
-          Q 38 78 36 78
-          L 35 77
-          Q 34 75 34 72
-          L 35 65
+          M 42 80
+          L 40 78
+          Q 38 75 38 72
+          L 38 68
+          Q 38 65 39 63
+          L 40 58
+          Q 41 52 42 48
+          L 43 42
+          Q 44 36 45 32
+          Q 46 28 47 26
+          Q 48 24 50 24
+          Q 52 24 53 26
+          Q 54 28 54 32
+          L 54 40
+          L 54 50
+          Q 54 54 53 56
+          L 52 60
+          Q 51 62 50 63
+          Q 49 64 48 64
+          Q 47 64 46 63
+          L 45 62
+          Q 44 60 44 58
+          L 44 52
+          Q 44 48 45 46
+          L 46 42
+          Q 47 40 48 40
         " />
-        
-        {/* Inner curve of fingers */}
-        <path d="M 45 55 Q 48 50 48 45 L 48 32 Q 48 28 46 27" />
-        <path d="M 45 62 Q 47 60 47 55" />
+        {/* Thumb */}
+        <path d="
+          M 40 68
+          Q 38 66 36 63
+          L 34 58
+          Q 33 55 33 52
+          Q 33 50 34 49
+          Q 35 48 37 49
+          Q 38 50 38 52
+          L 39 58
+        " />
       </g>
       
-      {/* Right Hand - Side view, palm facing left (mirror) */}
+      {/* Right Hand - Horizontally flipped */}
       <g className="animate-mudra-right">
-        {/* Thumb (extends forward) */}
-        <path d="M 85 65 Q 88 63 90 58 Q 91 54 90 50 Q 89 48 87 49 Q 85 50 85 54 L 84 60" />
-        
-        {/* Fingers curved together */}
         <path d="
-          M 82 35
-          Q 82 30 81 27
-          Q 80 24 78 24
-          Q 76 24 75 27
-          L 74 40
-          Q 74 48 75 55
-          L 76 62
-          Q 77 67 78 70
-          L 80 75
-          Q 82 78 84 78
-          L 85 77
-          Q 86 75 86 72
-          L 85 65
+          M 78 80
+          L 80 78
+          Q 82 75 82 72
+          L 82 68
+          Q 82 65 81 63
+          L 80 58
+          Q 79 52 78 48
+          L 77 42
+          Q 76 36 75 32
+          Q 74 28 73 26
+          Q 72 24 70 24
+          Q 68 24 67 26
+          Q 66 28 66 32
+          L 66 40
+          L 66 50
+          Q 66 54 67 56
+          L 68 60
+          Q 69 62 70 63
+          Q 71 64 72 64
+          Q 73 64 74 63
+          L 75 62
+          Q 76 60 76 58
+          L 76 52
+          Q 76 48 75 46
+          L 74 42
+          Q 73 40 72 40
         " />
-        
-        {/* Inner curve of fingers */}
-        <path d="M 75 55 Q 72 50 72 45 L 72 32 Q 72 28 74 27" />
-        <path d="M 75 62 Q 73 60 73 55" />
+        {/* Thumb */}
+        <path d="
+          M 80 68
+          Q 82 66 84 63
+          L 86 58
+          Q 87 55 87 52
+          Q 87 50 86 49
+          Q 85 48 83 49
+          Q 82 50 82 52
+          L 81 58
+        " />
       </g>
     </svg>
   );
