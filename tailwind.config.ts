@@ -63,6 +63,7 @@ export default {
       fontFamily: {
         serif: ['Cormorant Garamond', 'serif'],
         sans: ['Inter', 'sans-serif'],
+        quicksand: ['Quicksand', 'Poppins', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
