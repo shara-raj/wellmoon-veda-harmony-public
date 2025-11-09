@@ -1,6 +1,7 @@
-import { Hand, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import yogaPoseIcon from "@/assets/yoga-pose.png";
+import MudraHandsIcon from "@/components/icons/MudraHandsIcon";
+import SingingBowlIcon from "@/components/icons/SingingBowlIcon";
 
 const HealingPaths = () => {
   const paths = [
@@ -11,12 +12,14 @@ const HealingPaths = () => {
       description: "Asanas and postures designed for hormonal harmony, strength, and inner peace.",
     },
     {
-      icon: Hand,
+      icon: "custom",
+      IconComponent: MudraHandsIcon,
       title: "Mudra & Pranayama Healing",
       description: "Empower your energy flow through mindful breathing and sacred hand gestures.",
     },
     {
-      icon: Sparkles,
+      icon: "custom",
+      IconComponent: SingingBowlIcon,
       title: "Sound & Aura Healing",
       description: "Immerse in soothing vibrations and energy-balancing therapies that refresh the mind and spirit.",
     },
@@ -64,9 +67,9 @@ const HealingPaths = () => {
                 )}
                 {path.icon === "image" ? (
                   <img src={path.iconSrc} alt="" className="w-10 h-10 object-contain relative z-10" style={{ filter: 'brightness(0) saturate(100%) invert(11%) sepia(8%) saturate(665%) hue-rotate(357deg) brightness(97%) contrast(90%)' }} />
-                ) : (
-                  <path.icon className="w-10 h-10 transition-colors duration-300" style={{ color: '#2b2a28' }} />
-                )}
+                ) : path.icon === "custom" && path.IconComponent ? (
+                  <path.IconComponent className="w-10 h-10" />
+                ) : null}
               </div>
               <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
                 {path.title}

@@ -73,6 +73,33 @@ All colors MUST be HSL.
     --transition-gentle: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  @keyframes mudra-left {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+  }
+
+  @keyframes mudra-right {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-6px); }
+  }
+
+  @keyframes bowl-stick {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-6px, 6px) rotate(-15deg); }
+  }
+
+  .animate-mudra-left {
+    animation: mudra-left 2s ease-in-out infinite;
+  }
+
+  .animate-mudra-right {
+    animation: mudra-right 2s ease-in-out infinite;
+  }
+
+  .animate-bowl-stick {
+    animation: bowl-stick 2s ease-in-out infinite;
+  }
+
   .dark {
     --background: 30 20% 12%;
     --foreground: 40 30% 95%;
