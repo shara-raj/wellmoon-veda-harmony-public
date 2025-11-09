@@ -17,10 +17,10 @@ const SingingBowlIcon = ({ className = "w-10 h-10" }: { className?: string }) =>
       
       {/* Mallet/striker from lower right - with animation */}
       <g className="animate-bowl-stick">
-        {/* Handle */}
+        {/* Mallet head (closer to bowl) */}
+        <circle cx="75" cy="75" r="3" fill="#333" />
+        {/* Handle (extending outward) */}
         <line x1="75" y1="75" x2="88" y2="88" strokeWidth="2" />
-        {/* Mallet head */}
-        <circle cx="90" cy="90" r="3" fill="#333" />
       </g>
     </svg>
   );
