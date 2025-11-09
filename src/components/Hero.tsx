@@ -38,13 +38,13 @@ const Hero = () => {
   return (
     <>
       {/* Video Background - Extended to cover header and hero */}
-      <div className="absolute top-0 left-0 w-full min-h-screen z-0">
+      <div className="absolute top-0 left-0 w-full h-full z-0">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="w-full h-full object-cover"
         >
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
