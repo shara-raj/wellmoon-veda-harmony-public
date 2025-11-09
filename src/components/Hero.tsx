@@ -145,7 +145,7 @@ const Hero = () => {
               >
                 <div className="relative w-64 h-64">
                   {/* White ring with soft shadow */}
-                  <div className="absolute inset-0 m-auto w-28 h-28 rounded-full bg-white shadow-soft border border-black"></div>
+                  <div className="absolute inset-0 m-auto w-[132px] h-[132px] rounded-full bg-white shadow-soft border border-black"></div>
 
                   {/* Rotating text inside the ring */}
                   <svg
