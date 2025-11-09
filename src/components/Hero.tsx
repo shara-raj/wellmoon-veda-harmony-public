@@ -142,7 +142,7 @@ const Hero = () => {
             <div ref={badgeRef} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
               <div className="relative w-64 h-64">
                 {/* White ring with soft shadow */}
-                <div className="absolute inset-0 m-auto w-[152px] h-[152px] rounded-full bg-white shadow-soft border border-black"></div>
+                <div className="absolute inset-0 m-auto w-[158px] h-[158px] rounded-full bg-white shadow-soft border border-black"></div>
 
                 {/* Rotating text inside the ring */}
                 <svg
@@ -155,7 +155,7 @@ const Hero = () => {
                   }}
                 >
                   <defs>
-                    <path id="circlePath" d="M 128, 128 m -55, 0 a 55,55 0 1,1 110,0 a 55,55 0 1,1 -110,0" />
+                    <path id="circlePath" d="M 128, 128 m -58, 0 a 58,58 0 1,1 116,0 a 58,58 0 1,1 -116,0" />
                   </defs>
                   <text
                     fill="currentColor"
