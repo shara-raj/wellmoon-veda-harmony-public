@@ -38,7 +38,7 @@ const Hero = () => {
   return (
     <>
       {/* Video Background - Extended to cover header and hero */}
-      <div className="fixed top-0 left-0 w-full h-screen z-0">
+      <div className="absolute top-0 left-0 w-full min-h-screen z-0">
         <video
           autoPlay
           muted
@@ -55,7 +55,7 @@ const Hero = () => {
 
       <section
         id="home"
-        className="relative min-h-screen pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden z-10"
+        className="relative min-h-screen pb-16 lg:pb-24 overflow-hidden z-10"
       >
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
