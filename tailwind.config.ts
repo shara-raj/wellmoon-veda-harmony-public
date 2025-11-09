@@ -99,6 +99,10 @@ export default {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-12px)" },
         },
+        "yoga-stretch": {
+          "0%, 100%": { transform: "rotate(0deg) translateY(0px)" },
+          "50%": { transform: "rotate(-2deg) translateY(-2px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.3s ease-out",
@@ -108,6 +112,7 @@ export default {
         "scale-in": "scale-in 0.5s ease-out",
         "rotate-slow": "rotate 20s linear infinite",
         "breathe": "breathe 4s ease-in-out infinite",
+        "yoga-stretch": "yoga-stretch 3s ease-in-out infinite",
       },
       backgroundImage: {
         'gradient-subtle': 'var(--gradient-subtle)',

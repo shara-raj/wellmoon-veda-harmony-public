@@ -1,12 +1,12 @@
 import { Hand, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import treePoseIcon from "@/assets/tree-pose-icon.png";
+import yogaPoseIcon from "@/assets/yoga-pose.png";
 
 const HealingPaths = () => {
   const paths = [
     {
       icon: "image",
-      iconSrc: treePoseIcon,
+      iconSrc: yogaPoseIcon,
       title: "Wellness Yoga",
       description: "Asanas and postures designed for hormonal harmony, strength, and inner peace.",
     },
@@ -43,7 +43,7 @@ const HealingPaths = () => {
             >
               <div className="w-14 h-14 rounded-full bg-sage-light flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300 mx-auto">
                 {path.icon === "image" ? (
-                  <img src={path.iconSrc} alt="" className="w-8 h-8 object-contain" />
+                  <img src={path.iconSrc} alt="" className="w-8 h-8 object-contain animate-yoga-stretch" />
                 ) : (
                   <path.icon className="w-7 h-7 text-sage-dark group-hover:text-primary-foreground transition-colors duration-300" />
                 )}
