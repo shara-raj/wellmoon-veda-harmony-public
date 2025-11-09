@@ -174,7 +174,7 @@ const Hero = () => {
                 </svg>
 
                 {/* Center image - stays upright */}
-                <div className="absolute inset-0 m-auto w-[5.125rem] h-[5.125rem] rounded-full overflow-hidden border border-black">
+                <div className="absolute inset-0 m-auto w-[5.375rem] h-[5.375rem] rounded-full overflow-hidden border border-black">
                   <img src={meditationCenter} alt="Meditation silhouette" className="w-full h-full object-cover" />
                 </div>
               </div>
