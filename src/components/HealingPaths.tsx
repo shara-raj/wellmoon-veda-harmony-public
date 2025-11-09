@@ -56,7 +56,7 @@ const HealingPaths = () => {
                           x2="32"
                           y2="8"
                           stroke="#e0cbb6"
-                          strokeWidth="1.5"
+                          strokeWidth="0.5"
                           strokeLinecap="round"
                           opacity="0.5"
                           transform={`rotate(${i * 30} 32 32)`}
