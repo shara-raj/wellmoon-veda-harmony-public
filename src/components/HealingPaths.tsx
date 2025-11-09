@@ -52,7 +52,7 @@ const HealingPaths = () => {
                           y1="32"
                           x2="32"
                           y2="8"
-                          stroke="#C7AF97"
+                          stroke="#e0cbb6"
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           opacity="0.5"
