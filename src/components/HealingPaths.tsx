@@ -45,7 +45,7 @@ const HealingPaths = () => {
                 {path.icon === "image" && (
                   <div className="absolute inset-0 animate-rotate-slow">
                     <svg className="w-full h-full" viewBox="0 0 64 64">
-                      {Array.from({ length: 24 }).map((_, i) => (
+                      {Array.from({ length: 12 }).map((_, i) => (
                         <line
                           key={i}
                           x1="32"
