@@ -68,7 +68,7 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={plan.name}
-              className={`bg-card rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle flex flex-col text-center ${
+              className={`bg-card rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle flex flex-col text-center hover:scale-105 ${
                 plan.featured ? 'ring-2 ring-primary scale-105' : ''
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
