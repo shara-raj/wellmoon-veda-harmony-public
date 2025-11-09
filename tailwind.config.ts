@@ -94,6 +94,10 @@ export default {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
         },
+        "breathe": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.3s ease-out",
@@ -102,6 +106,7 @@ export default {
         "fade-in-subtle": "fade-in-subtle 0.4s ease-out",
         "scale-in": "scale-in 0.5s ease-out",
         "rotate-slow": "rotate 20s linear infinite",
+        "breathe": "breathe 4s ease-in-out infinite",
       },
       backgroundImage: {
         'gradient-subtle': 'var(--gradient-subtle)',
