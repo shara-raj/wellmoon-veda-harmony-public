@@ -1,90 +1,60 @@
 const MudraHandsIcon = ({ className = "w-10 h-10" }: { className?: string }) => {
   return (
     <svg
-      viewBox="0 0 100 100"
+      viewBox="0 0 120 120"
       className={className}
       fill="none"
-      stroke="#2b2a28"
-      strokeWidth="2"
+      stroke="#333"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      {/* Left Hand */}
+      {/* Left Hand - Palm cupped and tilted inward */}
       <g className="animate-mudra-left">
-        {/* Outer edge */}
-        <path d="
-          M 38 75
-          L 35 73
-          Q 32 70 31 65
-          L 28 50
-          Q 27 40 27 35
-          L 27 25
-          Q 27 18 30 15
-          Q 32 13 35 15
-          Q 37 17 37 22
-          L 37 30
-        " />
-        {/* Inner edge */}
-        <path d="
-          M 45 75
-          L 45 35
-          Q 45 25 45 22
-          Q 45 15 42 13
-          Q 40 12 38 13
-          Q 36 15 36 18
-          L 36 25
-        " />
         {/* Thumb */}
-        <path d="
-          M 35 55
-          Q 33 53 31 50
-          L 29 45
-          Q 28 42 28 40
-          Q 28 38 30 37
-          Q 32 37 33 39
-          L 35 44
-        " />
-        {/* Bottom */}
-        <path d="M 38 75 L 45 75" />
+        <path d="M 35 68 Q 30 65 28 60 L 27 52 Q 27 48 29 47 Q 31 47 32 50 L 34 58 Q 35 63 35 65" />
+        
+        {/* Index finger */}
+        <path d="M 37 40 Q 37 35 38 32 Q 39 28 41 28 Q 43 28 43 32 L 43 50 Q 43 58 42 62" />
+        
+        {/* Middle finger */}
+        <path d="M 42 35 Q 42 30 43 26 Q 44 22 46 22 Q 48 22 48 26 L 48 50 Q 48 60 47 65" />
+        
+        {/* Ring finger */}
+        <path d="M 47 38 Q 47 33 48 30 Q 49 26 51 26 Q 53 26 53 30 L 53 52 Q 53 60 52 64" />
+        
+        {/* Pinky */}
+        <path d="M 52 42 Q 52 38 53 35 Q 54 32 56 32 Q 58 32 58 35 L 58 55 Q 58 60 57 63" />
+        
+        {/* Palm outline */}
+        <path d="M 35 68 Q 36 70 38 72 L 50 78 Q 53 79 56 78 L 57 77 Q 58 75 58 72 L 58 65" />
+        <path d="M 42 62 Q 43 64 45 65" />
+        <path d="M 47 65 L 50 67" />
+        <path d="M 52 64 L 54 66" />
       </g>
       
-      {/* Right Hand */}
+      {/* Right Hand - Mirror of left, palm cupped and tilted inward */}
       <g className="animate-mudra-right">
-        {/* Outer edge */}
-        <path d="
-          M 62 75
-          L 65 73
-          Q 68 70 69 65
-          L 72 50
-          Q 73 40 73 35
-          L 73 25
-          Q 73 18 70 15
-          Q 68 13 65 15
-          Q 63 17 63 22
-          L 63 30
-        " />
-        {/* Inner edge */}
-        <path d="
-          M 55 75
-          L 55 35
-          Q 55 25 55 22
-          Q 55 15 58 13
-          Q 60 12 62 13
-          Q 64 15 64 18
-          L 64 25
-        " />
         {/* Thumb */}
-        <path d="
-          M 65 55
-          Q 67 53 69 50
-          L 71 45
-          Q 72 42 72 40
-          Q 72 38 70 37
-          Q 68 37 67 39
-          L 65 44
-        " />
-        {/* Bottom */}
-        <path d="M 62 75 L 55 75" />
+        <path d="M 85 68 Q 90 65 92 60 L 93 52 Q 93 48 91 47 Q 89 47 88 50 L 86 58 Q 85 63 85 65" />
+        
+        {/* Index finger */}
+        <path d="M 83 40 Q 83 35 82 32 Q 81 28 79 28 Q 77 28 77 32 L 77 50 Q 77 58 78 62" />
+        
+        {/* Middle finger */}
+        <path d="M 78 35 Q 78 30 77 26 Q 76 22 74 22 Q 72 22 72 26 L 72 50 Q 72 60 73 65" />
+        
+        {/* Ring finger */}
+        <path d="M 73 38 Q 73 33 72 30 Q 71 26 69 26 Q 67 26 67 30 L 67 52 Q 67 60 68 64" />
+        
+        {/* Pinky */}
+        <path d="M 68 42 Q 68 38 67 35 Q 66 32 64 32 Q 62 32 62 35 L 62 55 Q 62 60 63 63" />
+        
+        {/* Palm outline */}
+        <path d="M 85 68 Q 84 70 82 72 L 70 78 Q 67 79 64 78 L 63 77 Q 62 75 62 72 L 62 65" />
+        <path d="M 78 62 Q 77 64 75 65" />
+        <path d="M 73 65 L 70 67" />
+        <path d="M 68 64 L 66 66" />
       </g>
     </svg>
   );
