@@ -44,31 +44,11 @@ const HealingPaths = () => {
               className="group bg-card p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle text-center hover:scale-105 hover:bg-[#e0cbb6]"
               style={{ animationDelay: `${index * 0.1}s`, borderRadius: '36px' }}
             >
-              <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 transition-colors duration-300 mx-auto relative overflow-hidden">
-                {path.icon === "image" && (
-                  <div className="absolute inset-0 animate-rotate-slow">
-                    <svg className="w-full h-full" viewBox="0 0 64 64">
-                      {Array.from({ length: 12 }).map((_, i) => (
-                        <line
-                          key={i}
-                          x1="32"
-                          y1="32"
-                          x2="32"
-                          y2="8"
-                          stroke="#e0cbb6"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          opacity="0.5"
-                          transform={`rotate(${i * 30} 32 32)`}
-                        />
-                      ))}
-                    </svg>
-                  </div>
-                )}
+              <div className="mb-6 mx-auto flex items-center justify-center">
                 {path.icon === "image" ? (
-                  <img src={path.iconSrc} alt="" className="w-10 h-10 object-contain relative z-10" style={{ filter: 'brightness(0) saturate(100%) invert(11%) sepia(8%) saturate(665%) hue-rotate(357deg) brightness(97%) contrast(90%)' }} />
+                  <img src={path.iconSrc} alt="" className="w-20 h-20 object-contain" style={{ filter: 'brightness(0) saturate(100%) invert(11%) sepia(8%) saturate(665%) hue-rotate(357deg) brightness(97%) contrast(90%)' }} />
                 ) : path.icon === "custom" && path.IconComponent ? (
-                  <path.IconComponent className="w-10 h-10" />
+                  <path.IconComponent className="w-20 h-20" />
                 ) : null}
               </div>
               <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
