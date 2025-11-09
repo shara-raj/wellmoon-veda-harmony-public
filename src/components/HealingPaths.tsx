@@ -50,9 +50,9 @@ const HealingPaths = () => {
                   </div>
                 )}
                 {path.icon === "image" ? (
-                  <img src={path.iconSrc} alt="" className="w-8 h-8 object-contain relative z-10" />
+                  <img src={path.iconSrc} alt="" className="w-10 h-10 object-contain relative z-10" />
                 ) : (
-                  <path.icon className="w-7 h-7 text-sage-dark group-hover:text-primary-foreground transition-colors duration-300" />
+                  <path.icon className="w-10 h-10 text-sage-dark transition-colors duration-300" />
                 )}
               </div>
               <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
