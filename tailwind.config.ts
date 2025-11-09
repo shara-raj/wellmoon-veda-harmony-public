@@ -95,8 +95,8 @@ export default {
           to: { transform: "rotate(360deg)" },
         },
         "breathe": {
-          "0%, 100%": { transform: "translateY(-6px)" },
-          "50%": { transform: "translateY(6px)" },
+          "0%, 100%": { transform: "translateY(-12px)" },
+          "50%": { transform: "translateY(12px)" },
         },
       },
       animation: {
