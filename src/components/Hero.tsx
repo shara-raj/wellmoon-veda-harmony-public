@@ -49,8 +49,8 @@ const Hero = () => {
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
         
-        {/* Overlay - #B0967E at 30% transparency (70% opacity) */}
-        <div className="absolute inset-0 bg-[#B0967E]/70"></div>
+        {/* Overlay - #B0967E at 20% transparency (80% opacity) */}
+        <div className="absolute inset-0 bg-[#B0967E]/80"></div>
       </div>
 
       <section
@@ -121,8 +121,8 @@ const Hero = () => {
                   />
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">332+</span> Happy Customers
+              <p className="text-sm text-[#000000]">
+                <span className="font-semibold text-[#000000]">332+</span> Happy Customers
               </p>
             </div>
           </div>
