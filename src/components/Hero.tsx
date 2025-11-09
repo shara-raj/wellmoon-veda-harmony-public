@@ -136,53 +136,54 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
+              </div>
 
               {/* Rotating Badge */}
               <div
+                ref={badgeRef}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40"
+                style={{ transform: `translate(-50%, -50%) rotate(${rotation}deg)` }}
               >
                 <div className="relative w-64 h-64">
-                  {/* White ring with soft shadow (fixed, doesn't rotate) */}
-                  <div className="absolute inset-0 m-auto w-52 h-52 rounded-full bg-white shadow-soft"></div>
-
-                  {/* Rotating group (ring text only) */}
+                  {/* Outer rotating text ring */}
                   <svg
                     className="absolute inset-0 w-full h-full"
                     viewBox="0 0 256 256"
-                    style={{ 
-                      transformBox: 'fill-box',
-                      transformOrigin: '50% 50%',
-                      transform: `rotate(${rotation}deg)`
-                    }}
                   >
                     <defs>
                       <path
-                        id="innerCirclePath"
-                        d="M 128, 128 m -86, 0 a 86,86 0 1,1 172,0 a 86,86 0 1,1 -172,0"
+                        id="circlePath"
+                        d="M 128, 128 m -108, 0 a 108,108 0 1,1 216,0 a 108,108 0 1,1 -216,0"
                       />
                     </defs>
                     <text 
-                      className="uppercase" 
+                      className="text-[11px] font-semibold tracking-wider uppercase" 
                       fill="currentColor"
                       style={{ 
-                        fontFamily: 'Poppins, sans-serif',
-                        fontSize: '13px',
-                        fontWeight: '500',
-                        letterSpacing: '1px'
+                        fontFamily: 'Inter, sans-serif',
+                        letterSpacing: '0.12em'
                       }}
-                      textAnchor="middle"
                     >
                       <textPath 
-                        href="#innerCirclePath" 
-                        startOffset="50%"
+                        href="#circlePath" 
+                        startOffset="0%"
+                        textAnchor="start"
                       >
                         UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH
                       </textPath>
                     </text>
                   </svg>
 
-                  {/* Center image - stays fixed (doesn't rotate) */}
-                  <div className="absolute inset-0 m-auto w-44 h-44 rounded-full overflow-hidden">
+                  {/* White ring with soft shadow */}
+                  <div className="absolute inset-0 m-auto w-52 h-52 rounded-full bg-white shadow-soft"></div>
+
+                  {/* Center image - stays upright */}
+                  <div 
+                    className="absolute inset-0 m-auto w-44 h-44 rounded-full overflow-hidden"
+                    style={{ 
+                      transform: `rotate(${-rotation}deg)`
+                    }}
+                  >
                     <img
                       src={meditationCenter}
                       alt="Meditation silhouette"
@@ -191,7 +192,6 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
