@@ -74,9 +74,7 @@ const HealingPaths = () => {
                 {path.icon === "image" ? (
                   <img src={path.iconSrc} alt="" className="w-20 h-20 object-contain relative z-20" style={{ filter: 'brightness(0) saturate(100%)', transition: 'none' }} />
                 ) : path.icon === "custom" && path.IconComponent ? (
-                  <div style={{ filter: 'brightness(0) saturate(100%)', transition: 'none' }}>
-                    <path.IconComponent className="w-20 h-20 relative z-20" />
-                  </div>
+                  <path.IconComponent className="w-20 h-20 relative z-20" />
                 ) : null}
               </div>
               <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
