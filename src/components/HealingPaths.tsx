@@ -53,12 +53,12 @@ const HealingPaths = () => {
                 
                 {/* Sun rays - shows on hover with 60% transparency */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-60 transition-opacity duration-300 z-[15]">
-                  <img src={sunRays} alt="" className="w-20 h-20 object-contain" />
+                  <img src={sunRays} alt="" className="w-40 h-40 object-contain" />
                 </div>
                 
                 {/* Icon - always on top */}
                 {path.icon === "image" ? (
-                  <img src={path.iconSrc} alt="" className="w-20 h-20 object-contain relative z-20" style={{ filter: 'brightness(0) saturate(100%)', transition: 'none' }} />
+                  <img src={path.iconSrc} alt="" className="w-20 h-20 object-contain relative z-20" style={{ transition: 'none' }} />
                 ) : path.icon === "custom" && path.IconComponent ? (
                   <path.IconComponent className="w-20 h-20 relative z-20" />
                 ) : null}
