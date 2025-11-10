@@ -51,8 +51,8 @@ const HealingPaths = () => {
                   <div className="w-20 h-20 rounded-full bg-white"></div>
                 </div>
                 
-                {/* Rotating sun rays - shows on hover with 60% transparency */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-60 transition-opacity duration-300 z-[15] animate-rotate-slow">
+                {/* Sun rays - shows on hover with 60% transparency */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-60 transition-opacity duration-300 z-[15]">
                   <img src={sunRays} alt="" className="w-20 h-20 object-contain" />
                 </div>
                 
