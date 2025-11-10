@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import yogaPoseIcon from "@/assets/yoga-pose.png";
 import sunRays from "@/assets/sun-rays-new.png";
@@ -5,6 +6,30 @@ import MudraHandsIcon from "@/components/icons/MudraHandsIcon";
 import SingingBowlIcon from "@/components/icons/SingingBowlIcon";
 
 const HealingPaths = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const paths = [
     {
       icon: "image",
@@ -38,12 +63,12 @@ const HealingPaths = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-12">
+        <div ref={sectionRef} className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-12">
           {paths.map((path, index) => (
             <div
               key={path.title}
-              className="group bg-card p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in text-center hover:scale-105 hover:bg-[#e0cbb6]/30"
-              style={{ animationDelay: `${index * 1}s`, borderRadius: '36px' }}
+              className={`group bg-card p-8 shadow-soft hover:shadow-medium transition-all duration-300 text-center hover:scale-105 hover:bg-[#e0cbb6]/30 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+              style={{ animationDelay: isVisible ? `${index * 1}s` : '0s', borderRadius: '36px' }}
             >
               <div className="mb-6 mx-auto flex items-center justify-center relative w-32 h-32">
                 {/* White circular background - shows on hover */}
