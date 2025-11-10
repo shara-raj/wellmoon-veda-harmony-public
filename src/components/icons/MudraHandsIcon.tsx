@@ -6,6 +6,7 @@ const MudraHandsIcon = ({ className = "w-10 h-10" }: { className?: string }) => 
       src={prayingHands} 
       alt="Praying hands icon" 
       className={className}
+      style={{ filter: 'brightness(0)' }}
     />
   );
 };

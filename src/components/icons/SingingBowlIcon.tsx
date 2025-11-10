@@ -6,6 +6,7 @@ const SingingBowlIcon = ({ className = "w-10 h-10" }: { className?: string }) =>
       src={singingBowl} 
       alt="Singing bowl icon" 
       className={className}
+      style={{ filter: 'brightness(0)' }}
     />
   );
 };
