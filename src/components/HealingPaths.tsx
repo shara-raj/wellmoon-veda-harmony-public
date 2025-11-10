@@ -42,8 +42,8 @@ const HealingPaths = () => {
           {paths.map((path, index) => (
             <div
               key={path.title}
-              className="group bg-card p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle text-center hover:scale-105 hover:bg-[#e0cbb6]/30"
-              style={{ animationDelay: `${index * 0.1}s`, borderRadius: '36px' }}
+              className="group bg-card p-8 shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in text-center hover:scale-105 hover:bg-[#e0cbb6]/30"
+              style={{ animationDelay: `${index * 1}s`, borderRadius: '36px' }}
             >
               <div className="mb-6 mx-auto flex items-center justify-center relative w-32 h-32">
                 {/* White circular background - shows on hover */}
