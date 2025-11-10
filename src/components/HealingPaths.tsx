@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import yogaPoseIcon from "@/assets/yoga-pose.png";
+import sunRays from "@/assets/sun-rays.png";
 import MudraHandsIcon from "@/components/icons/MudraHandsIcon";
 import SingingBowlIcon from "@/components/icons/SingingBowlIcon";
 
@@ -45,29 +46,14 @@ const HealingPaths = () => {
               style={{ animationDelay: `${index * 0.1}s`, borderRadius: '36px' }}
             >
               <div className="mb-6 mx-auto flex items-center justify-center relative w-32 h-32">
-                {/* Rays - rotating slowly, only visible on hover, behind everything */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0 animate-rotate-slow">
-                  <svg className="w-20 h-20" viewBox="0 0 64 64">
-                    {Array.from({ length: 12 }).map((_, i) => (
-                      <line
-                        key={i}
-                        x1="32"
-                        y1="32"
-                        x2="32"
-                        y2="8"
-                        stroke="#e0cbb6"
-                        strokeWidth="0.5"
-                        strokeLinecap="round"
-                        opacity="0.5"
-                        transform={`rotate(${i * 30} 32 32)`}
-                      />
-                    ))}
-                  </svg>
-                </div>
-                
                 {/* White circular background - shows on hover */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                   <div className="w-20 h-20 rounded-full bg-white"></div>
+                </div>
+                
+                {/* Rotating sun rays - shows on hover with 60% transparency */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-60 transition-opacity duration-300 z-[15] animate-rotate-slow">
+                  <img src={sunRays} alt="" className="w-20 h-20 object-contain" />
                 </div>
                 
                 {/* Icon - always on top */}
