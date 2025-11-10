@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import yogaPoseIcon from "@/assets/yoga-pose.png";
-import sunRays from "@/assets/sun-rays.png";
+import sunRays from "@/assets/sun-rays-new.png";
 import MudraHandsIcon from "@/components/icons/MudraHandsIcon";
 import SingingBowlIcon from "@/components/icons/SingingBowlIcon";
 
