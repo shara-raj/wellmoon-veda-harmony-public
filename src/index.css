@@ -64,19 +64,19 @@
 
   @keyframes mudra-left {
     0%, 100% { 
-      transform: translateX(0);
+      transform: translateX(-7px);
     }
     50% { 
-      transform: translateX(7px);
+      transform: translateX(0);
     }
   }
 
   @keyframes mudra-right {
     0%, 100% { 
-      transform: translateX(0);
+      transform: translateX(7px);
     }
     50% { 
-      transform: translateX(-7px);
+      transform: translateX(0);
     }
   }
 
