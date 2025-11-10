@@ -103,7 +103,7 @@
   }
 
   .animate-rotate-slow {
-    animation: rotate-slow 80s linear infinite;
+    animation: rotate-slow 300s linear infinite;
   }
 
   .dark {
