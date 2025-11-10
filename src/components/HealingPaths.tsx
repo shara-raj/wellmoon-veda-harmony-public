@@ -52,7 +52,7 @@ const HealingPaths = () => {
   ];
 
   return (
-    <section id="healing-paths" className="py-20 lg:py-32 bg-background">
+    <section id="healing-paths" className="py-20 lg:py-32 bg-background" style={{ backgroundImage: 'url(/images/pattern.png)', backgroundRepeat: 'repeat' }}>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
