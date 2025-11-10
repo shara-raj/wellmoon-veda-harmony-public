@@ -45,9 +45,14 @@ const HealingPaths = () => {
               style={{ animationDelay: `${index * 0.1}s`, borderRadius: '36px' }}
             >
               <div className="mb-6 mx-auto flex items-center justify-center relative w-32 h-32">
-                {/* Rays - rotating slowly */}
-                <div className="absolute inset-0 flex items-center justify-center animate-rotate-slow z-10">
-                  <svg className="w-32 h-32" viewBox="0 0 64 64">
+                {/* White circular background - shows on hover */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                  <div className="w-20 h-20 rounded-full bg-white"></div>
+                </div>
+                
+                {/* Rays - rotating slowly, only visible on hover, inside the white circle */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 animate-rotate-slow">
+                  <svg className="w-20 h-20" viewBox="0 0 64 64">
                     {Array.from({ length: 12 }).map((_, i) => (
                       <line
                         key={i}
@@ -63,11 +68,6 @@ const HealingPaths = () => {
                       />
                     ))}
                   </svg>
-                </div>
-                
-                {/* White circular background - shows on hover */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
-                  <div className="w-20 h-20 rounded-full bg-white"></div>
                 </div>
                 
                 {/* Icon - always on top */}
