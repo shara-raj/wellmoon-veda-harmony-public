@@ -166,8 +166,8 @@ const Navigation = () => {
                   Login
                 </Button>
                 <Button
-                  className="text-sm bg-orange-500 text-white shadow-md hover:shadow-lg transition-all duration-300 
-                       hover:bg-[hsl(35_50%_65%)] hover:text-gray-800 hover:scale-105" // ⬅️ UPDATED
+                  className="bg-[hsl(35_50%_65%)] text-sm bg-orange-500 text-white shadow-md hover:shadow-lg transition-all duration-300 
+                       hover:bg-[#e0cbb6]/30 hover:text-gray-800 hover:scale-105" // ⬅️ UPDATED
                 >
                   Sign Up
                 </Button>
