@@ -42,7 +42,7 @@ const Subscribe = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="bg-primary-foreground text-foreground placeholder:text-muted-foreground border-0 flex-grow"
+                className="bg-white-foreground text-foreground placeholder:text-muted-foreground border-0 flex-grow"
               />
               <Button
                 variant="outline"
