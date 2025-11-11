@@ -82,7 +82,12 @@ const Navigation = () => {
 
           {/* Auth Buttons - Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="text-sm font-medium">
+            <Button
+              variant="outline"
+              size="sm"
+              className="bg-[hsl(35_50%_65%)] 
+            text-primary-foreground text-sm font-medium"
+            >
               Login
             </Button>
             <Button variant="outline" size="sm" className="text-sm font-medium">
