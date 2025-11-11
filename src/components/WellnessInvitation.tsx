@@ -30,7 +30,15 @@ const WellnessInvitation = () => {
           <Button
             size="lg"
             variant="outline"
-            className="bg-[hsl(35_50%_65%)] text-primary-foreground hover:bg-[#e0cbb6]/30 hover:text-black shadow-soft"
+            className="bg-[hsl(35_50%_65%)] 
+            text-primary-foreground 
+            hover:bg-[#e0cbb6]/30 
+            hover:text-black 
+            shadow-soft
+            //scale transition
+            transition-all duration-300
+            //Scale on hover
+            hover: scale-105"
             onClick={() => document.getElementById("subscribe")?.scrollIntoView({ behavior: "smooth" })}
           >
             Subscribe for Weekly Wellness Notes
