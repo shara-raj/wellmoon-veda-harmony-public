@@ -85,7 +85,7 @@ const Navigation = () => {
             <Button variant="ghost" size="sm" className="text-sm font-medium">
               Login
             </Button>
-            <Button size="sm" className="text-sm font-medium">
+            <Button variant="outline" size="sm" className="text-sm font-medium">
               Sign Up
             </Button>
           </div>
