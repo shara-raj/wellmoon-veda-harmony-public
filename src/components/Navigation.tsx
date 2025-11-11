@@ -66,16 +66,16 @@ const Navigation = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <a href="#pricing" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <a href="#pricing" className="text-sm font-medium text-foreground hover:text-white transition-colors">
               Plans & Pricing
             </a>
-            <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <a href="#about" className="text-sm font-medium text-foreground hover:text-white transition-colors">
               About
             </a>
-            <a href="#blog" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <a href="#blog" className="text-sm font-medium text-foreground hover:text-white transition-colors">
               Blog
             </a>
-            <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <a href="#contact" className="text-sm font-medium text-foreground hover:text-white transition-colors">
               Contact
             </a>
           </div>
