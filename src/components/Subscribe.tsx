@@ -6,11 +6,38 @@ import { toast } from "sonner";
 const Subscribe = () => {
   const [email, setEmail] = useState("");
 
+  // --- TYPING ANIMATION LOGIC START ---
+  const fullPlaceholder = "Enter your email for gentle reminders...";
+  const typingSpeed = 75; // Speed in milliseconds per character
+  const [displayedPlaceholder, setDisplayedPlaceholder] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    // Only run the animation if we haven't typed the full string yet
+    if (currentIndex < fullPlaceholder.length) {
+      const timeoutId = setTimeout(() => {
+        // Build the string character by character
+        setDisplayedPlaceholder(fullPlaceholder.substring(0, currentIndex + 1));
+        setCurrentIndex(currentIndex + 1);
+      }, typingSpeed);
+
+      return () => clearTimeout(timeoutId);
+    }
+
+    // Optional: Add logic here if you want the placeholder animation to loop or delete itself.
+  }, [currentIndex, fullPlaceholder, typingSpeed]);
+
+  // --- TYPING ANIMATION LOGIC END ---
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
       toast.success("Thank you for subscribing to WellMoon Veda!");
       setEmail("");
+
+      // Reset the typing animation when the user successfully submits
+      setCurrentIndex(0);
+      setDisplayedPlaceholder("");
     }
   };
 
@@ -38,7 +65,7 @@ const Subscribe = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={displayedPlaceholder}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
