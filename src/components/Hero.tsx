@@ -50,7 +50,7 @@ const Hero = () => {
             {/* Left Column - Content */}
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-4">
-                <p className="text-sm font-medium tracking-wider uppercase text-primary">Woman's Wellness</p>
+                <p className="text-sm font-medium tracking-wider uppercase text-white">Woman's Wellness</p>
                 <h1 className="text-5xl lg:text-6xl xl:text-7xl font-serif font-semibold text-foreground leading-tight">
                   Yoga Helps Calm The Mind
                 </h1>
