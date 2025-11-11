@@ -81,8 +81,10 @@ const Hero = () => {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
+                  variant="outline"
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft"
+                  className="bg-[hsl(35_50%_65%)] 
+            text-primary-foreground text-sm font-medium shadow-soft"
                   onClick={() => document.getElementById("subscribe")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   Subscribe Now
