@@ -120,10 +120,7 @@ const HealingPaths = () => {
           <Button
             size="lg"
             variant="outline"
-            className="border-2
-            //New hover bg color and text color
-            hover:bg-[hsl(35_50%_65%)]
-            hover:text-white"
+            className="bg-[hsl(35_50%_65%)] text-primary-foreground hover:bg-[#e0cbb6]/30 hover:text-black shadow-soft"
             onClick={() => document.getElementById("subscribe")?.scrollIntoView({ behavior: "smooth" })}
           >
             Subscribe for More Insights
