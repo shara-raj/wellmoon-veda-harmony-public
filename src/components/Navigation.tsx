@@ -154,8 +154,8 @@ const Navigation = () => {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="w-full justify-start"
-                  className="bg-[hsl(35_50%_65%)] 
+                  className="w-full justify-start
+                  bg-[hsl(35_50%_65%)] 
             text-primary-foreground 
             hover:bg-[#e0cbb6]/30 
             hover:text-black 
@@ -169,8 +169,8 @@ const Navigation = () => {
                 </Button>
                 <Button
                   size="sm"
-                  className="w-full bg-primary text-primary-foreground"
-                  className="bg-[hsl(35_50%_65%)] 
+                  className="w-full bg-primary text-primary-foreground
+                  bg-[hsl(35_50%_65%)] 
             text-primary-foreground 
             hover:bg-[#e0cbb6]/30 
             hover:text-black 
