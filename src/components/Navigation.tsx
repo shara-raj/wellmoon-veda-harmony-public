@@ -27,7 +27,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
-            <span className="text-white text-2xl font-serif font-semibold text-foreground">WellMoon Veda</span>
+            <span className="text-2xl font-serif font-semibold text-foreground">WellMoon Veda</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -151,10 +151,35 @@ const Navigation = () => {
                 Contact
               </a>
               <div className="flex flex-col space-y-2 px-4 pt-4 border-t border-border">
-                <Button variant="ghost" size="sm" className="w-full justify-start">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="w-full justify-start"
+                  className="bg-[hsl(35_50%_65%)] 
+            text-primary-foreground 
+            hover:bg-[#e0cbb6]/30 
+            hover:text-black 
+            shadow-soft
+            //scale transition
+            transition-all duration-300
+            //Scale on hover
+            hover: scale-105"
+                >
                   Login
                 </Button>
-                <Button size="sm" className="w-full bg-primary text-primary-foreground">
+                <Button
+                  size="sm"
+                  className="w-full bg-primary text-primary-foreground"
+                  className="bg-[hsl(35_50%_65%)] 
+            text-primary-foreground 
+            hover:bg-[#e0cbb6]/30 
+            hover:text-black 
+            shadow-soft
+            //scale transition
+            transition-all duration-300
+            //Scale on hover
+            hover: scale-105"
+                >
                   Sign Up
                 </Button>
               </div>
