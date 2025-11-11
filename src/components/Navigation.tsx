@@ -160,9 +160,7 @@ const Navigation = () => {
             hover:bg-[#e0cbb6]/30 
             hover:text-black 
             shadow-soft
-            //scale transition
             transition-all duration-300
-            //Scale on hover
             hover: scale-105"
                 >
                   Login
@@ -174,10 +172,8 @@ const Navigation = () => {
             text-primary-foreground 
             hover:bg-[#e0cbb6]/30 
             hover:text-black 
-            shadow-soft
-            //scale transition
+            shadow-soft 
             transition-all duration-300
-            //Scale on hover
             hover: scale-105"
                 >
                   Sign Up
