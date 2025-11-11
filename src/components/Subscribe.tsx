@@ -15,18 +15,23 @@ const Subscribe = () => {
   };
 
   return (
-    <section id="subscribe" className="py-20 lg:py-32 bg-gradient-sage relative overflow-hidden" style={{ backgroundImage: 'url(/images/pattern.png)', backgroundRepeat: 'repeat' }}>
+    <section
+      id="subscribe"
+      className="py-20 lg:py-32 bg-gradient-sage relative overflow-hidden"
+      style={{ backgroundImage: "url(/images/pattern.png)", backgroundRepeat: "repeat" }}
+    >
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary-foreground/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-primary-foreground/10 rounded-full blur-3xl"></div>
-      
+
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center space-y-8 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-primary-foreground mb-6">
             Begin Your Healing Journey
           </h2>
           <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
-            Subscribe to receive gentle reminders, healing stories, guided practices, and updates from WellMoon Veda. Join our community of women finding balance and clarity.
+            Subscribe to receive gentle reminders, healing stories, guided practices, and updates from WellMoon Veda.
+            Join our community of women finding balance and clarity.
           </p>
 
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -40,9 +45,18 @@ const Subscribe = () => {
                 className="bg-primary-foreground text-foreground placeholder:text-muted-foreground border-0 flex-grow"
               />
               <Button
+                variant="outline"
                 type="submit"
                 size="lg"
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 whitespace-nowrap"
+                className="bg-[hsl(35_50%_65%)] 
+            text-primary-foreground 
+            hover:bg-[#e0cbb6]/30 
+            hover:text-black 
+            shadow-soft
+            //scale transition
+            transition-all duration-300
+            //Scale on hover
+            hover: scale-105 whitespace-nowrap"
               >
                 Subscribe
               </Button>
