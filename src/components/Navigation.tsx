@@ -27,17 +27,12 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
-            <span className="text-2xl font-serif font-semibold text-foreground">
-              WellMoon Veda
-            </span>
+            <span className="text-white text-2xl font-serif font-semibold text-foreground">WellMoon Veda</span>
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <a
-              href="#home"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
+            <a href="#home" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Home
             </a>
 
@@ -56,9 +51,7 @@ const Navigation = () => {
                               href={path.href}
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
-                              <div className="text-sm font-medium leading-none">
-                                {path.name}
-                              </div>
+                              <div className="text-sm font-medium leading-none">{path.name}</div>
                             </a>
                           </NavigationMenuLink>
                         </li>
@@ -69,28 +62,16 @@ const Navigation = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <a
-              href="#pricing"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
+            <a href="#pricing" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Plans & Pricing
             </a>
-            <a
-              href="#about"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
+            <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               About
             </a>
-            <a
-              href="#blog"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
+            <a href="#blog" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Blog
             </a>
-            <a
-              href="#contact"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
+            <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Contact
             </a>
           </div>
