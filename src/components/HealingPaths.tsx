@@ -12,9 +12,9 @@ const HealingPaths = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+        // 🔑 KEY CHANGE: Update state based on entry.isIntersecting
+        // This will set isVisible to true when entering, and false when exiting.
+        setIsVisible(entry.isIntersecting);
       },
       { threshold: 0.2 },
     );
