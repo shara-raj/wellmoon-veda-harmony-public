@@ -32,7 +32,11 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="#home" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <a
+              href="#home"
+              className="text-sm font-medium text-foreground hover:text-white
+              transition-colors"
+            >
               Home
             </a>
 
