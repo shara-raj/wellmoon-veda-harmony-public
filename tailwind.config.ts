@@ -59,11 +59,17 @@ export default {
         ivory: "hsl(var(--ivory))",
         beige: "hsl(var(--beige))",
         taupe: "hsl(var(--taupe))",
+        "brand-tan-base": {
+          DEFAULT: "#e0cbb6", // The original #e0cbb6 color
+        },
+        "brand-tan-accent": {
+          DEFAULT: "hsl(35 50% 65%)", // The desired HSL hover color
+        },
       },
       fontFamily: {
-        serif: ['Fraunces', 'serif'],
-        sans: ['Inter', 'sans-serif'],
-        quicksand: ['Quicksand', 'Poppins', 'sans-serif'],
+        serif: ["Fraunces", "serif"],
+        sans: ["Inter", "sans-serif"],
+        quicksand: ["Quicksand", "Poppins", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -91,11 +97,11 @@ export default {
           from: { opacity: "0", transform: "scale(0.95)" },
           to: { opacity: "1", transform: "scale(1)" },
         },
-        "rotate": {
+        rotate: {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
         },
-        "breathe": {
+        breathe: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-12px)" },
         },
@@ -111,18 +117,18 @@ export default {
         "fade-in-subtle": "fade-in-subtle 0.4s ease-out",
         "scale-in": "scale-in 0.5s ease-out",
         "rotate-slow": "rotate 20s linear infinite",
-        "breathe": "breathe 4s ease-in-out infinite",
+        breathe: "breathe 4s ease-in-out infinite",
         "yoga-stretch": "yoga-stretch 3s ease-in-out infinite",
       },
       backgroundImage: {
-        'gradient-subtle': 'var(--gradient-subtle)',
-        'gradient-sage': 'var(--gradient-sage)',
-        'gradient-warm': 'var(--gradient-warm)',
+        "gradient-subtle": "var(--gradient-subtle)",
+        "gradient-sage": "var(--gradient-sage)",
+        "gradient-warm": "var(--gradient-warm)",
       },
       boxShadow: {
-        'soft': 'var(--shadow-soft)',
-        'medium': 'var(--shadow-medium)',
-        'glow': 'var(--shadow-glow)',
+        soft: "var(--shadow-soft)",
+        medium: "var(--shadow-medium)",
+        glow: "var(--shadow-glow)",
       },
     },
   },
