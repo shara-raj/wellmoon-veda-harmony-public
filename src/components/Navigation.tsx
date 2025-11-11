@@ -85,7 +85,11 @@ const Navigation = () => {
             <Button variant="ghost" size="sm" className="text-sm font-medium">
               Login
             </Button>
-            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button
+              size="sm"
+              className="w-full bg-brand-tan-base/30 text-gray-800 shadow-md transition-all duration-300 
+                             hover:bg-brand-tan-accent hover:text-white hover:shadow-lg hover:scale-105"
+            >
               Sign Up
             </Button>
           </div>
