@@ -73,15 +73,20 @@ const HealingPaths = () => {
           {paths.map((path, index) => (
             <div
               key={path.title}
-              // Tailwind classes for Staggered Fade-in/Slide-up Animation
+              // The new class for the default (non-hover) background is added here
               className={`
-                group bg-card p-8 shadow-soft hover:shadow-medium transition-all duration-300 text-center
-                hover:scale-105 hover:bg-[#e0cbb6]/30 rounded-[36px]
-                // Base classes for the transition
-                transition-all duration-700 ease-out 
-                // Initial state (hidden and slightly lowered)
-                ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} 
-              `}
+    group bg-card p-8 shadow-soft hover:shadow-medium transition-all duration-300 text-center
+    hover:scale-105 hover:bg-[#e0cbb6]/30 rounded-[36px]
+    
+    // 🎨 NEW BASE BACKGROUND COLOR (60% opacity)
+    bg-[#e0cbb6]/60
+    
+    // Base classes for the smooth transition
+    transition-all duration-1000 ease-out 
+    
+    // State change (translate-y-20 makes the movement very noticeable)
+    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"} 
+  `}
               // Inline style for staggered delay
               style={{
                 transitionDelay: isVisible ? `${index * 0.2}s` : "0s",
