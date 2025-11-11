@@ -1,10 +1,41 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 
 const Subscribe = () => {
   const [email, setEmail] = useState("");
+
+  // --- VISIBILITY LOGIC ---
+  const [isSectionVisible, setIsSectionVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Trigger visibility state when 50% of the element is visible
+        if (entry.isIntersecting) {
+          setIsSectionVisible(true);
+          // Stop observing after the first time it becomes visible
+          if (sectionRef.current) {
+            observer.unobserve(sectionRef.current);
+          }
+        }
+      },
+      { threshold: 0.5 },
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+  // --- END VISIBILITY LOGIC ---
 
   // --- TYPING ANIMATION LOGIC START ---
   const fullPlaceholder = "Enter your email for gentle reminders...";
@@ -13,7 +44,9 @@ const Subscribe = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    // Only run the animation if we haven't typed the full string yet
+    // 🔑 START CONDITION: Only run the typing effect if the section is visible
+    if (!isSectionVisible) return;
+
     if (currentIndex < fullPlaceholder.length) {
       const timeoutId = setTimeout(() => {
         // Build the string character by character
@@ -23,27 +56,28 @@ const Subscribe = () => {
 
       return () => clearTimeout(timeoutId);
     }
-
-    // Optional: Add logic here if you want the placeholder animation to loop or delete itself.
-  }, [currentIndex, fullPlaceholder, typingSpeed]);
-
+  }, [currentIndex, fullPlaceholder, typingSpeed, isSectionVisible]); // isSectionVisible is crucial dependency
   // --- TYPING ANIMATION LOGIC END ---
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      toast.success("Thank you for subscribing to WellMoon Veda!");
+      // Use the actual email value for submission logic
+      toast.success(`Thank you for subscribing with ${email}!`);
       setEmail("");
 
-      // Reset the typing animation when the user successfully submits
+      // Reset the typing animation when the user successfully submits (optional but nice UX)
       setCurrentIndex(0);
       setDisplayedPlaceholder("");
+      setIsSectionVisible(true); // Keep visible state true to allow immediate re-typing if user clears the form
     }
   };
 
   return (
     <section
       id="subscribe"
+      // 🔑 Attach the ref here
+      ref={sectionRef}
       className="py-20 lg:py-32 bg-gradient-sage relative overflow-hidden"
       style={{ backgroundImage: "url(/images/pattern.png)", backgroundRepeat: "repeat" }}
     >
@@ -69,7 +103,7 @@ const Subscribe = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="bg-white-foreground text-foreground placeholder:text-muted-foreground border-0 flex-grow"
+                className="bg-white text-foreground placeholder:text-muted-foreground border-0 flex-grow"
               />
               <Button
                 variant="outline"
@@ -80,10 +114,8 @@ const Subscribe = () => {
             hover:bg-[#e0cbb6]/30 
             hover:text-black 
             shadow-soft
-            //scale transition
             transition-all duration-300
-            //Scale on hover
-            hover: scale-105 whitespace-nowrap"
+            hover:scale-105 whitespace-nowrap"
               >
                 Subscribe
               </Button>
