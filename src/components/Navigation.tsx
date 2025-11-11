@@ -27,7 +27,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
-            <span className="text-2xl font-serif font-semibold text-foreground">WellMoon Veda</span>
+            <span className="text-2xl text-white font-serif font-semibold text-foreground">WellMoon Veda</span>
           </a>
 
           {/* Desktop Navigation */}
