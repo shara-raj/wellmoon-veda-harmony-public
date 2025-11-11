@@ -90,7 +90,12 @@ const Navigation = () => {
             >
               Login
             </Button>
-            <Button variant="outline" size="sm" className="text-sm font-medium">
+            <Button
+              variant="outline"
+              size="sm"
+              className="bg-[hsl(35_50%_65%)] 
+            text-primary-foreground text-sm font-medium"
+            >
               Sign Up
             </Button>
           </div>
