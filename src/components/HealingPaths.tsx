@@ -121,7 +121,7 @@ const HealingPaths = () => {
             size="lg"
             variant="outline"
             className="border-2
-            //New hover color
+            //New hover bg color and text color
             hover:bg-[hsl(35_50%_65%)]
             hover:text-white"
             onClick={() => document.getElementById("subscribe")?.scrollIntoView({ behavior: "smooth" })}
