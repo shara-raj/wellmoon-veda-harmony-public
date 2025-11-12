@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Star } from "lucide-react";
-import { Button } from "@/components/ui/button"; // Assuming Button is available
+import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
@@ -57,6 +57,7 @@ const getCardsPerView = () => {
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(getCardsPerView());
+  const [isHovering, setIsHovering] = useState(false); // New state to pause on hover
 
   // Handle window resize for responsiveness
   useEffect(() => {
@@ -68,21 +69,26 @@ const Testimonials = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Calculate the total number of items to show in the carousel (allowing for wrap-around)
   const totalSlides = testimonials.length;
-  // Calculate the index limit based on cards shown per view
-  const maxIndex = Math.ceil(totalSlides / cardsPerView) * cardsPerView;
 
   // Auto-advance logic (runs every 5 seconds)
   useEffect(() => {
+    // Only run the timer if not hovering
+    if (isHovering) return;
+
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => {
-        // Move to the next set of cards
+        const lastValidStartIndex = totalSlides - cardsPerView;
+
         let nextIndex = prevIndex + cardsPerView;
 
-        // If we reach the end, loop back to the start (0)
-        if (nextIndex >= totalSlides) {
-          nextIndex = 0;
+        // Logic to ensure continuous loop that hits the last visible card set
+        if (prevIndex === lastValidStartIndex) {
+          return 0; // Loop back to start
+        }
+
+        if (nextIndex > lastValidStartIndex) {
+          return lastValidStartIndex; // Stop exactly at the last full view
         }
 
         return nextIndex;
@@ -91,7 +97,7 @@ const Testimonials = () => {
 
     // Cleanup the interval on component unmount
     return () => clearInterval(timer);
-  }, [cardsPerView, totalSlides]); // Dependency on cardsPerView ensures restart on resize
+  }, [cardsPerView, totalSlides, isHovering]);
 
   // Function to render rating stars
   const renderStars = (rating) => {
@@ -101,6 +107,19 @@ const Testimonials = () => {
         <Star key={i} className={`w-5 h-5 ${i < rating ? "text-gold-light fill-gold-light" : "text-gray-300"}`} />
       ));
   };
+
+  // Calculate the percentage width of a single item relative to the visible area
+  // We divide 100% by the number of cards visible at once to get the translation step
+  const itemPercentageWidth = 100 / cardsPerView;
+
+  // Calculate the number of dots needed
+  const numDots =
+    totalSlides > cardsPerView
+      ? Math.floor(totalSlides / cardsPerView) + (totalSlides % cardsPerView !== 0 ? 1 : 0)
+      : 1;
+
+  // Calculate the current active dot index for navigation control
+  const currentActiveDotIndex = Math.floor(currentIndex / cardsPerView);
 
   return (
     <section id="testimonials" className="py-20 lg:py-32 bg-background">
@@ -115,20 +134,30 @@ const Testimonials = () => {
         </div>
 
         {/* Slider Container */}
-        <div className="relative overflow-hidden max-w-7xl mx-auto">
+        <div
+          className="relative overflow-hidden max-w-7xl mx-auto"
+          // Pause animation on hover
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+        >
           {/* Slider Track */}
           <div
-            className="flex transition-transform duration-700 ease-in-out"
+            className="flex transition-transform duration-700 ease-in-out gap-8 px-4"
             style={{
-              // Translate by percentage based on current index and total items
-              transform: `translateX(-${(currentIndex / totalSlides) * 100}%)`,
+              // Translate by the current index multiplied by the step width
+              transform: `translateX(-${currentIndex * itemPercentageWidth}%)`,
             }}
           >
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
                 // Responsive width for card display (1, 2, or 3 cards visible)
-                className="w-full flex-shrink-0 md:w-1/2 xl:w-1/3 p-4"
+                // Added flex-shrink-0 to prevent shrinking and forced layout
+                className="w-full flex-shrink-0 md:w-1/2 xl:w-1/3"
+                style={{
+                  // Apply explicit width to card element to ensure calculation is pixel perfect
+                  minWidth: `${itemPercentageWidth}%`,
+                }}
               >
                 {/* Testimonial Card */}
                 <div className="bg-card p-6 h-full rounded-xl shadow-medium flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300">
@@ -145,22 +174,35 @@ const Testimonials = () => {
             ))}
           </div>
 
-          {/* Navigation Dots (Optional: for manual control/visual cue) */}
+          {/* Navigation Dots (for manual control/visual cue) */}
           <div className="flex justify-center mt-8 space-x-2">
-            {Array(Math.ceil(totalSlides / cardsPerView))
+            {Array(numDots)
               .fill(0)
-              .map((_, i) => (
-                <button
-                  key={i}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    currentIndex === i * cardsPerView
-                      ? "w-8 bg-primary"
-                      : "w-2 bg-muted-foreground/50 hover:bg-muted-foreground"
-                  }`}
-                  onClick={() => setCurrentIndex(i * cardsPerView)}
-                  aria-label={`Go to slide ${i + 1}`}
-                />
-              ))}
+              .map((_, i) => {
+                // Calculate the index for the dot to navigate to
+                let targetIndex = i * cardsPerView;
+
+                // Ensure the last dot points to the last valid starting index
+                const lastValidStartIndex = totalSlides - cardsPerView;
+                if (targetIndex > lastValidStartIndex) {
+                  targetIndex = lastValidStartIndex;
+                }
+
+                // Determine if this dot represents the currently viewed slide group
+                // Check if the current index is within the range of the slide group represented by dot i
+                const isActive = currentIndex >= targetIndex && currentIndex < targetIndex + cardsPerView;
+
+                return (
+                  <button
+                    key={i}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      isActive ? "w-8 bg-primary" : "w-2 bg-muted-foreground/50 hover:bg-muted-foreground"
+                    }`}
+                    onClick={() => setCurrentIndex(targetIndex)}
+                    aria-label={`Go to slide ${i + 1}`}
+                  />
+                );
+              })}
           </div>
         </div>
       </div>
