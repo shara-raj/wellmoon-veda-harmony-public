@@ -21,7 +21,7 @@ const Hero = () => {
       if (window.innerWidth >= 1024 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         const scrollY = window.scrollY;
         // Rotate clockwise as user scrolls down
-        setRotation(scrollY * 0.2);
+        setRotation(scrollY * 0.1);
       }
     };
 
