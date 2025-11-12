@@ -93,7 +93,7 @@ const Testimonials = () => {
 
         return nextIndex;
       });
-    }, 5000); // 5 seconds interval
+    }, 3000); // 5 seconds interval
 
     // Cleanup the interval on component unmount
     return () => clearInterval(timer);
