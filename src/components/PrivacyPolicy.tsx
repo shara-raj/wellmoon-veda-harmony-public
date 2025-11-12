@@ -1,6 +1,11 @@
+import Navigation from "./Navigation";
+import Footer from "./Footer";
+
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 lg:px-8 py-16">
         <h1 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-8">
           Privacy Policy
@@ -68,7 +73,9 @@ const PrivacyPolicy = () => {
           </p>
         </div>
       </div>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 
