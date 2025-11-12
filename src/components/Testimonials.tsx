@@ -49,7 +49,7 @@ const testimonials = [
 
 // Helper to calculate the number of cards visible based on screen size
 const getCardsPerView = () => {
-  if (window.innerWidth >= 1280) return 3; // xl screens
+  if (window.innerWidth >= 1280) return 2; // xl screens
   if (window.innerWidth >= 768) return 2; // md screens and up
   return 1; // mobile/sm screens
 };
