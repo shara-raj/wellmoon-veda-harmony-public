@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -109,19 +110,19 @@ const Footer = () => {
             <h4 className="font-semibold text-foreground mb-4">Legal</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/terms-and-conditions" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Terms and Conditions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/return-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Return Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
