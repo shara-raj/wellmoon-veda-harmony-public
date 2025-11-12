@@ -9,9 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-serif font-semibold text-foreground">
-              WellMoon Veda
-            </h3>
+            <h3 className="text-2xl font-serif font-semibold text-foreground">WellMoon Veda</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Blending ancient Vedic wisdom with modern science for women's holistic wellness.
             </p>
@@ -112,17 +110,17 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a href="#privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Terms and Conditions
+                </a>
+              </li>
+              <li>
+                <a href="#terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Privacy Policy
                 </a>
               </li>
               <li>
                 <a href="#terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#cookies" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Cookie Policy
+                  Return Policy
                 </a>
               </li>
             </ul>
