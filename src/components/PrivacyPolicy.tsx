@@ -7,7 +7,9 @@ const PrivacyPolicy = () => {
       <Navigation />
       <div className="min-h-screen bg-background pt-20">
         <div className="container mx-auto px-4 lg:px-8 py-16">
-          <h1 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-12">Privacy Policy</h1>
+          <h1 className="text-4xl md:text-5xl font-serif font-semibold text-foreground text-center mb-12">
+            Privacy Policy
+          </h1>
 
           <div className="prose prose-lg max-w-none space-y-8 text-muted-foreground">
             <section>
