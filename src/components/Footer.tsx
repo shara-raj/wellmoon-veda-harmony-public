@@ -5,14 +5,17 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t border-border pt-16 pb-8">
+    <footer className="bg-[#B0967E]/50 border-t border-border pt-16 pb-8">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-serif font-semibold text-foreground">WellMoon Veda</h3>
+            <h3 className="text-2xl font-serif font-semibold text-foreground">
+              WellMoon Veda
+            </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Blending ancient Vedic wisdom with modern science for women's holistic wellness.
+              Blending ancient Vedic wisdom with modern science for women's
+              holistic wellness.
             </p>
             <div className="flex gap-4">
               <a
@@ -48,30 +51,47 @@ const Footer = () => {
 
           {/* Healing Paths */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Healing Paths</h4>
+            <h4 className="font-semibold text-foreground mb-4">
+              Healing Paths
+            </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#yoga" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/wellness-yoga"
+                  className="text-sm text-muted-foreground hover:text-black transition-colors"
+                >
                   Wellness Yoga
                 </a>
               </li>
               <li>
-                <a href="#mudra" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/mudra-healing"
+                  className="text-sm text-muted-foreground hover:text-black transition-colors"
+                >
                   Mudra Healing
                 </a>
               </li>
               <li>
-                <a href="#aura" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/aura-healing"
+                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                >
                   Aura Healing
                 </a>
               </li>
               <li>
-                <a href="#nature" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/virtual-nature-healing"
+                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                >
                   Virtual Nature Healing
                 </a>
               </li>
               <li>
-                <a href="#sound" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/sound-healing"
+                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                >
                   Sound Healing
                 </a>
               </li>
@@ -83,22 +103,34 @@ const Footer = () => {
             <h4 className="font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/about"
+                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                >
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/blog"
+                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                >
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/plan-and-pricing"
+                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                >
                   Plans & Pricing
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/contact"
+                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                >
                   Contact
                 </a>
               </li>
@@ -110,17 +142,26 @@ const Footer = () => {
             <h4 className="font-semibold text-foreground mb-4">Legal</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/terms-and-conditions" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  to="/terms-and-conditions"
+                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                >
                   Terms and Conditions
                 </Link>
               </li>
               <li>
-                <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  to="/privacy-policy"
+                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/return-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  to="/return-policy"
+                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                >
                   Return Policy
                 </Link>
               </li>
