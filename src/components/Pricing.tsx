@@ -18,7 +18,7 @@ const Pricing = () => {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.2 },
+      { threshold: 0.2 }
     );
 
     if (sectionRef.current) {
@@ -85,13 +85,20 @@ const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="py-20 lg:py-32 bg-gradient-subtle"
-      style={{ backgroundImage: "url(/images/pattern.png)", backgroundRepeat: "repeat" }}
+      className="py-22 lg:py-32 bg-gradient-subtle"
+      style={{
+        backgroundImage: "url(/images/pattern.png)",
+        backgroundRepeat: "repeat",
+      }}
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">Choose Your Path</h2>
-          <p className="text-lg text-muted-foreground">Select the plan that aligns with your wellness journey</p>
+          <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
+            Choose Your Path
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Select the plan that aligns with your wellness journey
+          </p>
         </div>
 
         {/* Outer wrapper for positioning the scroll arrow */}
@@ -107,14 +114,18 @@ const Pricing = () => {
                 key={plan.name}
                 // Mobile specific width, snapping, and flex-shrink
                 className={`
-                  bg-card rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col text-center hover:scale-105 
+                  bg-card rounded-2xl p-6 md:p-6 shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col text-center hover:scale-105 
                   ${plan.featured ? "ring-2 ring-primary scale-105" : ""}
                   
                   w-[85vw] flex-shrink-0 snap-start md:w-auto md:flex-shrink-0 md:flex-grow
                   
                   // Desktop Staggered Slide Animation Classes
                   transition-all duration-1000 ease-out 
-                  ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"} 
+                  ${
+                    isVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-20"
+                  } 
                 `}
                 // Staggered delay for each card
                 style={{
@@ -127,16 +138,25 @@ const Pricing = () => {
                     Most Popular
                   </div>
                 )}
-                <h3 className="text-2xl font-serif font-semibold text-foreground mb-2">{plan.name}</h3>
+                <h3 className="text-2xl font-serif font-semibold text-foreground mb-2">
+                  {plan.name}
+                </h3>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-foreground">{plan.price}</span>
-                  <span className="text-muted-foreground ml-2">{plan.period}</span>
+                  <span className="text-4xl font-bold text-foreground">
+                    {plan.price}
+                  </span>
+                  <span className="text-muted-foreground ml-2">
+                    {plan.period}
+                  </span>
                 </div>
                 <p className="text-muted-foreground mb-6">{plan.description}</p>
 
                 <ul className="space-y-3 mb-8 flex-grow">
                   {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-center justify-center gap-3">
+                    <li
+                      key={i}
+                      className="flex items-center justify-center gap-3"
+                    >
                       <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-foreground">{feature}</span>
                     </li>
@@ -146,7 +166,7 @@ const Pricing = () => {
                 <Button
                   className={`w-full ${
                     plan.featured
-                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                      ? "bg-[#d4af37]/70 text-primary-foreground hover:bg-[#d4af37]/40"
                       : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
                   }`}
                   size="lg"
@@ -166,12 +186,16 @@ const Pricing = () => {
             <div className="text-primary-foreground/80 bg-primary/80 rounded-full p-2 animate-pulse shadow-lg">
               <ChevronRight className="w-6 h-6" />
             </div>
-            <span className="text-sm text-primary-foreground/80 absolute -right-6">Scroll</span>
+            <span className="text-sm text-primary-foreground/80 absolute -right-6">
+              Scroll
+            </span>
           </div>
         </div>
 
         <div className="text-center">
-          <p className="text-sm text-muted-foreground">All plans include a 14-day money-back guarantee</p>
+          <p className="text-sm text-muted-foreground">
+            All plans include a 14-day money-back guarantee
+          </p>
         </div>
       </div>
     </section>

@@ -6,7 +6,15 @@ const Contact = () => {
   return (
     <>
       <SecondaryNavigation />
-      <div> Aura Healing </div>
+      <div
+        className=""
+        style={{
+          backgroundImage: "url(/images/pattern.png)",
+          backgroundRepeat: "repeat",
+        }}
+      >
+        Contact
+      </div>
       <Footer />
     </>
   );

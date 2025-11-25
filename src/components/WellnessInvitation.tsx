@@ -4,7 +4,10 @@ const WellnessInvitation = () => {
   return (
     <section
       className="py-20 lg:py-32 bg-gradient-warm relative overflow-hidden"
-      style={{ backgroundImage: "url(/images/pattern.png)", backgroundRepeat: "repeat" }}
+      style={{
+        backgroundImage: "url(/images/pattern.png)",
+        backgroundRepeat: "repeat",
+      }}
     >
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-sage/10 rounded-full blur-3xl"></div>
@@ -24,7 +27,8 @@ const WellnessInvitation = () => {
           </div>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Receive weekly wellness notes, guided practices, and ancient wisdom delivered to your inbox.
+            Receive weekly wellness notes, guided practices, and ancient wisdom
+            delivered to your inbox.
           </p>
 
           <Button
@@ -35,11 +39,14 @@ const WellnessInvitation = () => {
             hover:bg-[#e0cbb6]/30 
             hover:text-black 
             shadow-soft
-            //scale transition
             transition-all duration-300
             //Scale on hover
             hover: scale-105"
-            onClick={() => document.getElementById("subscribe")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() =>
+              document
+                .getElementById("subscribe")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Subscribe for Weekly Wellness Notes
           </Button>

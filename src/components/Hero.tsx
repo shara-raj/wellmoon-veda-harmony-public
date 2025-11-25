@@ -50,12 +50,12 @@ const Hero = () => {
         </video>
 
         {/* Overlay - #B0967E at 20% transparency (80% opacity) */}
-        <div className="absolute inset-0 bg-[#B0967E]/80"></div>
+        <div className="absolute inset-0 bg-[#e0cbb6]/90"></div>
       </div>
 
       <section
         id="home"
-        className="relative min-h-screen pb-16 lg:pb-24 overflow-hidden z-10"
+        className="relative min-h-screen pb-16 lg:pb-24 overflow-hidden z-10 pt-32"
       >
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -148,7 +148,7 @@ const Hero = () => {
             {/* Right Column - Collage & Badge (Desktop Only) */}
             <div className="hidden lg:block relative">
               <div
-                className="relative w-full max-w-[500px] h-[600px] mx-auto animate-fade-in animate-breathe"
+                className="relative w-full max-w-[500px] h-[600px] mx-auto animate-fade-in"
                 style={{ animationDelay: "0.2s" }}
               >
                 {/* Photo 1 - Meditation (Top Left) */}

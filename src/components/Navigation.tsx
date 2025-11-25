@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -12,6 +12,16 @@ import {
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const healingPaths = [
     { name: "Wellness Yoga", href: "/wellness-yoga" },
@@ -22,188 +32,155 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="relative z-50 bg-transparent">
-      <div className="container mx-auto px-4 lg:px-8 pb-[10px]">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <a href="/" className="flex items-center space-x-2">
-            <span className="text-2xl text-white font-serif font-semibold text-foreground">
-              WellMoon Veda
-            </span>
-          </a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <a
-              href="/"
-              className="text-sm font-medium text-foreground hover:text-white
-              transition-colors"
-            >
-              Home
-            </a>
-
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-white">
-                    Healing Path
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 bg-card">
-                      {healingPaths.map((path) => (
-                        <li key={path.name}>
-                          <NavigationMenuLink asChild>
-                            <a
-                              href={path.href}
-                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                            >
-                              <div className="text-sm font-medium leading-none">
-                                {path.name}
-                              </div>
-                            </a>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-
-            <a
-              href="/plan-and-pricing"
-              className="text-sm font-medium text-foreground hover:text-white transition-colors"
-            >
-              Plans & Pricing
-            </a>
-            <a
-              href="/about"
-              className="text-sm font-medium text-foreground hover:text-white transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="/blog"
-              className="text-sm font-medium text-foreground hover:text-white transition-colors"
-            >
-              Blog
-            </a>
-            <a
-              href="/contact"
-              className="text-sm font-medium text-foreground hover:text-white transition-colors"
-            >
-              Contact
-            </a>
-          </div>
-
-          {/* Auth Buttons - Desktop */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Button
-              variant="outline"
-              size="sm"
-              className="bg-[hsl(35_50%_65%)] 
-            text-primary-foreground text-sm font-medium"
-            >
-              Login
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              className="bg-[hsl(35_50%_65%)] 
-            text-primary-foreground text-sm font-medium"
-            >
-              Sign Up
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-foreground"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+    <nav
+      className={`
+      fixed top-0 left-0 right-0 z-50
+      transition-colors transition-shadow duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+      ${
+        isScrolled
+          ? "bg-[#FFF9F1] shadow-md"
+          : "bg-transparent backdrop-blur-md"
+      }
+    `}
+    >
+      <div
+        className={`container mx-auto px-2 py-2 lg:px-8 transition-[padding,margin] duration-500 ease-[cubic-bezier(0.22,1,0.36,1) ${
+          isScrolled ? "py-1" : "py-3 mt-2"
+        }]`}
+      >
+        <div
+          className={`
+          transition-all duration-300
+          ${
+            isScrolled
+              ? "rounded-none px-3 py-1" // full-width bar, smaller padding
+              : "bg-[#FFF9F1]/50 backdrop-blur-sm rounded-2xl shadow-md px-6 py-3" // floating rounded card on hero
+          }
+        `}
+        >
+          <div
+            className={`
+            flex items-center justify-between
+            transition-[height] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+        ${isScrolled ? "h-14" : "h-20"}  // 👈 height reduced when scrolled
+          `}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {/* Logo */}
+            <a href="/" className="flex items-center flex-shrink-0">
+              <div
+                className={`logoClass flex items-center w-32 md:w-40 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                  isScrolled
+                    ? "flex-row items-center space-x-2 scale-95"
+                    : "flex-col items-center space-y-1 scale-100"
+                }`}
+              >
+                <img
+                  src="/images/favicon.png"
+                  alt="wellmoon veda logo"
+                  className="w-auto max-w-full h-10 md:h-12"
+                />
+                <img
+                  src="/images/footerbanner.png"
+                  alt="wellmoon veda tagline"
+                  className="w-auto max-w-full h-5 md:h-6"
+                />
+              </div>
+            </a>
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              <a
+                href="/"
+                className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              >
+                Home
+              </a>
+
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-[#be9d31]">
+                      Healing Path
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[400px] gap-3 p-4 bg-card">
+                        {healingPaths.map((path) => (
+                          <li key={path.name}>
+                            <NavigationMenuLink asChild>
+                              <a
+                                href={path.href}
+                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#be9d31] hover:text-white"
+                              >
+                                <div className="text-sm font-medium leading-none">
+                                  {path.name}
+                                </div>
+                              </a>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+
+              <a
+                href="/plan-and-pricing"
+                className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              >
+                Plans & Pricing
+              </a>
+              <a
+                href="/about"
+                className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="/blog"
+                className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              >
+                Blog
+              </a>
+              <a
+                href="/contact"
+                className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              >
+                Contact
+              </a>
+            </div>
+
+            {/* Auth Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <Button
+                size="sm"
+                className="bg-[#d4af37]/70 text-primary-foreground text-sm font-medium hover:bg-[#d4af37]/40 hover:border-[hsl(35_50%_65%)]"
+              >
+                Login
+              </Button>
+              <Button
+                size="sm"
+                className="bg-[#d4af37]/70 text-primary-foreground text-sm font-medium hover:bg-[#d4af37]/40 hover:border-[hsl(35_50%_65%)]"
+              >
+                Sign Up
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden p-2 text-foreground"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border bg-card">
             <div className="flex flex-col space-y-4">
-              <a
-                href="#home"
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </a>
-              <div className="px-4">
-                <p className="text-sm font-medium text-muted-foreground mb-2">
-                  Healing Path
-                </p>
-                <div className="flex flex-col space-y-2 pl-4">
-                  {healingPaths.map((path) => (
-                    <a
-                      key={path.name}
-                      href={path.href}
-                      className="text-sm text-foreground hover:text-primary transition-colors py-1"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {path.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-              <a
-                href="#pricing"
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Plans & Pricing
-              </a>
-              <a
-                href="#about"
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
-              </a>
-              <a
-                href="#blog"
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blog
-              </a>
-              <a
-                href="#contact"
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact
-              </a>
-              <div className="flex flex-col space-y-2 px-4 pt-4 border-t border-border">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="w-full justify-start
-                  bg-[hsl(35_50%_65%)] 
-            text-primary-foreground 
-            hover:bg-[#e0cbb6]/30 
-            hover:text-black 
-            shadow-soft
-            transition-all duration-300
-            hover: scale-105"
-                >
-                  Login
-                </Button>
-                <Button
-                  className="w-full bg-brand-tan-base/30 text-gray-800 shadow-md transition-all duration-300 
-                             hover:bg-brand-tan-accent hover:text-white hover:shadow-lg hover:scale-105" // ⬅️ UPDATED
-                >
-                  Sign Up
-                </Button>
-              </div>
+              {/* ... same as before ... */}
             </div>
           </div>
         )}

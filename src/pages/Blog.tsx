@@ -6,7 +6,16 @@ const Blog = () => {
   return (
     <>
       <SecondaryNavigation />
-      <div> Aura Healing </div>
+      <div
+        className=""
+        style={{
+          backgroundImage: "url(/images/pattern.png)",
+          backgroundRepeat: "repeat",
+        }}
+      >
+        {" "}
+        Blog{" "}
+      </div>
       <Footer />
     </>
   );

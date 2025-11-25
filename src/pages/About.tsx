@@ -13,7 +13,6 @@ const About = () => {
           backgroundRepeat: "repeat",
         }}
       >
-        {" "}
         About
       </div>
       <Footer />

@@ -6,7 +6,16 @@ const VirtualNatureHealing = () => {
   return (
     <>
       <SecondaryNavigation />
-      <div> Aura Healing </div>
+      <div
+        className=""
+        style={{
+          backgroundImage: "url(/images/pattern.png)",
+          backgroundRepeat: "repeat",
+        }}
+      >
+        {" "}
+        Aura Healing{" "}
+      </div>
       <Footer />
     </>
   );
