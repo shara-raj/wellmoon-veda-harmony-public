@@ -39,7 +39,7 @@ const Navigation = () => {
     <nav
       className={`
       fixed top-0 left-0 right-0 z-50
-      transition-colors transition-shadow duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+      transition-[colors,shadow] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
       ${
         isScrolled
           ? "bg-[#FFF9F1] shadow-md"

@@ -114,7 +114,6 @@ const Testimonials = () => {
             text-primary-foreground 
             hover:text-black 
             shadow-soft
-            //scale transition
             transition-all duration-300
             //Scale on hover
             hover: scale-105"
