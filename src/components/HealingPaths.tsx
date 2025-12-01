@@ -151,9 +151,8 @@ const HealingPaths = () => {
           <Button
             size="lg"
             variant="outline"
-            className="bg-[hsl(35_50%_65%)] 
-            text-primary-foreground 
-            hover:bg-[#e0cbb6]/30 
+            className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 
+            text-primary-foreground
             hover:text-black 
             shadow-soft
             transition-all duration-300

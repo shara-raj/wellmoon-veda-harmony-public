@@ -79,9 +79,9 @@ const Hero = () => {
               {/* Video Pill */}
               <Dialog>
                 <DialogTrigger asChild>
-                  <button className="group flex items-center space-x-3 bg-card hover:bg-secondary transition-all duration-300 rounded-full pl-2 pr-6 py-2 shadow-soft hover:shadow-medium">
-                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary/90 transition-colors">
-                      <Play className="w-5 h-5 text-primary-foreground fill-current" />
+                  <button className="group flex items-center space-x-3 bg-[#d4af37]/70 hover:bg-white transition-all duration-300 rounded-full pl-2 pr-6 py-2 shadow-soft hover:shadow-medium">
+                    <div className="w-12 h-12 rounded-full bg-white group-hover:bg-[#d4af37]/70 flex items-center justify-center transition-colors">
+                      <Play className="w-5 h-5 text-primary-foreground " />
                     </div>
                     <span className="text-sm font-medium text-foreground">
                       Watch Welcome Video
@@ -102,7 +102,7 @@ const Hero = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="bg-[hsl(35_50%_65%)] 
+                  className="bg-[#d4af37]/70 hover:bg-white 
             text-primary-foreground text-sm font-medium shadow-soft"
                   onClick={() =>
                     document

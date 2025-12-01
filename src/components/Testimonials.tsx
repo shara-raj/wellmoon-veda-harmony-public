@@ -1,6 +1,12 @@
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Testimonials = () => {
   const testimonials = [
@@ -41,13 +47,19 @@ const Testimonials = () => {
   return (
     <section
       className="py-20 lg:py-32 bg-background"
-      style={{ backgroundImage: "url(/images/pattern.png)", backgroundRepeat: "repeat" }}
+      style={{
+        backgroundImage: "url(/images/pattern.png)",
+        backgroundRepeat: "repeat",
+      }}
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">Voices of Healing</h2>
+          <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
+            Voices of Healing
+          </h2>
           <p className="text-lg text-muted-foreground">
-            Hear from women who have found balance and clarity through our practices.
+            Hear from women who have found balance and clarity through our
+            practices.
           </p>
         </div>
 
@@ -59,15 +71,28 @@ const Testimonials = () => {
                   <div className="bg-card rounded-2xl p-8 shadow-soft h-full flex flex-col">
                     <div className="flex gap-1 mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                        <Star
+                          key={i}
+                          className="w-5 h-5 fill-accent text-accent"
+                        />
                       ))}
                     </div>
-                    <p className="text-foreground leading-relaxed mb-6 flex-grow">"{testimonial.content}"</p>
+                    <p className="text-foreground leading-relaxed mb-6 flex-grow">
+                      "{testimonial.content}"
+                    </p>
                     <div className="flex items-center gap-4">
-                      <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full" />
+                      <img
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        className="w-12 h-12 rounded-full"
+                      />
                       <div>
-                        <p className="font-semibold text-foreground">{testimonial.name}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        <p className="font-semibold text-foreground">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          {testimonial.role}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -85,16 +110,19 @@ const Testimonials = () => {
           </p>
           <Button
             variant="outline"
-            className="border-2 bg-[hsl(35_50%_65%)] 
+            className="border-2 bg-[#d4af37]/70 hover:bg-[#d4af37]/40 
             text-primary-foreground 
-            hover:bg-[#e0cbb6]/30 
             hover:text-black 
             shadow-soft
             //scale transition
             transition-all duration-300
             //Scale on hover
             hover: scale-105"
-            onClick={() => document.getElementById("subscribe")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() =>
+              document
+                .getElementById("subscribe")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Subscribe Now
           </Button>

@@ -22,7 +22,7 @@ const Subscribe = () => {
           }
         }
       },
-      { threshold: 0.5 },
+      { threshold: 0.5 }
     );
 
     if (sectionRef.current) {
@@ -79,7 +79,10 @@ const Subscribe = () => {
       // 🔑 Attach the ref here
       ref={sectionRef}
       className="py-20 lg:py-32 bg-gradient-sage relative overflow-hidden"
-      style={{ backgroundImage: "url(/images/pattern.png)", backgroundRepeat: "repeat" }}
+      style={{
+        backgroundImage: "url(/images/pattern.png)",
+        backgroundRepeat: "repeat",
+      }}
     >
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary-foreground/10 rounded-full blur-3xl"></div>
@@ -91,8 +94,9 @@ const Subscribe = () => {
             Begin Your Healing Journey
           </h2>
           <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
-            Subscribe to receive gentle reminders, healing stories, guided practices, and updates from WellMoon Veda.
-            Join our community of women finding balance and clarity.
+            Subscribe to receive gentle reminders, healing stories, guided
+            practices, and updates from WellMoon Veda. Join our community of
+            women finding balance and clarity.
           </p>
 
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -109,9 +113,8 @@ const Subscribe = () => {
                 variant="outline"
                 type="submit"
                 size="lg"
-                className="bg-[hsl(35_50%_65%)] 
+                className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 
             text-primary-foreground 
-            hover:bg-[#e0cbb6]/30 
             hover:text-black 
             shadow-soft
             transition-all duration-300
@@ -121,7 +124,8 @@ const Subscribe = () => {
               </Button>
             </div>
             <p className="text-xs text-primary-foreground/70 mt-4">
-              By subscribing, you agree to receive emails from WellMoon Veda. Unsubscribe anytime.
+              By subscribing, you agree to receive emails from WellMoon Veda.
+              Unsubscribe anytime.
             </p>
           </form>
         </div>
