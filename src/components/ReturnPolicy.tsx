@@ -32,52 +32,65 @@ const ReturnPolicy = () => {
           </h1>
 
           <div className="prose prose-lg max-w-none space-y-10 text-muted-foreground">
+            {/* Refund Policy */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
                 REFUND POLICY
               </h2>
+
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
                 Any participant who pays the package amount for any program
-                offered by **WellMoon Veda** and wants to withdraw/ask for a
-                refund before the program commences is eligible for a refund.
+                offered by <strong>WellMoon Veda</strong> and wishes to withdraw
+                or request a refund{" "}
+                <strong>before the program commences</strong> is eligible for a
+                refund.
               </p>
+
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                After the commencement of the program, **No refund of the fee
-                will be made under any circumstances whatsoever.**
+                After the commencement of the program,{" "}
+                <strong>
+                  no refund of the fee will be made under any circumstances
+                  whatsoever.
+                </strong>
               </p>
+
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                The package amount once paid is **non-refundable and
-                non-transferable** irrespective of the mode of payment unless a
-                request for cancellation of the application/refund is made by
-                the participant in writing before program commencement.
+                The package amount once paid is{" "}
+                <strong>non-refundable and non-transferable</strong>{" "}
+                irrespective of the mode of payment, unless a written request
+                for cancellation of the application or refund is made by the
+                participant <strong>before program commencement</strong>.
               </p>
             </section>
 
+            {/* Returns Policy */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
                 Returns Policy
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                Given the nature of our digital and service-based wellness
-                offerings (e.g., live sessions, courses, retreats), there are
-                generally no "returns" of physical goods. Returns are addressed
-                strictly under the Refund Policy section above.
+                As our offerings primarily consist of wellness services, live
+                programs, and digital content (such as courses, sessions, and
+                retreats), there are no returns of physical goods. All requests
+                related to changes, cancellations, or refunds are governed
+                strictly by the Refund Policy stated above.
               </p>
             </section>
 
+            {/* Contact */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
-                Contact for Requests
+                Contact for Refunds and Queries
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                Please send all questions, comments, and feedback regarding this
-                policy to us at: **info@wellmoonveda.com**
+                Please send all questions, comments, refund requests, and
+                feedback to us at: <strong>info@wellmoonveda.com</strong>
               </p>
             </section>
 
             <p className="text-sm mt-8 font-['Quicksand',_'Poppins',_sans-serif] text-foreground/70">
-              *This Refund and Returns Policy is effective as of **
-              {effectiveDate}**.*
+              *This Refund and Returns Policy is effective as of{" "}
+              <strong>{effectiveDate}</strong>.*
             </p>
           </div>
         </div>

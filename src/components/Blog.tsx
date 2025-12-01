@@ -1,43 +1,140 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import pranayamaImage from "@/assets/blog-pranayama.jpg";
 import soundHealingImage from "@/assets/blog-sound-healing.jpg";
 import auraImage from "@/assets/blog-aura.jpg";
 
 const Blog = () => {
+  const guidesScrollRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollGuides = (direction: "left" | "right") => {
+    if (!guidesScrollRef.current) return;
+    const container = guidesScrollRef.current;
+    const scrollAmount = container.clientWidth; // scroll by one "page" (~3 cards)
+
+    container.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
   const articles = [
     {
       title: "The Science Behind Pranayama Breathing",
-      excerpt: "Discover how ancient breathing techniques affect your nervous system and promote emotional balance through modern scientific research.",
+      excerpt:
+        "Discover how ancient breathing techniques affect your nervous system and promote emotional balance through modern scientific research.",
       image: pranayamaImage,
       category: "Wellness Science",
       readTime: "5 min read",
     },
     {
       title: "Sound Healing: Vibrations That Transform",
-      excerpt: "Explore the therapeutic power of sound frequencies and how they can restore harmony to your mind, body, and spirit.",
+      excerpt:
+        "Explore the therapeutic power of sound frequencies and how they can restore harmony to your mind, body, and spirit.",
       image: soundHealingImage,
       category: "Healing Practices",
       readTime: "7 min read",
     },
     {
       title: "Understanding Your Aura Energy",
-      excerpt: "Learn to recognize and balance your energetic field for improved wellbeing, clarity, and emotional resilience.",
+      excerpt:
+        "Learn to recognize and balance your energetic field for improved wellbeing, clarity, and emotional resilience.",
       image: auraImage,
       category: "Energy Work",
       readTime: "6 min read",
     },
   ];
 
+  const featuredGuides = [
+    {
+      title: "Cycle Syncing: A Natural Way to Balance Women’s Hormones",
+      url: "/blog/cycle-syncing-hormonal-health",
+      description:
+        "Align your lifestyle, movement, and self-care with each menstrual phase to support hormonal balance.",
+      tag: "Hormonal Health",
+    },
+    {
+      title: "10 Yoga Practices Every Woman Should Do for Hormonal Balance",
+      url: "/blog/yoga-for-hormonal-balance",
+      description:
+        "Gentle yoga sequences to regulate hormones, reduce PMS, and support overall wellbeing.",
+      tag: "Yoga for Women",
+    },
+    {
+      title: "IAYT Approach to PCOS: Diet, Yoga & Lifestyle Tips",
+      url: "/blog/iayt-yoga-for-pcos",
+      description:
+        "An integrative yoga therapy view on managing PCOS naturally with diet, movement, and rest.",
+      tag: "PCOS Support",
+    },
+    {
+      title: "Holistic Prenatal & Postnatal Care: Yoga, Mudras & Nutrition",
+      url: "/blog/prenatal-postnatal-wellness",
+      description:
+        "Support each stage of motherhood with safe yoga, breath, mudras, and nourishing foods.",
+      tag: "Prenatal & Postnatal",
+    },
+    {
+      title: "Top 7 Mudras Every Woman Should Practice for Hormonal Wellness",
+      url: "/blog/mudras-for-womens-health",
+      description:
+        "Use simple hand gestures to calm the mind, balance hormones, and support daily energy.",
+      tag: "Mudra Healing",
+    },
+    {
+      title: "Managing Menopause Naturally: Yoga, Breathwork & Herbs",
+      url: "/blog/menopause-natural-relief",
+      description:
+        "Ease hot flashes, mood shifts, and sleep disturbances with natural, body-honoring tools.",
+      tag: "Menopause Wellness",
+    },
+    {
+      title: "Emotional Wellness for Women: Simple Practices to Reduce Stress",
+      url: "/blog/emotional-wellbeing-women",
+      description:
+        "Create emotional safety with breath, movement, and gentle mindset shifts.",
+      tag: "Emotional Health",
+    },
+    {
+      title: "Understanding Breast Health: Early Signs, Self-Care & Yoga",
+      url: "/blog/breast-health-awareness",
+      description:
+        "Learn daily breast care, early signs to notice, and supportive yoga practices.",
+      tag: "Breast Health",
+    },
+    {
+      title: "Pelvic Floor Strengthening Yoga: Why It Matters for Every Woman",
+      url: "/blog/pelvic-floor-yoga",
+      description:
+        "Strengthen and relax your pelvic floor for posture, digestion, and reproductive health.",
+      tag: "Pelvic Floor",
+    },
+    {
+      title: "Essential Nutrition for Women: What Every Woman Should Eat Daily",
+      url: "/blog/nutrition-for-women-daily-guide",
+      description:
+        "A simple daily guide to proteins, fats, minerals, and herbs that support women’s bodies.",
+      tag: "Women's Nutrition",
+    },
+  ];
+
   return (
-    <section id="blog" className="py-20 lg:py-32 bg-background" style={{ backgroundImage: 'url(/images/pattern.png)', backgroundRepeat: 'repeat' }}>
+    <section
+      id="blog"
+      className="py-20 lg:py-32 bg-background"
+      style={{
+        backgroundImage: "url(/images/pattern.png)",
+        backgroundRepeat: "repeat",
+      }}
+    >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
             Wellness Insights
           </h2>
           <p className="text-lg text-muted-foreground">
-            Explore articles that bridge ancient wisdom with modern understanding
+            Explore articles that bridge ancient wisdom with modern
+            understanding
           </p>
         </div>
 
@@ -66,7 +163,9 @@ const Blog = () => {
                   {article.excerpt}
                 </p>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-sm text-muted-foreground">{article.readTime}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {article.readTime}
+                  </span>
                   <button className="flex items-center gap-2 text-sm font-medium text-primary group-hover:gap-3 transition-all">
                     Read More
                     <ArrowRight className="w-4 h-4" />
@@ -75,6 +174,91 @@ const Blog = () => {
               </div>
             </article>
           ))}
+        </div>
+      </div>
+      {/* Featured Guides - Horizontal Scroll */}
+      <div className="max-w-6xl mx-auto mt-20">
+        <h3 className="text-3xl font-serif font-semibold text-center mb-8 text-foreground">
+          Featured Guides for Women’s Wellness
+        </h3>
+
+        <div className="relative">
+          {/* Left arrow */}
+          <button
+            type="button"
+            onClick={() => scrollGuides("left")}
+            className="hidden md:flex absolute -left-9 top-1/2 -translate-y-1/2 
+      z-20 items-center justify-center
+      w-10 h-10 rounded-full bg-white shadow-md border border-[#e5d8c8]
+      hover:bg-primary hover:text-primary-foreground transition-colors"
+            aria-label="Scroll left"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          {/* Scroll container */}
+          <div
+            ref={guidesScrollRef}
+            className="
+        flex gap-6 overflow-x-auto pb-4
+        snap-x snap-mandatory scroll-smooth
+        [-webkit-overflow-scrolling:touch]
+        [scrollbar-width:none] [-ms-overflow-style:none]
+        [&::-webkit-scrollbar]:hidden
+        md:px-10
+      "
+          >
+            {featuredGuides.map((guide, index) => (
+              <article
+                key={guide.title}
+                className="
+            snap-start cursor-pointer
+            bg-card rounded-2xl p-6 shadow-soft 
+            hover:shadow-medium hover:-translate-y-1
+            transition-all duration-300 animate-fade-in-subtle
+
+            basis-full sm:basis-2/3 md:basis-1/2 lg:basis-1/3 
+            shrink-0
+          "
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs font-medium px-3 py-1 rounded-full bg-primary/10 text-primary">
+                    {guide.tag}
+                  </span>
+                </div>
+
+                <h4 className="text-lg font-serif font-semibold text-foreground mb-3">
+                  {guide.title}
+                </h4>
+
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  {guide.description}
+                </p>
+
+                <a
+                  href={guide.url}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:gap-3 transition-all"
+                >
+                  Explore Guide
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </article>
+            ))}
+          </div>
+
+          {/* Right arrow */}
+          <button
+            type="button"
+            onClick={() => scrollGuides("right")}
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 
+                 z-20 items-center justify-center
+                 w-9 h-9 rounded-full bg-white/90 shadow-md border border-[#e5d8c8]
+                 hover:bg-primary hover:text-primary-foreground transition-colors"
+            aria-label="Scroll right"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>

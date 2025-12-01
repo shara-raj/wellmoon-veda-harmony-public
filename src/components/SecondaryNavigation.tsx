@@ -22,21 +22,23 @@ const SecondaryNavigation = () => {
   ];
 
   return (
-    <nav className="relative z-50 bg-[#B0967E]/50">
+    <nav className="relative z-50 bg-[#FFF9F1]">
       <div className="container mx-auto px-4 lg:px-8 pb-[10px]">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2">
-            <span className="text-2xl text-white font-serif font-semibold text-foreground">
-              WellMoon Veda
-            </span>
+          <a href="/" className="flex items-center space-x-2 pt-1">
+            <img
+              src="/images/mainlogo.png"
+              alt="Wellmoon Veda logo"
+              className="h-14 w-auto md:h-16 lg:h-20 object-contain flex-shrink-0"
+            />
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <a
               href="/"
-              className="text-sm font-medium text-foreground hover:text-white
+              className="text-sm font-medium text-foreground hover:text-[#be9d31]
               transition-colors"
             >
               Home
@@ -45,7 +47,7 @@ const SecondaryNavigation = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-white">
+                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-[#be9d31]">
                     Healing Path
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -55,7 +57,7 @@ const SecondaryNavigation = () => {
                           <NavigationMenuLink asChild>
                             <a
                               href={path.href}
-                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#d4af37]/70 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
                               <div className="text-sm font-medium leading-none">
                                 {path.name}
@@ -72,25 +74,25 @@ const SecondaryNavigation = () => {
 
             <a
               href="/plan-and-pricing"
-              className="text-sm font-medium text-foreground hover:text-white transition-colors"
+              className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
             >
               Plans & Pricing
             </a>
             <a
               href="/about"
-              className="text-sm font-medium text-foreground hover:text-white transition-colors"
+              className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
             >
               About
             </a>
             <a
               href="/blog"
-              className="text-sm font-medium text-foreground hover:text-white transition-colors"
+              className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
             >
               Blog
             </a>
             <a
               href="/contact"
-              className="text-sm font-medium text-foreground hover:text-white transition-colors"
+              className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
             >
               Contact
             </a>
@@ -101,7 +103,7 @@ const SecondaryNavigation = () => {
             <Button
               variant="outline"
               size="sm"
-              className="bg-[hsl(35_50%_65%)] 
+              className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 
             text-primary-foreground text-sm font-medium"
             >
               Login
@@ -109,7 +111,7 @@ const SecondaryNavigation = () => {
             <Button
               variant="outline"
               size="sm"
-              className="bg-[hsl(35_50%_65%)] 
+              className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 
             text-primary-foreground text-sm font-medium"
             >
               Sign Up

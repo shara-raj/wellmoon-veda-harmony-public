@@ -9,6 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { Navigate, useNavigate, Link } from "react-router-dom";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,6 +31,9 @@ const Navigation = () => {
     { name: "Virtual Nature Healing", href: "/virtual-nature-healing" },
     { name: "Sound Healing", href: "/sound-healing" },
   ];
+
+  const Navigate = useNavigate();
+  const [showLoginCard, setShowLoginCard] = useState(false);
 
   return (
     <nav
@@ -54,7 +58,7 @@ const Navigation = () => {
           ${
             isScrolled
               ? "rounded-none px-3 py-1" // full-width bar, smaller padding
-              : "bg-[#FFF9F1]/50 backdrop-blur-sm rounded-2xl shadow-md px-6 py-3" // floating rounded card on hero
+              : "bg-[#FFF9F1] backdrop-blur-sm rounded-2xl shadow-md px-6 py-3" // floating rounded card on hero
           }
         `}
         >
@@ -62,7 +66,7 @@ const Navigation = () => {
             className={`
             flex items-center justify-between
             transition-[height] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
-        ${isScrolled ? "h-14" : "h-20"}  // 👈 height reduced when scrolled
+        ${isScrolled ? "h-14" : "h-20"}  // height reduced when scrolled
           `}
           >
             {/* Logo */}
@@ -109,7 +113,7 @@ const Navigation = () => {
                             <NavigationMenuLink asChild>
                               <a
                                 href={path.href}
-                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#be9d31] hover:text-white"
+                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#d4af37]/70 hover:text-black"
                               >
                                 <div className="text-sm font-medium leading-none">
                                   {path.name}
@@ -152,14 +156,78 @@ const Navigation = () => {
 
             {/* Auth Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
+              <div className="relative">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setShowLoginCard((prev) => !prev)}
+                  className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 text-primary-foreground text-sm font-medium"
+                >
+                  Login
+                </Button>
+
+                {showLoginCard && (
+                  <div className="absolute right-0 mt-2 w-80 bg-white rounded-2xl shadow-xl border border-[#e5d8c8] p-4 z-50">
+                    <h3 className="text-sm font-semibold mb-3 text-foreground">
+                      Log in to your account
+                    </h3>
+
+                    <form
+                      className="space-y-3"
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        // TODO: call your login API here
+                        setShowLoginCard(false);
+                      }}
+                    >
+                      <div>
+                        <label className="block text-xs font-medium text-muted-foreground mb-1">
+                          Email
+                        </label>
+                        <input
+                          type="email"
+                          required
+                          className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-sm focus:ring-2 focus:ring-primary focus:outline-none"
+                          placeholder="you@example.com"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-medium text-muted-foreground mb-1">
+                          Password
+                        </label>
+                        <input
+                          type="password"
+                          required
+                          className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-sm focus:ring-2 focus:ring-primary focus:outline-none"
+                          placeholder="••••••••"
+                        />
+                      </div>
+
+                      <Button
+                        type="submit"
+                        size="sm"
+                        className="w-full bg-[#d4af37]/70 text-primary-foreground hover:bg-[#d4af37]/40 mt-2"
+                      >
+                        Log In
+                      </Button>
+                    </form>
+
+                    <p className="mt-3 text-[11px] text-muted-foreground text-center">
+                      Don’t have an account?{" "}
+                      <Link
+                        to="/signup"
+                        className="text-primary hover:underline"
+                      >
+                        Sign up
+                      </Link>
+                    </p>
+                  </div>
+                )}
+              </div>
               <Button
                 size="sm"
-                className="bg-[#d4af37]/70 text-primary-foreground text-sm font-medium hover:bg-[#d4af37]/40 hover:border-[hsl(35_50%_65%)]"
-              >
-                Login
-              </Button>
-              <Button
-                size="sm"
+                onClick={() => Navigate("/sign-up")}
                 className="bg-[#d4af37]/70 text-primary-foreground text-sm font-medium hover:bg-[#d4af37]/40 hover:border-[hsl(35_50%_65%)]"
               >
                 Sign Up

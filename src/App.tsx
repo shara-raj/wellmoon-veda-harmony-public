@@ -17,6 +17,7 @@ import PlanandPricing from "./pages/PlanandPricing";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import SignUp from "./pages/SignUp";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const App = () => (
             element={<TermsAndConditions />}
           />
           <Route path="/return-policy" element={<ReturnPolicy />} />
+          <Route path="/sign-up" element={<SignUp />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

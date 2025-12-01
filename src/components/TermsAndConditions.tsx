@@ -32,166 +32,221 @@ const TermsAndConditions = () => {
           </h1>
 
           <div className="prose prose-lg max-w-none space-y-10 text-muted-foreground">
+            {/* 1. Introduction */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
-                1. Agreement to Terms
+                1. Introduction
               </h2>
-              <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                By accessing and using WellMoon Veda's services, courses, or
-                digital content (collectively, "Services"), you agree to be
-                bound by these Terms and Conditions. If you do not agree to
-                these terms, please do not use our Services. These terms
-                constitute a legally binding agreement between you and WellMoon
-                Veda.
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                This website is operated by WellMoon Veda. We offer guided
+                forest therapy walks, yoga training, wellness workshops, and
+                retreat packages. All trainings and workshops are conducted by
+                certified instructors associated with WellMoon Veda.
+              </p>
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                The terms “we”, “us”, and “our” refer to WellMoon Veda. Your
+                access and use of our website are governed by these Terms and
+                Conditions (“Terms”), along with our Privacy Policy. By using
+                our website, you agree to comply with these Terms. If you do not
+                agree, you are not authorized to use our website or services.
               </p>
             </section>
 
+            {/* 2. Use of Our Website */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
-                2. Use of Services & Health Disclaimer
+                2. Use of Our Website
               </h2>
-              <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                Our wellness services, including yoga, meditation, sound
-                healing, and other practices, are intended for general personal
-                wellness purposes only. They are not a substitute for
-                professional medical advice, diagnosis, or treatment. Always
-                seek the advice of your physician or other qualified health
-                provider with any questions you may have regarding a medical
-                condition.
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                You agree to use our website only for lawful purposes. You will
+                not engage in actions that violate intellectual property rights,
+                privacy laws, or any applicable regulations. By agreeing to
+                these Terms, you confirm that you are of legal age to enter into
+                a binding contract.
               </p>
-              <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                WellMoon Veda is not responsible for any personal injury or
-                property damage that may result from the use of our Services,
-                including live classes or digital guidance.
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                You agree not to attempt unauthorized access to our systems or
+                disrupt the security, network integrity, or operations of our
+                website. You also agree to provide accurate, updated personal
+                information whenever required.
               </p>
             </section>
 
+            {/* 3. General Conditions */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
-                3. User Responsibilities
+                3. General Conditions
               </h2>
-              <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                You agree to the following when using our Services:
-              </p>
-              <ul className="list-disc pl-8 space-y-2 font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                <li>
-                  Provide accurate and complete information during registration
-                  and purchasing.
-                </li>
-                <li>
-                  Maintain the confidentiality of your account password and
-                  login details.
-                </li>
-                <li>
-                  Use our Services in accordance with all applicable local,
-                  state, and international laws and regulations.
-                </li>
-                <li>
-                  Consult with healthcare professionals before beginning any new
-                  wellness or physical exercise program.
-                </li>
-                <li>
-                  Not share, distribute, or resell our proprietary content,
-                  including course materials or digital guides, without our
-                  explicit written permission.
-                </li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
-                4. Intellectual Property Rights
-              </h2>
-              <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                All content, trademarks, service marks, graphics, and materials
-                on the WellMoon Veda website and within our courses are our
-                exclusive property or licensed to us, and are protected by
-                copyright and intellectual property laws. You are granted a
-                limited, non-exclusive, non-transferable license to access and
-                use the content for your personal, non-commercial use only. You
-                may not reproduce, distribute, or create derivative works
-                without our written permission.
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                We reserve the right to refuse service to anyone at any time. We
+                may change, suspend, or discontinue any part of the website
+                without notice. Continued use of our website after modifications
+                implies acceptance of the updated Terms.
               </p>
             </section>
 
+            {/* 4. Products and Services */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
-                5. Payments, Refunds, and Cancellation
+                4. Products and Services
               </h2>
-              <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                All prices are subject to change. Payment must be received by us
-                before any service is provided.
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                All purchases made through our website are subject to
+                availability. We may limit or cancel quantities or restrict
+                sales to specific regions or individuals. Prices are shown in
+                INR unless stated otherwise. We reserve the right to decline
+                suspicious or fraudulent orders.
               </p>
-              <h3 className="text-xl font-serif font-medium text-foreground mt-6 mb-2">
-                Cancellation Policy:
-              </h3>
-              <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                For scheduled appointments (e.g., private healing sessions), a
-                cancellation fee may apply if the cancellation is made less than
-                24 hours prior to the scheduled time. Specific policy details
-                will be communicated at the time of booking.
-              </p>
-              <h3 className="text-xl font-serif font-medium text-foreground mt-6 mb-2">
-                Digital Product Refunds:
-              </h3>
-              <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                Due to the digital nature of our courses and guides, all sales
-                are final and non-refundable unless otherwise specified in
-                writing for a particular product (e.g., a "30-day money-back
-                guarantee").
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                While we strive for accuracy, we do not guarantee that product
+                colors, visuals, or design elements displayed on our website are
+                fully accurate due to display variations.
               </p>
             </section>
 
+            {/* 5. Links to Third-Party Websites */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
-                6. Limitation of Liability
+                5. Links to Third-Party Websites
               </h2>
-              <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                To the maximum extent permitted by law, WellMoon Veda shall not
-                be liable for any indirect, incidental, special, or
-                consequential damages, including but not limited to damages for
-                loss of profits, goodwill, or other intangible losses, resulting
-                from your use of or inability to use the Services.
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                Any links to third-party websites are provided for convenience.
+                WellMoon Veda does not endorse, control, or take responsibility
+                for external sites, their content, or their services. Accessing
+                third-party links is at your own risk.
               </p>
             </section>
 
+            {/* 6. User Content & Submissions */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
-                7. Modifications to Terms
+                6. User Content, Feedback & Submissions
               </h2>
-              <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                We reserve the right to modify these Terms and Conditions at any
-                time. We will notify users of significant changes by posting the
-                new Terms on this page and updating the "Last updated" date.
-                Continued use of our Services after any such change constitutes
-                your acceptance of the modified terms.
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                You are solely responsible for any content you submit, including
+                comments, feedback, and posts. By submitting content, you grant
+                us permission to edit, modify, publish, or use it in any form.
+                You agree not to upload illegal, abusive, or harmful content.
+              </p>
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                We reserve the right to remove any content that violates these
+                Terms.
               </p>
             </section>
 
+            {/* 7. Personal Information */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
-                8. Governing Law
+                7. Personal Information
               </h2>
-              <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                These Terms shall be governed by and construed in accordance
-                with the laws of the jurisdiction where WellMoon Veda is
-                registered, without regard to its conflict of law provisions.
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                Your submission of personal information is governed by our
+                Privacy Policy. Please review it to understand how we collect,
+                store, and use your data.
               </p>
             </section>
 
+            {/* 8. Errors & Omissions */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
-                9. Contact Information
+                8. Errors and Omissions
               </h2>
-              <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
-                For questions regarding these Terms and Conditions, please
-                contact us at: **legal@wellmoonveda.com**
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                Occasionally, our website may contain errors, typographical
+                mistakes, or outdated information. We reserve the right to
+                correct such errors and update information without prior notice.
               </p>
             </section>
 
+            {/* 9. Limitation of Liability */}
+            <section>
+              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+                9. Disclaimer & Limitation of Liability
+              </h2>
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                Our website and services are provided "as is" without warranties
+                of any kind. We do not guarantee uninterrupted, secure, or
+                error-free service. WellMoon Veda is not liable for damages
+                arising from the use or inability to use our website, including
+                indirect or consequential losses.
+              </p>
+            </section>
+
+            {/* 10. Indemnification */}
+            <section>
+              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+                10. Indemnification
+              </h2>
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                You agree to indemnify and hold WellMoon Veda harmless from any
+                claims, liabilities, damages, or expenses arising from your use
+                of our website or violation of these Terms.
+              </p>
+            </section>
+
+            {/* 11. Entire Agreement */}
+            <section>
+              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+                11. Entire Agreement
+              </h2>
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                These Terms constitute the entire agreement between you and
+                WellMoon Veda regarding your use of our website and services,
+                superseding any prior agreements.
+              </p>
+            </section>
+
+            {/* 12. Waiver */}
+            <section>
+              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+                12. Waiver
+              </h2>
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                Failure to enforce any part of the Terms does not constitute a
+                waiver of our rights to enforce them in the future.
+              </p>
+            </section>
+
+            {/* 13. Severability */}
+            <section>
+              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+                13. Severability
+              </h2>
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                If any provision of these Terms is found invalid or
+                unenforceable, the remaining provisions will continue to remain
+                in effect.
+              </p>
+            </section>
+
+            {/* 14. Governing Law */}
+            <section>
+              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+                14. Governing Law
+              </h2>
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                These Terms shall be governed by the laws of India. Any disputes
+                must be resolved in the courts of Kalpetta, India.
+              </p>
+            </section>
+
+            {/* 15. Contact */}
+            <section>
+              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+                15. Contact Information
+              </h2>
+              <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
+                For questions regarding these Terms and Conditions, contact us
+                at:
+                <br />
+                <strong>legal@wellmoonveda.com</strong>
+              </p>
+            </section>
+
+            {/* Effective Date */}
             <p className="text-sm mt-8 font-['Quicksand',_'Poppins',_sans-serif] text-foreground/70">
-              *These Terms and Conditions are effective as of **{effectiveDate}
-              **.*
+              *These Terms and Conditions are effective as of{" "}
+              <strong>{effectiveDate}</strong>.*
             </p>
           </div>
         </div>
