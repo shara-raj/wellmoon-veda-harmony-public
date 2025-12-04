@@ -9,6 +9,7 @@ import meditationCenter from "@/assets/meditation-center.png";
 import customer1 from "@/assets/customer-1.jpg";
 import customer2 from "@/assets/customer-2.jpg";
 import customer3 from "@/assets/customer-3.jpg";
+import heroVideo from "@/assets/videos/hero-bg.mp4";
 
 const Hero = () => {
   const [rotation, setRotation] = useState(0);
@@ -45,7 +46,7 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          <source src={heroVideo} type="video/mp4" />
         </video>
 
         {/* Overlay - #B0967E at 20% transparency (80% opacity) */}
