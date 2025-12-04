@@ -5,7 +5,6 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import mudraImage from "@/assets/mudra-hands.jpg";
 import yogaImage from "@/assets/woman-yoga.jpg";
 import meditatingImage from "@/assets/woman-meditating.jpg";
-import meditationBadge from "@/assets/meditation-badge.png";
 import meditationCenter from "@/assets/meditation-center.png";
 import customer1 from "@/assets/customer-1.jpg";
 import customer2 from "@/assets/customer-2.jpg";

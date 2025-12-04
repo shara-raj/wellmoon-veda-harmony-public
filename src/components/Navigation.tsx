@@ -10,6 +10,8 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Navigate, useNavigate, Link } from "react-router-dom";
+import favIcon from "@/assets/images/favicon.png";
+import tagLine from "@/assets/images/footerbanner.png";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -39,7 +41,7 @@ const Navigation = () => {
     <nav
       className={`
       fixed top-0 left-0 right-0 z-50
-      transition-colors transition-shadow duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+      transition-[colors,shadow] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
       ${
         isScrolled
           ? "bg-[#FFF9F1] shadow-md"
@@ -79,12 +81,12 @@ const Navigation = () => {
                 }`}
               >
                 <img
-                  src="/images/favicon.png"
+                  src={favIcon}
                   alt="wellmoon veda logo"
                   className="w-auto max-w-full h-10 md:h-12"
                 />
                 <img
-                  src="/images/footerbanner.png"
+                  src={tagLine}
                   alt="wellmoon veda tagline"
                   className="w-auto max-w-full h-5 md:h-6"
                 />

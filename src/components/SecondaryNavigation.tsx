@@ -9,6 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import logo from "@/assets/images/mainlogo.png";
 
 const SecondaryNavigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,7 +29,7 @@ const SecondaryNavigation = () => {
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2 pt-1">
             <img
-              src="/images/mainlogo.png"
+              src={logo}
               alt="Wellmoon Veda logo"
               className="h-14 w-auto md:h-16 lg:h-20 object-contain flex-shrink-0"
             />
