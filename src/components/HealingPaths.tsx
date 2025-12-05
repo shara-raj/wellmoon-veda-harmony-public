@@ -170,10 +170,10 @@ const HealingPaths = () => {
             >
               <div
                 className="
-                  group bg-[#e0cbb6]/20 p-8 shadow-soft rounded-[36px] text-center
-                  hover:shadow-medium hover:scale-105 hover:bg-[#e0cbb6]/45
-                  transition-[transform,shadow,background-color] duration-300 ease-out
-                "
+          group bg-[#e0cbb6]/20 p-8 shadow-soft rounded-[36px] text-center
+          hover:shadow-medium hover:scale-105 hover:bg-[#e0cbb6]/45
+          transition-transform transition-shadow transition-colors duration-300 ease-out
+        "
               >
                 <div className="mb-6 mx-auto flex items-center justify-center relative w-32 h-32">
                   {/* White circular background - shows on hover */}

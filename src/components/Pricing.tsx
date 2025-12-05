@@ -115,8 +115,12 @@ const Pricing = () => {
                 key={plan.name}
                 // Mobile specific width, snapping, and flex-shrink
                 className={`
-                  bg-card rounded-2xl p-6 md:p-6 shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col text-center hover:scale-105 
-                  ${plan.featured ? "ring-2 ring-primary scale-105" : ""}
+                  bg-[#c1a88d]/65 rounded-2xl scale-95 p-6 md:p-6 shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col text-center  hover:bg-[#c1a88d]/45
+                  ${
+                    plan.featured
+                      ? "bg-[#c1a88d]/70 ring-black ring-1 scale-105"
+                      : "hover:scale-100"
+                  }
                   
                   w-[85vw] flex-shrink-0 snap-start md:w-auto md:flex-shrink-0 md:flex-grow
                   
@@ -131,7 +135,6 @@ const Pricing = () => {
                 // Staggered delay for each card
                 style={{
                   transitionDelay: isVisible ? `${index * 0.2}s` : "0s",
-                  transform: isVisible ? "translateY(0)" : "translateY(80px)",
                 }}
               >
                 {plan.featured && (
@@ -167,8 +170,8 @@ const Pricing = () => {
                 <Button
                   className={`w-full ${
                     plan.featured
-                      ? "bg-[#d4af37]/70 text-primary-foreground hover:bg-[#d4af37]/40"
-                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                      ? "bg-[#d4af37]/70 text-primary-foreground hover:bg-white"
+                      : "bg-secondary text-secondary-foreground hover:bg-[#d4af37]/70"
                   }`}
                   size="lg"
                 >

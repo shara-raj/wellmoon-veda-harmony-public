@@ -19,8 +19,8 @@ const Index = () => {
         <HealingPaths />
         <WellnessInvitation />
         <Testimonials />
-        <Pricing />
         <Blog />
+        <Pricing />
         <Subscribe />
       </main>
       <Footer />
