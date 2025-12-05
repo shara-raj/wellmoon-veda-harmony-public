@@ -170,8 +170,8 @@ const HealingPaths = () => {
             >
               <div
                 className="
-                  group bg-[#e0cbb6]/20 p-8 shadow-soft rounded-[36px] text-center
-                  hover:shadow-medium hover:scale-105 hover:bg-[#e0cbb6]/45
+                  group bg-[#c1a88d]/85 p-8 shadow-soft rounded-[36px] text-center
+                  hover:shadow-medium hover:scale-105 hover:bg-[#c1a88d]/65
                   transition-[transform,shadow,background-color] duration-300 ease-out
                 "
               >

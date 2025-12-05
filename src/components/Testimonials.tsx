@@ -68,12 +68,12 @@ const Testimonials = () => {
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                  <div className="bg-card rounded-2xl p-8 shadow-soft h-full flex flex-col">
+                  <div className="bg-[#c1a88d]/70 rounded-2xl p-8 shadow-soft h-full flex flex-col">
                     <div className="flex gap-1 mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star
                           key={i}
-                          className="w-5 h-5 fill-accent text-accent"
+                          className="w-5 h-5 fill-white text-white"
                         />
                       ))}
                     </div>

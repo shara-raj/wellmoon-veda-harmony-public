@@ -142,7 +142,7 @@ const Blog = () => {
           {articles.map((article, index) => (
             <article
               key={article.title}
-              className="group bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle"
+              className="group bg-[#c1a88d]/70 rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative h-56 overflow-hidden">
@@ -151,12 +151,12 @@ const Blog = () => {
                   alt={article.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-medium px-3 py-1 rounded-full">
+                <div className="absolute top-4 left-4 bg-white/50 text-foreground text-xs font-medium px-3 py-1 rounded-full">
                   {article.category}
                 </div>
               </div>
               <div className="p-6 space-y-4">
-                <h3 className="text-xl font-serif font-semibold text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-serif font-semibold text-foreground group-hover:text-[#636363]">
                   {article.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -166,7 +166,7 @@ const Blog = () => {
                   <span className="text-sm text-muted-foreground">
                     {article.readTime}
                   </span>
-                  <button className="flex items-center gap-2 text-sm font-medium text-primary group-hover:gap-3 transition-all">
+                  <button className="flex items-center gap-2 text-sm font-medium text-foreground group-hover:gap-3 transition-all">
                     Read More
                     <ArrowRight className="w-4 h-4" />
                   </button>
@@ -183,82 +183,54 @@ const Blog = () => {
         </h3>
 
         <div className="relative">
-          {/* Left arrow */}
-          <button
-            type="button"
-            onClick={() => scrollGuides("left")}
-            className="hidden md:flex absolute -left-9 top-1/2 -translate-y-1/2 
-      z-20 items-center justify-center
-      w-10 h-10 rounded-full bg-white shadow-md border border-[#e5d8c8]
-      hover:bg-primary hover:text-primary-foreground transition-colors"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-
-          {/* Scroll container */}
-          <div
-            ref={guidesScrollRef}
-            className="
-        flex gap-6 overflow-x-auto pb-4
-        snap-x snap-mandatory scroll-smooth
-        [-webkit-overflow-scrolling:touch]
-        [scrollbar-width:none] [-ms-overflow-style:none]
-        [&::-webkit-scrollbar]:hidden
-        md:px-10
-      "
-          >
-            {featuredGuides.map((guide, index) => (
-              <article
-                key={guide.title}
+          <div className="max-w-6xl mx-auto mt-20">
+            <div>
+              {/* GRID CONTAINER INSTEAD OF SCROLL */}
+              <div
                 className="
-            snap-start cursor-pointer
-            bg-card rounded-2xl p-6 shadow-soft 
+        grid 
+        grid-cols-1 
+        sm:grid-cols-2 
+        lg:grid-cols-3
+        gap-6
+      "
+              >
+                {featuredGuides.map((guide, index) => (
+                  <article
+                    key={guide.title}
+                    className="
+            bg-[#c1a88d]/70 rounded-2xl p-6 shadow-soft 
             hover:shadow-medium hover:-translate-y-1
             transition-all duration-300 animate-fade-in-subtle
-
-            basis-full sm:basis-2/3 md:basis-1/2 lg:basis-1/3 
-            shrink-0
           "
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-medium px-3 py-1 rounded-full bg-primary/10 text-primary">
-                    {guide.tag}
-                  </span>
-                </div>
+                    style={{ animationDelay: `${index * 0.05}s` }}
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/50 text-foreground">
+                        {guide.tag}
+                      </span>
+                    </div>
 
-                <h4 className="text-lg font-serif font-semibold text-foreground mb-3">
-                  {guide.title}
-                </h4>
+                    <h4 className="text-lg font-serif font-semibold text-foreground mb-3">
+                      {guide.title}
+                    </h4>
 
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  {guide.description}
-                </p>
+                    <p className="text-sm text-foreground leading-relaxed mb-4">
+                      {guide.description}
+                    </p>
 
-                <a
-                  href={guide.url}
-                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:gap-3 transition-all"
-                >
-                  Explore Guide
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </article>
-            ))}
+                    <a
+                      href={guide.url}
+                      className="inline-flex items-center gap-2 text-sm font-medium text-[#212121] hover:gap-3 transition-all"
+                    >
+                      Explore Guide
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
-
-          {/* Right arrow */}
-          <button
-            type="button"
-            onClick={() => scrollGuides("right")}
-            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 
-                 z-20 items-center justify-center
-                 w-9 h-9 rounded-full bg-white/90 shadow-md border border-[#e5d8c8]
-                 hover:bg-primary hover:text-primary-foreground transition-colors"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
         </div>
       </div>
     </section>
