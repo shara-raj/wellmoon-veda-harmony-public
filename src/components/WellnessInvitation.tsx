@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
+import backgroundPattern from "@/assets/images/pattern.png";
 
 const WellnessInvitation = () => {
   return (
     <section
       className="py-20 lg:py-32 bg-gradient-warm relative overflow-hidden"
       style={{
-        backgroundImage: "url(/images/pattern.png)",
+        backgroundImage: `url(${backgroundPattern})`,
         backgroundRepeat: "repeat",
       }}
     >

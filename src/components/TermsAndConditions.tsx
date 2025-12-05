@@ -1,6 +1,7 @@
 import Footer from "./Footer";
 import { useEffect } from "react";
 import SecondaryNavigation from "./SecondaryNavigation";
+import backgroundPattern from "@/assets/images/pattern.png";
 
 const TermsAndConditions = () => {
   useEffect(() => {
@@ -22,7 +23,7 @@ const TermsAndConditions = () => {
       <div
         className="min-h-screen bg-background pt-20"
         style={{
-          backgroundImage: "url(/images/pattern.png)",
+          backgroundImage: `url(${backgroundPattern})`,
           backgroundRepeat: "repeat",
         }}
       >

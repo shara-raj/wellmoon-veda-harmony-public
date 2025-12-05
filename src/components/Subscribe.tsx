@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import backgroundPattern from "@/assets/images/pattern.png";
 
 const Subscribe = () => {
   const [email, setEmail] = useState("");
@@ -80,7 +81,7 @@ const Subscribe = () => {
       ref={sectionRef}
       className="py-20 lg:py-32 bg-gradient-sage relative overflow-hidden"
       style={{
-        backgroundImage: "url(/images/pattern.png)",
+        backgroundImage: `url(${backgroundPattern})`,
         backgroundRepeat: "repeat",
       }}
     >

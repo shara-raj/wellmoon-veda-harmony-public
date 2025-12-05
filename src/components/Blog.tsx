@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import pranayamaImage from "@/assets/blog-pranayama.jpg";
 import soundHealingImage from "@/assets/blog-sound-healing.jpg";
 import auraImage from "@/assets/blog-aura.jpg";
+import backgroundPattern from "@/assets/images/pattern.png";
 
 const Blog = () => {
   const guidesScrollRef = useRef<HTMLDivElement | null>(null);
@@ -123,7 +124,7 @@ const Blog = () => {
       id="blog"
       className="py-20 lg:py-32 bg-background"
       style={{
-        backgroundImage: "url(/images/pattern.png)",
+        backgroundImage: `url(${backgroundPattern})`,
         backgroundRepeat: "repeat",
       }}
     >

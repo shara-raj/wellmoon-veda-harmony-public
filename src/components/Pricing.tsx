@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Check, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import backgroundPattern from "@/assets/images/pattern.png";
 
 const Pricing = () => {
   // State to track when the section is visible in the viewport (for desktop animation)
@@ -87,7 +88,7 @@ const Pricing = () => {
       id="pricing"
       className="py-22 lg:py-32 bg-gradient-subtle"
       style={{
-        backgroundImage: "url(/images/pattern.png)",
+        backgroundImage: `url(${backgroundPattern})`,
         backgroundRepeat: "repeat",
       }}
     >

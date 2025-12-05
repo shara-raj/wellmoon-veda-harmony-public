@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-
+import backgroundPattern from "@/assets/images/pattern.png";
 import yoga from "@/assets/yoga.mp4";
 import mudraHealing from "@/assets/mudrahealing.mp4";
 import natureHealing from "@/assets/naturehealing.mp4";
@@ -130,7 +130,7 @@ const HealingPaths = () => {
       id="healing-paths"
       className="py-20 lg:py-32 bg-background"
       style={{
-        backgroundImage: "url(/images/pattern.png)",
+        backgroundImage: `url(${backgroundPattern})`,
         backgroundRepeat: "repeat",
       }}
     >

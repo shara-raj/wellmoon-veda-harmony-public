@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import backgroundPattern from "@/assets/images/pattern.png";
 
 const Testimonials = () => {
   const testimonials = [
@@ -48,7 +49,7 @@ const Testimonials = () => {
     <section
       className="py-20 lg:py-32 bg-background"
       style={{
-        backgroundImage: "url(/images/pattern.png)",
+        backgroundImage: `url(${backgroundPattern})`,
         backgroundRepeat: "repeat",
       }}
     >

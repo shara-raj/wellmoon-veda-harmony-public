@@ -1,6 +1,7 @@
 import SecondaryNavigation from "./SecondaryNavigation";
 import Footer from "./Footer";
 import { useEffect } from "react";
+import backgroundPattern from "@/assets/images/pattern.png";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
@@ -16,7 +17,7 @@ const PrivacyPolicy = () => {
       <div
         className="min-h-screen bg-background pt-20"
         style={{
-          backgroundImage: "url(/images/pattern.png)",
+          backgroundImage: `url(${backgroundPattern})`,
           backgroundRepeat: "repeat",
         }}
       >
