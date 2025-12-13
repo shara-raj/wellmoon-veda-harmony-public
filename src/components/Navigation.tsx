@@ -97,7 +97,7 @@ const Navigation = () => {
             <div className="hidden lg:flex items-center space-x-8">
               <a
                 href="/"
-                className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Home
               </a>
@@ -105,7 +105,7 @@ const Navigation = () => {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-[#be9d31]">
+                    <NavigationMenuTrigger className="text-base font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-[#be9d31]">
                       Healing Path
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -117,7 +117,7 @@ const Navigation = () => {
                                 href={path.href}
                                 className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#d4af37]/70 hover:text-black"
                               >
-                                <div className="text-sm font-medium leading-none">
+                                <div className="text-base font-medium leading-none">
                                   {path.name}
                                 </div>
                               </a>
@@ -132,25 +132,25 @@ const Navigation = () => {
 
               <a
                 href="/plan-and-pricing"
-                className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Plans & Pricing
               </a>
               <a
                 href="/about"
-                className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 About
               </a>
               <a
                 href="/blog"
-                className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Blog
               </a>
               <a
                 href="/contact"
-                className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Contact
               </a>
@@ -163,7 +163,7 @@ const Navigation = () => {
                   variant="outline"
                   size="sm"
                   onClick={() => setShowLoginCard((prev) => !prev)}
-                  className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 text-primary-foreground text-sm font-medium"
+                  className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 text-primary-foreground text-base font-medium"
                 >
                   Login
                 </Button>
@@ -230,7 +230,7 @@ const Navigation = () => {
               <Button
                 size="sm"
                 onClick={() => Navigate("/sign-up")}
-                className="bg-[#d4af37]/70 text-primary-foreground text-sm font-medium hover:bg-[#d4af37]/40 hover:border-[hsl(35_50%_65%)]"
+                className="bg-[#d4af37]/70 text-primary-foreground text-base font-medium hover:bg-[#d4af37]/40 hover:border-[hsl(35_50%_65%)]"
               >
                 Sign Up
               </Button>
