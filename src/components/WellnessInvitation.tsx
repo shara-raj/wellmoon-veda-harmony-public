@@ -18,8 +18,10 @@ const WellnessInvitation = () => {
           <div className="space-y-6">
             <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
             <blockquote
-              className="text-5xl lg:text-6xl font-bold text-foreground italic leading-relaxed"
-              style={{ fontFamily: "Tangerine, cursive" }}
+              className="text-2xl lg:text-3xl font-bold text-foreground italic leading-relaxed"
+              style={{
+                fontFamily: "'Atkinson Hyperlegible', system-ui, sans-serif",
+              }}
             >
               "Healing begins when you pause and listen to your body."
             </blockquote>

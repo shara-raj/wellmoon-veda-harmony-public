@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -67,9 +72,8 @@ export default {
         },
       },
       fontFamily: {
-        serif: ["Fraunces", "serif"],
-        sans: ["Inter", "sans-serif"],
-        quicksand: ["Quicksand", "Poppins", "sans-serif"],
+        heading: ['"Cormorant Garamond"', "serif"],
+        body: ["Alegreya", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -82,7 +86,10 @@ export default {
           to: { height: "var(--radix-accordion-content-height)", opacity: "1" },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)", opacity: "1" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+            opacity: "1",
+          },
           to: { height: "0", opacity: "0" },
         },
         "fade-in": {

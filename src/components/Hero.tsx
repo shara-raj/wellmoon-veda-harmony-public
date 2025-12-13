@@ -62,13 +62,18 @@ const Hero = () => {
             {/* Left Column - Content */}
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-4">
-                <p className="text-sm font-medium tracking-wider uppercase text-white">
-                  Woman's Wellness
+                <p className="text-sm font-medium tracking-wider uppercase text-foreground">
+                  Hollistic Woman's Wellness
                 </p>
-                <h1 className="text-5xl lg:text-6xl xl:text-7xl font-serif font-semibold text-foreground leading-tight">
+                <h1
+                  className="text-2xl lg:text-4xl xl:text-5xl font-semibold text-foreground leading-tight"
+                  style={{
+                    fontFamily: "'Lexend', system-ui, sans-serif",
+                  }}
+                >
                   Yoga Helps Calm The Mind
                 </h1>
-                <p className="text-lg text-[#000000] max-w-xl leading-relaxed">
+                <p className="text-base text-[#000000] max-w-xl leading-relaxed">
                   At WellMoon Veda, we blend ancient Vedic practices with modern
                   research to help women find balance, clarity, and inner calm.
                   Explore yoga, mudra, pranayama, sound healing, and aura
