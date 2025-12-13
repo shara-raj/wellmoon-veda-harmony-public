@@ -50,7 +50,7 @@ const Navigation = () => {
     `}
     >
       <div
-        className={`container mx-auto px-2 py-2 lg:px-8 transition-[padding,margin] duration-500 ease-[cubic-bezier(0.22,1,0.36,1) ${
+        className={`container mx-auto px-2 py-1 lg:px-8 transition-[padding,margin] duration-500 ease-[cubic-bezier(0.22,1,0.36,1) ${
           isScrolled ? "py-1" : "py-3 mt-2"
         }]`}
       >
@@ -60,7 +60,7 @@ const Navigation = () => {
           ${
             isScrolled
               ? "rounded-none px-3 py-1" // full-width bar, smaller padding
-              : "bg-[#FFF9F1] backdrop-blur-sm rounded-2xl shadow-md px-6 py-3" // floating rounded card on hero
+              : "bg-[#FFF9F1] backdrop-blur-sm rounded-2xl shadow-md px-6 py-2" // floating rounded card on hero
           }
         `}
         >
@@ -68,7 +68,7 @@ const Navigation = () => {
             className={`
             flex items-center justify-between
             transition-[height] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
-        ${isScrolled ? "h-20" : "h-24"}  // height reduced when scrolled
+        ${isScrolled ? "h-20" : "h-24"}
           `}
           >
             {/* Logo */}
@@ -77,7 +77,7 @@ const Navigation = () => {
                 className={`logoClass flex items-center w-40 md:w-40 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                   isScrolled
                     ? "flex-row items-center space-x-2 scale-110"
-                    : "flex-col items-center space-y-1 scale-120"
+                    : "flex-col items-center scale-120"
                 }`}
               >
                 <img
