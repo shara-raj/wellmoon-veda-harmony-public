@@ -68,27 +68,27 @@ const Navigation = () => {
             className={`
             flex items-center justify-between
             transition-[height] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
-        ${isScrolled ? "h-14" : "h-20"}  // height reduced when scrolled
+        ${isScrolled ? "h-20" : "h-24"}  // height reduced when scrolled
           `}
           >
             {/* Logo */}
             <a href="/" className="flex items-center flex-shrink-0">
               <div
-                className={`logoClass flex items-center w-32 md:w-40 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                className={`logoClass flex items-center w-40 md:w-40 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                   isScrolled
-                    ? "flex-row items-center space-x-2 scale-95"
-                    : "flex-col items-center space-y-1 scale-100"
+                    ? "flex-row items-center space-x-2 scale-110"
+                    : "flex-col items-center space-y-1 scale-120"
                 }`}
               >
                 <img
                   src={favIcon}
                   alt="wellmoon veda logo"
-                  className="w-auto max-w-full h-10 md:h-12"
+                  className="w-auto max-w-full h-12 md:h-14"
                 />
                 <img
                   src={tagLine}
                   alt="wellmoon veda tagline"
-                  className="w-auto max-w-full h-5 md:h-6"
+                  className="w-auto max-w-full h-9 md:h-7"
                 />
               </div>
             </a>

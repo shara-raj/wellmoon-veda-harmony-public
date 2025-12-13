@@ -7,18 +7,32 @@ import auraImage from "@/assets/blog-aura.jpg";
 import backgroundPattern from "@/assets/images/pattern.png";
 
 const Blog = () => {
-  const guidesScrollRef = useRef<HTMLDivElement | null>(null);
+  const importedImages = import.meta.glob(
+    "/src/assets/featuredSectionImages/*.{png,jpg,jpeg,webp}",
+    { eager: true }
+  );
 
-  const scrollGuides = (direction: "left" | "right") => {
-    if (!guidesScrollRef.current) return;
-    const container = guidesScrollRef.current;
-    const scrollAmount = container.clientWidth; // scroll by one "page" (~3 cards)
+  const imagesMap: Record<string, string> = Object.entries(
+    importedImages
+  ).reduce((acc, [path, mod]) => {
+    const fileName = path.split("/").pop() || "";
+    const key = fileName.replace(/\.[^/.]+$/, ""); // remove extension
+    // mod.default is the resolved url in Vite when eager: true
+    acc[key] = (mod as any).default;
+    return acc;
+  }, {} as Record<string, string>);
 
-    container.scrollBy({
-      left: direction === "left" ? -scrollAmount : scrollAmount,
-      behavior: "smooth",
-    });
-  };
+  // Also create an array ordered by filename (useful as fallback)
+  const imagesArray = Object.keys(imagesMap)
+    .sort() // optional: keep alphabetical order by filename
+    .map((k) => imagesMap[k]);
+
+  const titleToSlug = (title: string) =>
+    title
+      .toLowerCase()
+      .replace(/\s+/g, "")
+      .replace(/[^\w-]/g, "");
+
   const articles = [
     {
       title: "The Science Behind Pranayama Breathing",
@@ -196,39 +210,59 @@ const Blog = () => {
         gap-6
       "
               >
-                {featuredGuides.map((guide, index) => (
-                  <article
-                    key={guide.title}
-                    className="
-            bg-[#c1a88d]/70 rounded-2xl p-6 shadow-soft 
-            hover:shadow-medium hover:-translate-y-1
-            transition-all duration-300 animate-fade-in-subtle
-          "
-                    style={{ animationDelay: `${index * 0.05}s` }}
-                  >
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/50 text-foreground">
-                        {guide.tag}
-                      </span>
-                    </div>
+                {featuredGuides.map((guide, index) => {
+                  // try to pick matching image by slug, otherwise fallback to index
+                  const slug = titleToSlug(guide.title);
+                  const matchedSrc = imagesMap[slug];
+                  const fallbackSrc = imagesArray[index] ?? undefined;
+                  const src = matchedSrc ?? fallbackSrc;
 
-                    <h4 className="text-lg font-serif font-semibold text-foreground mb-3">
-                      {guide.title}
-                    </h4>
-
-                    <p className="text-sm text-foreground leading-relaxed mb-4">
-                      {guide.description}
-                    </p>
-
-                    <a
-                      href={guide.url}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-[#212121] hover:gap-3 transition-all"
+                  return (
+                    <article
+                      key={guide.title}
+                      className="
+              bg-[#c1a88d]/70 rounded-2xl p-6 shadow-soft 
+              hover:shadow-medium hover:-translate-y-1
+              transition-all duration-300 animate-fade-in-subtle
+              overflow-hidden
+            "
+                      style={{ animationDelay: `${index * 0.05}s` }}
                     >
-                      Explore Guide
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </article>
-                ))}
+                      {/* IMAGE (render only if found) */}
+                      {src && (
+                        <div className="mb-4 rounded-lg overflow-hidden">
+                          <img
+                            src={src}
+                            alt={guide.title}
+                            className="w-full h-56 object-cover block"
+                          />
+                        </div>
+                      )}
+
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-xs font-medium px-3 py-1 rounded-full bg-white text-black">
+                          {guide.tag}
+                        </span>
+                      </div>
+
+                      <h4 className="text-lg font-serif font-semibold text-foreground mb-3">
+                        {guide.title}
+                      </h4>
+
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                        {guide.description}
+                      </p>
+
+                      <a
+                        href={guide.url}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-black hover:gap-3 transition-all"
+                      >
+                        Explore Guide
+                        <ArrowRight className="w-4 h-4" />
+                      </a>
+                    </article>
+                  );
+                })}
               </div>
             </div>
           </div>
