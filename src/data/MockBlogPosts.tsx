@@ -1,5 +1,5 @@
 import { BlogPost } from "@/types/blog";
-import { featuredImages } from "@/assets/featuredSectionImages/featuredimages";
+import { featuredImages } from "@/assets/featuredSectionImages/featuredImages";
 
 /**
  * FEATURED / PILLAR POSTS
