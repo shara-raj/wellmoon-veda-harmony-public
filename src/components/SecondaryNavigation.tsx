@@ -28,9 +28,14 @@ const SecondaryNavigation = () => {
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2 pt-1">
             <img
-              src="/images/mainlogo.png"
+              src="/images/favicon.png"
               alt="Wellmoon Veda logo"
-              className="h-14 w-auto md:h-16 lg:h-20 object-contain flex-shrink-0"
+              className="h-7 w-auto md:h-10 lg:h-14 object-contain flex-shrink-0"
+            />
+            <img
+              src="/images/footerbanner.png"
+              alt="Wellmoon Veda logo"
+              className="h-5 w-auto md:h-6 lg:h-7 object-contain flex-shrink-0"
             />
           </a>
 

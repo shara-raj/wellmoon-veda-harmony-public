@@ -10,7 +10,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-16 mb-12">
           {/* Brand */}
           <div className="space-y-4 mr-3">
-            <img src="/images/footerbanner.png" alt="" />
+            <img
+              src="/images/footerbanner.png"
+              alt=""
+              className="h-7 w-auto md:h-7 lg:h-9 object-contain flex-shrink-0"
+            />
             <p className="text-sm text-muted-foreground leading-relaxed">
               Blending ancient Vedic wisdom with modern science for women's
               holistic wellness.
