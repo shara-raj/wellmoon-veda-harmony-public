@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import favicon from "@/assets/images/mainlogo.png";
+import favicon from "@/assets/images/favicon.png";
 import tagline from "@/assets/images/footerbanner.png";
 import { Link } from "react-router-dom";
 
