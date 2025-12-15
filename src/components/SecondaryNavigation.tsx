@@ -9,7 +9,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import logo from "@/assets/images/mainlogo.png";
+import favicon from "@/assets/images/mainlogo.png";
+import tagline from "@/assets/images/footerbanner.png";
 import { Link } from "react-router-dom";
 
 const SecondaryNavigation = () => {
@@ -30,12 +31,12 @@ const SecondaryNavigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 pt-1">
             <img
-              src={logo}
+              src={favicon}
               alt="Wellmoon Veda logo"
               className="h-7 w-auto md:h-10 lg:h-14 object-contain flex-shrink-0"
             />
             <img
-              src="/images/footerbanner.png"
+              src={tagline}
               alt="Wellmoon Veda logo"
               className="h-5 w-auto md:h-6 lg:h-7 object-contain flex-shrink-0"
             />
