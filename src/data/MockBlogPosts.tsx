@@ -108,7 +108,7 @@ export const recentPosts: BlogPost[] = [
     title: "Morning Breathwork Routine for a Calm Start",
     excerpt:
       "A short and gentle breathwork routine to begin your day with clarity.",
-    image: "/images/blog/morning-breathwork.jpg",
+    image: featuredImages[2],
     date: "Mar 10, 2025",
     slug: "morning-breathwork-routine",
   },
@@ -117,7 +117,7 @@ export const recentPosts: BlogPost[] = [
     title: "5 Signs Your Nervous System Needs Rest",
     excerpt:
       "Learn to recognize subtle signs of burnout and emotional overload.",
-    image: "/images/blog/nervous-system-rest.jpg",
+    image: featuredImages[6],
     date: "Mar 08, 2025",
     slug: "signs-nervous-system-needs-rest",
   },
@@ -126,7 +126,7 @@ export const recentPosts: BlogPost[] = [
     title: "How Sound Frequencies Influence Mood",
     excerpt:
       "Understanding how sound therapy impacts emotional and mental states.",
-    image: "/images/blog/sound-frequencies-mood.jpg",
+    image: featuredImages[5],
     date: "Mar 05, 2025",
     slug: "sound-frequencies-influence-mood",
   },
@@ -135,7 +135,7 @@ export const recentPosts: BlogPost[] = [
     title: "A Beginner’s Guide to Guided Forest Bathing",
     excerpt:
       "What to expect when you experience forest bathing for the first time.",
-    image: "/images/blog/guided-forest-bathing.jpg",
+    image: featuredImages[1],
     date: "Mar 01, 2025",
     slug: "beginners-guide-forest-bathing",
   },
@@ -143,7 +143,7 @@ export const recentPosts: BlogPost[] = [
     id: "post-5",
     title: "Evening Rituals to Wind Down Naturally",
     excerpt: "Simple practices to relax your mind and body before sleep.",
-    image: "/images/blog/evening-rituals.jpg",
+    image: featuredImages[7],
     date: "Feb 27, 2025",
     slug: "evening-rituals-wind-down",
   },
