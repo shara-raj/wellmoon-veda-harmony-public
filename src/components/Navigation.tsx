@@ -27,11 +27,11 @@ const Navigation = () => {
   }, []);
 
   const healingPaths = [
-    { name: "Wellness Yoga", href: "/wellness-yoga" },
-    { name: "Mudra Healing", href: "/mudra-healing" },
-    { name: "Aura Healing", href: "/aura-healing" },
-    { name: "Virtual Nature Healing", href: "/virtual-nature-healing" },
-    { name: "Sound Healing", href: "/sound-healing" },
+    { name: "Wellness Yoga", to: "/wellness-yoga" },
+    { name: "Mudra Healing", to: "/mudra-healing" },
+    { name: "Aura Healing", to: "/aura-healing" },
+    { name: "Virtual Nature Healing", to: "/virtual-nature-healing" },
+    { name: "Sound Healing", to: "/sound-healing" },
   ];
 
   const Navigate = useNavigate();
@@ -72,7 +72,7 @@ const Navigation = () => {
           `}
           >
             {/* Logo */}
-            <a href="/" className="flex items-center flex-shrink-0">
+            <Link to="/" className="flex items-center flex-shrink-0">
               <div
                 className={`logoClass flex items-center w-40 md:w-40 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                   isScrolled
@@ -91,16 +91,16 @@ const Navigation = () => {
                   className="w-auto max-w-full h-9 md:h-7"
                 />
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Home
-              </a>
+              </Link>
 
               <NavigationMenu>
                 <NavigationMenuList>
@@ -113,14 +113,14 @@ const Navigation = () => {
                         {healingPaths.map((path) => (
                           <li key={path.name}>
                             <NavigationMenuLink asChild>
-                              <a
-                                href={path.href}
+                              <Link
+                                to={path.to}
                                 className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#d4af37]/70 hover:text-black"
                               >
                                 <div className="text-base font-medium leading-none">
                                   {path.name}
                                 </div>
-                              </a>
+                              </Link>
                             </NavigationMenuLink>
                           </li>
                         ))}
@@ -130,30 +130,30 @@ const Navigation = () => {
                 </NavigationMenuList>
               </NavigationMenu>
 
-              <a
-                href="/plan-and-pricing"
+              <Link
+                to="/plan-and-pricing"
                 className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Plans & Pricing
-              </a>
-              <a
-                href="/about"
+              </Link>
+              <Link
+                to="/about"
                 className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 About
-              </a>
-              <a
-                href="/blog"
+              </Link>
+              <Link
+                to="/blog"
                 className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Blog
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Contact
-              </a>
+              </Link>
             </div>
 
             {/* Auth Buttons */}
