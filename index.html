@@ -1,28 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WellMoon Veda | Women's Holistic Wellness</title>
-    <meta name="description" content="Restore harmony and balance through ancient Vedic practices. Yoga, mudra healing, pranayama, sound healing, and aura balancing for women's wellbeing." />
+    <meta
+      name="description"
+      content="Restore harmony and balance through ancient Vedic practices. Yoga, mudra healing, pranayama, sound healing, and aura balancing for women's wellbeing."
+    />
     <meta name="author" content="WellMoon Veda" />
 
-    <meta property="og:title" content="WellMoon Veda | Women's Holistic Wellness" />
-    <meta property="og:description" content="Restore harmony and balance through ancient Vedic practices. Yoga, mudra healing, pranayama, sound healing, and aura balancing for women's wellbeing." />
+    <meta
+      property="og:title"
+      content="WellMoon Veda | Women's Holistic Wellness"
+    />
+    <meta
+      property="og:description"
+      content="Restore harmony and balance through ancient Vedic practices. Yoga, mudra healing, pranayama, sound healing, and aura balancing for women's wellbeing."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta
+      property="og:image"
+      content="https://lovable.dev/opengraph-image-p98pqg.png"
+    />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@WellMoonVeda" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500&family=Fraunces:wght@400;500;600;700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <meta
+      name="twitter:image"
+      content="https://lovable.dev/opengraph-image-p98pqg.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500&family=Fraunces:wght@400;500;600;700&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx">
+          (function () {
+        const params = new URLSearchParams(window.location.search);
+        const redirectPath = params.get("");
+        if (redirectPath) {
+          window.history.replaceState(
+            null,
+            "",
+            "/wellmoon-veda-harmony-public" + redirectPath
+          );
+        }
+      })();
+    </script>
   </body>
 </html>
