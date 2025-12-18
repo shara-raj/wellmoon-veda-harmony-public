@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
+import footerbanner from "@/assets/images/footerbanner.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4 mr-3">
             <img
-              src="/images/footerbanner.png"
+              src={footerbanner}
               alt=""
               className="h-7 w-auto md:h-7 lg:h-9 object-contain flex-shrink-0"
             />

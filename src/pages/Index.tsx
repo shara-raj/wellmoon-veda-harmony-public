@@ -4,7 +4,7 @@ import HealingPaths from "@/components/HealingPaths";
 import WellnessInvitation from "@/components/WellnessInvitation";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
-import Blog from "@/components/Blog";
+import Blog from "@/components/ui/Blog";
 import Subscribe from "@/components/Subscribe";
 import Footer from "@/components/Footer";
 
