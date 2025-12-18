@@ -43,7 +43,7 @@ const SecondaryNavigation = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <a
               href="/"
-              className="text-sm font-medium text-foreground hover:text-[#be9d31]
+              className="text-base font-medium text-foreground hover:text-[#be9d31]
               transition-colors"
             >
               Home
@@ -52,7 +52,7 @@ const SecondaryNavigation = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-[#be9d31]">
+                  <NavigationMenuTrigger className="text-base font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-[#be9d31]">
                     Healing Path
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -64,7 +64,7 @@ const SecondaryNavigation = () => {
                               href={path.href}
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#d4af37]/70 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
-                              <div className="text-sm font-medium leading-none">
+                              <div className="text-base font-medium leading-none">
                                 {path.name}
                               </div>
                             </a>
@@ -79,25 +79,25 @@ const SecondaryNavigation = () => {
 
             <a
               href="/plan-and-pricing"
-              className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
             >
               Plans & Pricing
             </a>
             <a
               href="/about"
-              className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
             >
               About
             </a>
             <a
               href="/blog"
-              className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
             >
               Blog
             </a>
             <a
               href="/contact"
-              className="text-sm font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
             >
               Contact
             </a>
@@ -109,7 +109,7 @@ const SecondaryNavigation = () => {
               variant="outline"
               size="sm"
               className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 
-            text-primary-foreground text-sm font-medium"
+            text-primary-foreground text-base font-medium"
             >
               Login
             </Button>
@@ -117,7 +117,7 @@ const SecondaryNavigation = () => {
               variant="outline"
               size="sm"
               className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 
-            text-primary-foreground text-sm font-medium"
+            text-primary-foreground text-base font-medium"
             >
               Sign Up
             </Button>
@@ -138,14 +138,14 @@ const SecondaryNavigation = () => {
           <div className="lg:hidden py-4 border-t border-border bg-card">
             <div className="flex flex-col space-y-4">
               <a
-                href="#home"
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
+                href="/home"
+                className="text-base font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </a>
               <div className="px-4">
-                <p className="text-sm font-medium text-muted-foreground mb-2">
+                <p className="text-base font-medium text-muted-foreground mb-2">
                   Healing Path
                 </p>
                 <div className="flex flex-col space-y-2 pl-4">
@@ -153,7 +153,7 @@ const SecondaryNavigation = () => {
                     <a
                       key={path.name}
                       href={path.href}
-                      className="text-sm text-foreground hover:text-primary transition-colors py-1"
+                      className="text-base text-foreground hover:text-primary transition-colors py-1"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {path.name}
@@ -162,29 +162,29 @@ const SecondaryNavigation = () => {
                 </div>
               </div>
               <a
-                href="#pricing"
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
+                href="/pricing"
+                className="text-base font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Plans & Pricing
               </a>
               <a
-                href="#about"
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
+                href="/about"
+                className="text-base font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </a>
               <a
-                href="#blog"
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
+                href="/blog"
+                className="text-base font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
               </a>
               <a
-                href="#contact"
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
+                href="/contact"
+                className="text-base font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
