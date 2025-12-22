@@ -17,7 +17,11 @@ export default function PricingCard({
     <div
       className={`
         rounded-2xl border p-8 space-y-6
-        ${highlighted ? "border-foreground bg-[#c1a88d]/85" : "bg-[#c1a88d]/55"}
+        ${
+          highlighted
+            ? "border-foreground bg-[#c1a88d]/70 ring-black ring-1 scale-105 hover:bg-[#c1a88d]/45"
+            : "bg-[#c1a88d]/65 hover:bg-[#c1a88d]/45"
+        }
       `}
     >
       <h2 className="font-serif text-2xl">{title}</h2>
@@ -34,8 +38,8 @@ export default function PricingCard({
         className={`mt-6 w-full rounded-lg border py-3
       ${
         highlighted
-          ? "bg-[#FFF9F1] hover:bg-white"
-          : "bg-white hover:bg-[#FFF9F1]"
+          ? "bg-[#faf2e8] hover:bg-white"
+          : "bg-white hover:bg-[#faf2e8]"
       }`}
       >
         Get Started

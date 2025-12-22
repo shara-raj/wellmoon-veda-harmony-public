@@ -1,9 +1,6 @@
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
-import { Button } from "@/components/ui/button";
-import pranayamaImage from "@/assets/blog-pranayama.jpg";
-import soundHealingImage from "@/assets/blog-sound-healing.jpg";
-import auraImage from "@/assets/blog-aura.jpg";
+import { ArrowRight } from "lucide-react";
+import { recentPosts, featuredPosts } from "@/data/BlogData";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const importedImages = import.meta.glob(
@@ -31,33 +28,6 @@ const Blog = () => {
       .toLowerCase()
       .replace(/\s+/g, "")
       .replace(/[^\w-]/g, "");
-
-  const articles = [
-    {
-      title: "The Science Behind Pranayama Breathing",
-      excerpt:
-        "Discover how ancient breathing techniques affect your nervous system and promote emotional balance through modern scientific research.",
-      image: pranayamaImage,
-      category: "Wellness Science",
-      readTime: "5 min read",
-    },
-    {
-      title: "Sound Healing: Vibrations That Transform",
-      excerpt:
-        "Explore the therapeutic power of sound frequencies and how they can restore harmony to your mind, body, and spirit.",
-      image: soundHealingImage,
-      category: "Healing Practices",
-      readTime: "7 min read",
-    },
-    {
-      title: "Understanding Your Aura Energy",
-      excerpt:
-        "Learn to recognize and balance your energetic field for improved wellbeing, clarity, and emotional resilience.",
-      image: auraImage,
-      category: "Energy Work",
-      readTime: "6 min read",
-    },
-  ];
 
   const featuredGuides = [
     {
@@ -153,37 +123,40 @@ const Blog = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {articles.map((article, index) => (
+          {recentPosts.slice(0, 3).map((article, index) => (
             <article
-              key={article.title}
-              className="group bg-[#c1a88d]/70 rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in-subtle"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              key={article.id}
+              className="group bg-[#c1a88d]/70 rounded-2xl overflow-hidden"
             >
               <div className="relative h-56 overflow-hidden">
                 <img
                   src={article.image}
                   alt={article.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                 />
-                <div className="absolute top-4 left-4 bg-white/50 text-foreground text-xs font-medium px-3 py-1 rounded-full">
+                <div className="absolute top-4 left-4 bg-white/50 text-xs px-3 py-1 rounded-full">
                   {article.category}
                 </div>
               </div>
+
               <div className="p-6 space-y-4">
-                <h3 className="text-xl font-serif font-semibold text-foreground group-hover:text-[#636363]">
+                <h3 className="text-xl font-serif font-semibold">
                   {article.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {article.excerpt}
-                </p>
-                <div className="flex items-center justify-between pt-2">
+
+                <p className="text-muted-foreground">{article.excerpt}</p>
+
+                <div className="flex justify-between items-center">
                   <span className="text-sm text-muted-foreground">
                     {article.readTime}
                   </span>
-                  <button className="flex items-center gap-2 text-sm font-medium text-foreground group-hover:gap-3 transition-all">
+
+                  <Link
+                    to={`/blog/${article.slug}`}
+                    className="flex items-center gap-2 text-sm font-medium"
+                  >
                     Read More
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </article>
@@ -209,59 +182,58 @@ const Blog = () => {
         gap-6
       "
               >
-                {featuredGuides.map((guide, index) => {
-                  // try to pick matching image by slug, otherwise fallback to index
-                  const slug = titleToSlug(guide.title);
-                  const matchedSrc = imagesMap[slug];
-                  const fallbackSrc = imagesArray[index] ?? undefined;
-                  const src = matchedSrc ?? fallbackSrc;
+                {featuredPosts.map((post, index) => (
+                  <article
+                    key={post.id}
+                    className="
+          bg-[#c1a88d]/70
+          rounded-2xl
+          p-6
+          shadow-soft
+          hover:shadow-medium
+          hover:-translate-y-1
+          transition-all
+          duration-300
+          overflow-hidden
+        "
+                    style={{ animationDelay: `${index * 0.05}s` }}
+                  >
+                    {/* Image */}
+                    <div className="mb-4 rounded-lg overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-56 object-cover block"
+                      />
+                    </div>
 
-                  return (
-                    <article
-                      key={guide.title}
-                      className="
-              bg-[#c1a88d]/70 rounded-2xl p-6 shadow-soft 
-              hover:shadow-medium hover:-translate-y-1
-              transition-all duration-300 animate-fade-in-subtle
-              overflow-hidden
-            "
-                      style={{ animationDelay: `${index * 0.05}s` }}
+                    {/* Optional category */}
+                    {post.category && (
+                      <span className="inline-block mb-3 text-xs font-medium px-3 py-1 rounded-full bg-white text-black">
+                        {post.category}
+                      </span>
+                    )}
+
+                    {/* Title */}
+                    <h4 className="text-lg font-serif font-semibold text-foreground mb-3">
+                      {post.title}
+                    </h4>
+
+                    {/* Excerpt */}
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      {post.excerpt}
+                    </p>
+
+                    {/* CTA */}
+                    <Link
+                      to={`/blog/${post.slug}`}
+                      className="inline-flex items-center gap-2 text-sm font-medium text-black hover:gap-3 transition-all"
                     >
-                      {/* IMAGE (render only if found) */}
-                      {src && (
-                        <div className="mb-4 rounded-lg overflow-hidden">
-                          <img
-                            src={src}
-                            alt={guide.title}
-                            className="w-full h-56 object-cover block"
-                          />
-                        </div>
-                      )}
-
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="text-xs font-medium px-3 py-1 rounded-full bg-white text-black">
-                          {guide.tag}
-                        </span>
-                      </div>
-
-                      <h4 className="text-lg font-serif font-semibold text-foreground mb-3">
-                        {guide.title}
-                      </h4>
-
-                      <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                        {guide.description}
-                      </p>
-
-                      <a
-                        href={guide.url}
-                        className="inline-flex items-center gap-2 text-sm font-medium text-black hover:gap-3 transition-all"
-                      >
-                        Explore Guide
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
-                    </article>
-                  );
-                })}
+                      Explore Guide
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </article>
+                ))}
               </div>
             </div>
           </div>
