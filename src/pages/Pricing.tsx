@@ -1,10 +1,17 @@
 import Footer from "@/components/Footer";
 import SecondaryNavigation from "@/components/SecondaryNavigation";
-import React from "react";
+import React, { useEffect } from "react";
 import PricingHeader from "@/components/pricing/PricingHeader";
 import PricingGrid from "@/components/pricing/PricingGrid";
 
 const PlanandPricing = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+  }, []);
   return (
     <>
       <SecondaryNavigation />

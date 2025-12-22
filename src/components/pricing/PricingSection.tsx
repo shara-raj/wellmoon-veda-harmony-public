@@ -16,7 +16,7 @@ export default function PricingSection() {
 
         <div className="text-center">
           <Link
-            to="/pricing"
+            to="/plan-and-pricing"
             className="inline-block mt-6 text-sm underline underline-offset-4"
           >
             View full pricing details
