@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import BlogPostPage from "./BlogPostPage";
-import { featuredPosts, recentPosts } from "@/data/MockBlogPosts";
+import { featuredPosts, recentPosts } from "@/data/BlogData";
 
 export default function BlogPostRoute() {
   const { slug } = useParams<{ slug: string }>();

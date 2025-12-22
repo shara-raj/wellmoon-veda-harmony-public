@@ -3,10 +3,10 @@ import Hero from "@/components/Hero";
 import HealingPaths from "@/components/HealingPaths";
 import WellnessInvitation from "@/components/WellnessInvitation";
 import Testimonials from "@/components/Testimonials";
-import Pricing from "@/components/Pricing";
-import Blog from "@/components/ui/Blog";
+import Blog from "@/components/Blog";
 import Subscribe from "@/components/Subscribe";
 import Footer from "@/components/Footer";
+import PricingSection from "@/components/pricing/PricingSection";
 
 const Index = () => {
   return (
@@ -20,7 +20,7 @@ const Index = () => {
         <WellnessInvitation />
         <Testimonials />
         <Blog />
-        <Pricing />
+        <PricingSection />
         <Subscribe />
       </main>
       <Footer />

@@ -5,4 +5,8 @@ export type BlogPost = {
   image: string;
   date: string;
   slug: string;
+
+  // OPTIONAL metadata (used in UI)
+  category?: string;
+  readTime?: string;
 };

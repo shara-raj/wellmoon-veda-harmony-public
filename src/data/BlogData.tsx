@@ -102,49 +102,50 @@ export const featuredPosts: BlogPost[] = [
  * RECENT POSTS
  * Mixed content, newest should appear first
  */
-export const recentPosts: BlogPost[] = [
+export const allPosts: BlogPost[] = [
   {
     id: "post-1",
-    title: "Morning Breathwork Routine for a Calm Start",
+    title: "The Science Behind Pranayama Breathing",
     excerpt:
-      "A short and gentle breathwork routine to begin your day with clarity.",
-    image: featuredImages[2],
-    date: "Mar 10, 2025",
-    slug: "morning-breathwork-routine",
+      "Discover how ancient breathing techniques affect your nervous system.",
+    image: featuredImages[3],
+    date: "Mar 15, 2025",
+    slug: "science-behind-pranayama-breathing",
+    category: "Wellness Science",
+    readTime: "5 min read",
   },
   {
     id: "post-2",
-    title: "5 Signs Your Nervous System Needs Rest",
-    excerpt:
-      "Learn to recognize subtle signs of burnout and emotional overload.",
-    image: featuredImages[6],
-    date: "Mar 08, 2025",
-    slug: "signs-nervous-system-needs-rest",
+    title: "Sound Healing: Vibrations That Transform",
+    excerpt: "Explore the therapeutic power of sound frequencies.",
+    image: featuredImages[4],
+    date: "Mar 12, 2025",
+    slug: "sound-healing-vibrations",
+    category: "Healing Practices",
+    readTime: "7 min read",
   },
   {
     id: "post-3",
-    title: "How Sound Frequencies Influence Mood",
+    title: "Gentle Evening Rituals to Calm the Nervous System",
     excerpt:
-      "Understanding how sound therapy impacts emotional and mental states.",
+      "Unwind after a long day with simple evening rituals that signal safety to your nervous system and prepare your body for deep rest.",
     image: featuredImages[5],
-    date: "Mar 05, 2025",
-    slug: "sound-frequencies-influence-mood",
+    date: "Mar 18, 2025",
+    slug: "gentle-evening-rituals-calm-nervous-system",
+    category: "Nervous System Care",
+    readTime: "6 min read",
   },
   {
     id: "post-4",
-    title: "A Beginner’s Guide to Guided Forest Bathing",
+    title: "How Breath Awareness Improves Emotional Regulation",
     excerpt:
-      "What to expect when you experience forest bathing for the first time.",
-    image: featuredImages[1],
-    date: "Mar 01, 2025",
-    slug: "beginners-guide-forest-bathing",
-  },
-  {
-    id: "post-5",
-    title: "Evening Rituals to Wind Down Naturally",
-    excerpt: "Simple practices to relax your mind and body before sleep.",
-    image: featuredImages[7],
-    date: "Feb 27, 2025",
-    slug: "evening-rituals-wind-down",
+      "Learn how mindful awareness of the breath can help you respond to emotions with clarity instead of reacting from stress.",
+    image: featuredImages[6],
+    date: "Mar 16, 2025",
+    slug: "breath-awareness-emotional-regulation",
+    category: "Emotional Wellness",
+    readTime: "5 min read",
   },
 ];
+
+export const recentPosts = allPosts;

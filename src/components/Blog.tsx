@@ -1,16 +1,6 @@
-<<<<<<< HEAD:src/components/ui/Blog.tsx
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
-import { Button } from "@/components/ui/button";
-import pranayamaImage from "@/assets/blog-pranayama.jpg";
-import soundHealingImage from "@/assets/blog-sound-healing.jpg";
-import auraImage from "@/assets/blog-aura.jpg";
-import backgroundPattern from "@/assets/images/pattern.png";
-=======
 import { ArrowRight } from "lucide-react";
 import { recentPosts, featuredPosts } from "@/data/BlogData";
 import { Link } from "react-router-dom";
->>>>>>> 4f6dd9775172ff330596d373b08269b3eda574e8:src/components/Blog.tsx
 
 const Blog = () => {
   const importedImages = import.meta.glob(
@@ -117,7 +107,7 @@ const Blog = () => {
       id="blog"
       className="py-20 lg:py-32 bg-background"
       style={{
-        backgroundImage: `url(${backgroundPattern})`,
+        backgroundImage: "url(/images/pattern.png)",
         backgroundRepeat: "repeat",
       }}
     >

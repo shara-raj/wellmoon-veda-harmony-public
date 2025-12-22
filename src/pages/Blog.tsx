@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import SecondaryNavigation from "@/components/SecondaryNavigation";
 import FeaturedPosts from "@/components/blog/FeaturedPosts";
 import RecentPosts from "@/components/blog/RecentPosts";
-import { featuredPosts, recentPosts } from "@/data/MockBlogPosts";
+import { featuredPosts, recentPosts } from "@/data/BlogData";
 import React from "react";
 
 const Blog = () => {
