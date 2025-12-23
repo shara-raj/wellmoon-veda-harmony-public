@@ -19,6 +19,7 @@ import Blog from "./pages/Blog";
 import BlogPostRoute from "./pages/BlogPostRoute";
 import Contact from "./pages/Contact";
 import SignUp from "./pages/SignUp";
+import AdminRoutes from "./admin/adminRoutes";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,8 @@ const App = () => (
           <Route path="/sign-up" element={<SignUp />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
+          {/*Admin Routes*/}
+          {AdminRoutes}
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
