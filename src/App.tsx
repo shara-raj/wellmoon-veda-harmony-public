@@ -19,7 +19,7 @@ import Blog from "./pages/Blog";
 import BlogPostRoute from "./pages/BlogPostRoute";
 import Contact from "./pages/Contact";
 import SignUp from "./pages/SignUp";
-import AdminRoutes from "./admin/adminRoutes";
+import AdminRoutes from "./admin/AdminRoutes";
 
 const queryClient = new QueryClient();
 
