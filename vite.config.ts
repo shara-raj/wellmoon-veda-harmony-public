@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // 👇 ADD THIS LINE
-  base: "/wellmoon-veda-harmony-public/",
+  base: process.env.VITE_BASE_PATH || "/",
 
   server: {
     host: "::",
