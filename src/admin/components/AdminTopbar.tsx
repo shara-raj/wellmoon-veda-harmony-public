@@ -1,7 +1,12 @@
+import { useNavigate } from "react-router-dom";
+import { adminLogout } from "../adminAuth";
+
 const AdminTopbar = () => {
+  const navigate = useNavigate();
+
   const handleLogout = () => {
-    // Supabase logout will go here later
-    console.log("Logout clicked");
+    adminLogout(); // ✅ clear login state
+    navigate("/admin/login"); // ✅ redirect
   };
 
   return (
