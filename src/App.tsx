@@ -20,6 +20,7 @@ import BlogPostRoute from "./pages/BlogPostRoute";
 import Contact from "./pages/Contact";
 import SignUp from "./pages/SignUp";
 import AdminRoutes from "./admin/AdminRoutes";
+import AdminLogin from "./admin/pages/AdminLogin";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
           {/*Admin Routes*/}
           {AdminRoutes}
+          <Route path="/admin/login" element={<AdminLogin />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
