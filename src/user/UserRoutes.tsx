@@ -2,8 +2,8 @@ import { Route } from "react-router-dom";
 import UserLayout from "./layout/UserLayout";
 import UserDashboard from "../user/pages/UserDashboard";
 import MyContent from "../user/pages/MyContent";
-import Subscription from "../user/pages/Subscription";
-import Settings from "../user/pages/Settings";
+import Subscription from "./pages/UserSubscription";
+import Settings from "./pages/UserSettings";
 
 const UserRoutes = (
   <Route path="/" element={<UserLayout />}>
