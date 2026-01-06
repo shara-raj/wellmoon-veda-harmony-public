@@ -8,6 +8,7 @@ import Users from "./pages/Users";
 import Subscriptions from "./pages/Subscriptions";
 import Settings from "./pages/Settings";
 import PostEditor from "./pages/PostEditor";
+import PageEditor from "./pages/PageEditor";
 
 const AdminRoutes = (
   <Route path="/admin" element={<AdminLayout />}>
@@ -19,6 +20,7 @@ const AdminRoutes = (
     <Route path="settings" element={<Settings />} />
     <Route path="posts/new" element={<PostEditor />} />
     <Route path="posts/:id/edit" element={<PostEditor />} />
+    <Route path="pages/:id/edit" element={<PageEditor />} />
   </Route>
 );
 
