@@ -15,6 +15,7 @@ const AdminSidebar = () => {
 
         {role === "admin" && (
           <>
+            <AdminNavLink to="/admin/requests">Approval Requests</AdminNavLink>
             <AdminNavLink to="/admin/users">Users</AdminNavLink>
             <AdminNavLink to="/admin/subscriptions">Subscriptions</AdminNavLink>
             <AdminNavLink to="/admin/settings">Settings</AdminNavLink>
