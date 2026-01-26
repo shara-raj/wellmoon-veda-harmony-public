@@ -10,6 +10,7 @@ import Settings from "./pages/Settings";
 import PostEditor from "./pages/PostEditor";
 import PageEditor from "./pages/PageEditor";
 import ApprovalRequests from "./pages/ApprovalRequests";
+import Editors from "./pages/Editors";
 
 const AdminRoutes = (
   <Route path="/admin" element={<AdminLayout />}>
@@ -23,6 +24,7 @@ const AdminRoutes = (
     <Route path="posts/:id/edit" element={<PostEditor />} />
     <Route path="pages/:id/edit" element={<PageEditor />} />
     <Route path="requests" element={<ApprovalRequests />} />
+    <Route path="editors" element={<Editors />} />
   </Route>
 );
 
