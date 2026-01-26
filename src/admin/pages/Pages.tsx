@@ -1,5 +1,4 @@
 import React from "react";
-import { getAdminRole } from "../useAdminRole";
 import { useNavigate } from "react-router-dom";
 
 const pages = [
@@ -24,7 +23,6 @@ const pages = [
 ];
 
 const Pages = () => {
-  const role = getAdminRole();
   const navigate = useNavigate();
 
   const handleRequest = (message: string) => {
@@ -43,23 +41,13 @@ const Pages = () => {
         </div>
 
         {/* Add / Request Page */}
-        {role === "admin" ? (
-          <button
-            className="px-5 py-2 rounded-full bg-primary text-primary-foreground 
+
+        <button
+          className="px-5 py-2 rounded-full bg-primary text-primary-foreground 
                        text-sm hover:opacity-90 transition"
-          >
-            + Add New Page
-          </button>
-        ) : (
-          <button
-            onClick={() =>
-              handleRequest("Request sent to admin for page creation approval.")
-            }
-            className="px-5 py-2 rounded-full border border-border text-sm"
-          >
-            Request New Page
-          </button>
-        )}
+        >
+          + Add New Page
+        </button>
       </div>
 
       {/* Pages table */}
@@ -108,35 +96,15 @@ const Pages = () => {
                   </button>
 
                   {/* Delete / Request Delete */}
-                  {role === "admin" ? (
-                    <button className="text-sm text-destructive hover:underline">
-                      Delete
-                    </button>
-                  ) : (
-                    <button
-                      onClick={() =>
-                        handleRequest(
-                          "Delete request sent to admin for approval."
-                        )
-                      }
-                      className="text-sm text-muted-foreground hover:underline"
-                    >
-                      Request Delete
-                    </button>
-                  )}
+                  <button className="text-sm text-destructive hover:underline">
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-
-      {/* Helper note */}
-      {role === "editor" && (
-        <p className="text-xs text-muted-foreground">
-          Page creation and deletion require admin approval.
-        </p>
-      )}
     </div>
   );
 };
