@@ -23,7 +23,7 @@ const AdminLogin = () => {
         <h1 className="text-2xl font-serif text-center mb-2">Admin Login</h1>
 
         <p className="text-sm text-muted-foreground text-center mb-8">
-          This login is for administrators and editors only
+          This login is for administrators only
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5">

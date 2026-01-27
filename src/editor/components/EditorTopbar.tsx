@@ -1,18 +1,18 @@
 import { useNavigate } from "react-router-dom";
-import { adminLogout } from "../adminAuth";
+import { editorLogout } from "../editorAuth";
 
-const AdminTopbar = () => {
+const EditorTopbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    adminLogout();
-    navigate("/admin/login");
+    editorLogout();
+    navigate("/editor/login");
   };
 
   return (
     <header className="h-16 bg-white border-b border-border flex items-center justify-between px-6">
       <div />
-      <h1 className="text-2xl mb-2">Admin Dashboard</h1>
+      <h1 className="text-2xl mb-2">Editor Dashboard</h1>
       <div className="flex items-center gap-4">
         <button
           onClick={handleLogout}
@@ -25,4 +25,4 @@ const AdminTopbar = () => {
   );
 };
 
-export default AdminTopbar;
+export default EditorTopbar;
