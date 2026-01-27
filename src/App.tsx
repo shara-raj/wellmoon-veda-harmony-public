@@ -28,6 +28,7 @@ import EditorPosts from "./editor/pages/Posts";
 import EditorPages from "./editor/pages/Pages";
 import EditorLogin from "./editor/pages/EditorLogin";
 import EditorSettings from "./editor/pages/EditorSettings";
+import AddNewPost from "./editor/pages/AddNewPost";
 
 const queryClient = new QueryClient();
 
@@ -72,6 +73,7 @@ const App = () => (
           <Route path="/editor" element={<EditorLayout />}>
             <Route index element={<EditorDashboard />} />
             <Route path="posts" element={<EditorPosts />} />
+            <Route path="posts/new" element={<AddNewPost />} />
             <Route path="pages" element={<EditorPages />} />
             <Route path="settings" element={<EditorSettings />} />
           </Route>

@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const EditorPosts = () => {
+  const navigate = useNavigate();
   return (
     <div className="space-y-8">
       {/* Header */}
@@ -8,7 +11,10 @@ const EditorPosts = () => {
           <p className="text-muted-foreground">Manage blog posts and guides</p>
         </div>
 
-        <button className="px-6 py-2 rounded-full bg-[#d4a373] text-white hover:opacity-90">
+        <button
+          onClick={() => navigate("/editor/posts/new")}
+          className="px-6 py-2 rounded-full bg-[#d4a373] text-white hover:opacity-90"
+        >
           + Add New Post
         </button>
       </div>
