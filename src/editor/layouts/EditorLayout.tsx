@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import ForceChangePasswordModal from "../components/ForceChangePasswordModal";
+import EditorTopbar from "../components/EditorTopbar";
 
 const EditorLayout = () => {
   // Temporary flag (later comes from Supabase)
@@ -14,7 +15,7 @@ const EditorLayout = () => {
 
   const handleLogout = () => {
     // Later: Supabase sign out
-    navigate("/login");
+    navigate("editor/login");
   };
 
   return (
@@ -42,21 +43,16 @@ const EditorLayout = () => {
           <NavLink to="/editor/pages" className={linkClass}>
             Pages
           </NavLink>
-
-          <button
-            onClick={handleLogout}
-            className="w-full text-left px-4 py-2 rounded-lg text-sm 
-                       text-muted-foreground hover:bg-muted"
-          >
-            Logout
-          </button>
         </nav>
       </aside>
 
       {/* Main Area */}
-      <main className="flex-1 p-8">
-        <Outlet />
-      </main>
+      <div className="flex-1 flex flex-col">
+        <EditorTopbar />
+        <main className="flex-1 p-8">
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 };

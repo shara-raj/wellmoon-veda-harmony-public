@@ -4,17 +4,19 @@ import { ReactNode } from "react";
 type Props = {
   to: string;
   children: ReactNode;
+  end?: boolean;
 };
 
-const AdminNavLink = ({ to, children }: Props) => {
+const AdminNavLink = ({ to, children, end = false }: Props) => {
   return (
     <NavLink
       to={to}
+      end={end}
       className={({ isActive }) =>
         `block px-3 py-2 rounded-md transition ${
           isActive
-            ? "bg-primary/10 text-primary"
-            : "text-muted-foreground hover:text-primary"
+            ? "bg-primary/10 text-black"
+            : "text-muted-foreground hover:text-black"
         }`
       }
     >
