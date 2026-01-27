@@ -4,7 +4,7 @@ const AdminSidebar = () => {
   return (
     <aside className="w-64 bg-white border-r border-border px-6 py-8">
       <img
-        src="/images/footerbanner.png"
+        src="src/assets/images/footerbanner.png"
         alt=""
         className="mb-5 p-1 border-2 border-muted-background rounded-sm"
       />

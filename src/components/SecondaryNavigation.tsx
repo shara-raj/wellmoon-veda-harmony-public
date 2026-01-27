@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import favicon from "@/assets/images/favicon.png";
 import tagline from "@/assets/images/footerbanner.png";
-import { Link } from "react-router-dom";
 
 const SecondaryNavigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

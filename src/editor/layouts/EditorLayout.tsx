@@ -27,7 +27,7 @@ const EditorLayout = () => {
       {/* Sidebar */}
       <aside className="w-60 bg-white border-r border-border p-6">
         <img
-          src="/images/footerbanner.png"
+          src="src/assets/images/footerbanner.png"
           alt=""
           className="mb-5 p-1 border-2 border-muted-background rounded-sm"
         />
