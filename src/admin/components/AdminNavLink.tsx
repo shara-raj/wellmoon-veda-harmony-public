@@ -13,10 +13,10 @@ const AdminNavLink = ({ to, children, end = false }: Props) => {
       to={to}
       end={end}
       className={({ isActive }) =>
-        `block px-3 py-2 rounded-md transition ${
+        `block px-3 py-2 text-base rounded-md transition ${
           isActive
-            ? "bg-primary/10 text-black"
-            : "text-muted-foreground hover:text-black"
+            ? "bg-muted text-black"
+            : "text-muted-foreground hover:text-black hover:bg-muted"
         }`
       }
     >

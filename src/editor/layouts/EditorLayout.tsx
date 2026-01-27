@@ -9,14 +9,11 @@ const EditorLayout = () => {
   const navigate = useNavigate();
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
-    `block px-4 py-2 rounded-lg text-sm transition ${
-      isActive ? "bg-muted font-medium" : "text-muted-foreground hover:bg-muted"
+    `block px-4 py-2 rounded-lg text-base transition ${
+      isActive
+        ? "bg-muted font-medium"
+        : "text-muted-foreground hover:bg-muted hover:text-black"
     }`;
-
-  const handleLogout = () => {
-    // Later: Supabase sign out
-    navigate("editor/login");
-  };
 
   return (
     <div className="min-h-screen flex bg-[#faf9f7]">
@@ -29,7 +26,11 @@ const EditorLayout = () => {
 
       {/* Sidebar */}
       <aside className="w-60 bg-white border-r border-border p-6">
-        <h2 className="text-xl font-serif mb-10">Editor Panel</h2>
+        <img
+          src="/images/footerbanner.png"
+          alt=""
+          className="mb-5 p-1 border-2 border-muted-background rounded-sm"
+        />
 
         <nav className="space-y-2">
           <NavLink to="/editor" end className={linkClass}>
@@ -42,6 +43,10 @@ const EditorLayout = () => {
 
           <NavLink to="/editor/pages" className={linkClass}>
             Pages
+          </NavLink>
+
+          <NavLink to="/editor/settings" className={linkClass}>
+            Settings
           </NavLink>
         </nav>
       </aside>

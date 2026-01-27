@@ -27,6 +27,7 @@ import EditorDashboard from "./editor/pages/EditorDashboard";
 import EditorPosts from "./editor/pages/Posts";
 import EditorPages from "./editor/pages/Pages";
 import EditorLogin from "./editor/pages/EditorLogin";
+import EditorSettings from "./editor/pages/EditorSettings";
 
 const queryClient = new QueryClient();
 
@@ -72,6 +73,7 @@ const App = () => (
             <Route index element={<EditorDashboard />} />
             <Route path="posts" element={<EditorPosts />} />
             <Route path="pages" element={<EditorPages />} />
+            <Route path="settings" element={<EditorSettings />} />
           </Route>
           {/*User Routes*/}
           {UserRoutes}

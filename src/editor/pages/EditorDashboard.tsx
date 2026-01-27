@@ -3,10 +3,7 @@ const EditorDashboard = () => {
     <div className="space-y-10">
       {/* Header */}
       <div>
-        <h1 className="text-4xl font-serif mb-2">Editor Dashboard</h1>
-        <p className="text-muted-foreground">
-          Manage your content and pending requests
-        </p>
+        <h2 className="text-xl">Manage your content and pending requests</h2>
       </div>
 
       {/* Stats Cards */}

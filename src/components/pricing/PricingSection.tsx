@@ -3,7 +3,13 @@ import { Link } from "react-router-dom";
 
 export default function PricingSection() {
   return (
-    <section className="px-4 py-24">
+    <section
+      className="px-4 py-24"
+      style={{
+        backgroundImage: "url(/images/pattern.png)",
+        backgroundRepeat: "repeat",
+      }}
+    >
       <div className="mx-auto max-w-6xl space-y-16">
         <header className="max-w-full space-y-4">
           <h2 className="text-4xl text-center font-medium">Plans & Pricing</h2>

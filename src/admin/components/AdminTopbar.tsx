@@ -12,7 +12,7 @@ const AdminTopbar = () => {
   return (
     <header className="h-16 bg-white border-b border-border flex items-center justify-between px-6">
       <div />
-
+      <h1 className="text-2xl mb-2">Admin Dashboard</h1>
       <div className="flex items-center gap-4">
         <button
           onClick={handleLogout}

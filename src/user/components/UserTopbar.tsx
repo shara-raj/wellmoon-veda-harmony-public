@@ -14,10 +14,10 @@ const UserTopbar = () => {
                        flex items-center justify-between px-6"
     >
       {/* Welcome note */}
-      <p className="text-sm text-muted-foreground">
+      <h1 className="text-xl text-muted-foreground">
         Welcome back,{" "}
         <span className="font-medium text-foreground">Ananya</span> ✨
-      </p>
+      </h1>
 
       {/* Logout */}
       <button
