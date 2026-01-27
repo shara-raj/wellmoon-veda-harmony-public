@@ -1,0 +1,64 @@
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import ForceChangePasswordModal from "../components/ForceChangePasswordModal";
+
+const EditorLayout = () => {
+  // Temporary flag (later comes from Supabase)
+  const [mustChangePassword, setMustChangePassword] = useState(true);
+  const navigate = useNavigate();
+
+  const linkClass = ({ isActive }: { isActive: boolean }) =>
+    `block px-4 py-2 rounded-lg text-sm transition ${
+      isActive ? "bg-muted font-medium" : "text-muted-foreground hover:bg-muted"
+    }`;
+
+  const handleLogout = () => {
+    // Later: Supabase sign out
+    navigate("/login");
+  };
+
+  return (
+    <div className="min-h-screen flex bg-[#faf9f7]">
+      {/* Force Password Change Modal */}
+      {mustChangePassword && (
+        <ForceChangePasswordModal
+          onSuccess={() => setMustChangePassword(false)}
+        />
+      )}
+
+      {/* Sidebar */}
+      <aside className="w-60 bg-white border-r border-border p-6">
+        <h2 className="text-xl font-serif mb-10">Editor Panel</h2>
+
+        <nav className="space-y-2">
+          <NavLink to="/editor" end className={linkClass}>
+            Dashboard
+          </NavLink>
+
+          <NavLink to="/editor/posts" className={linkClass}>
+            Posts
+          </NavLink>
+
+          <NavLink to="/editor/pages" className={linkClass}>
+            Pages
+          </NavLink>
+
+          <button
+            onClick={handleLogout}
+            className="w-full text-left px-4 py-2 rounded-lg text-sm 
+                       text-muted-foreground hover:bg-muted"
+          >
+            Logout
+          </button>
+        </nav>
+      </aside>
+
+      {/* Main Area */}
+      <main className="flex-1 p-8">
+        <Outlet />
+      </main>
+    </div>
+  );
+};
+
+export default EditorLayout;

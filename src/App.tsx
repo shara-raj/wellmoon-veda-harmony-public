@@ -22,6 +22,10 @@ import SignUp from "./pages/SignUp";
 import AdminRoutes from "./admin/AdminRoutes";
 import AdminLogin from "./admin/pages/AdminLogin";
 import UserRoutes from "./user/UserRoutes";
+import EditorLayout from "./editor/layouts/EditorLayout";
+import EditorDashboard from "./editor/pages/EditorDashboard";
+import EditorPosts from "./editor/pages/Posts";
+import EditorPages from "./editor/pages/Pages";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +62,12 @@ const App = () => (
           {/*Admin Routes*/}
           {AdminRoutes}
           <Route path="/admin/login" element={<AdminLogin />} />
+          {/* Editor Routes */}
+          <Route path="/editor" element={<EditorLayout />}>
+            <Route index element={<EditorDashboard />} />
+            <Route path="posts" element={<EditorPosts />} />
+            <Route path="pages" element={<EditorPages />} />
+          </Route>
           {/*User Routes*/}
           {UserRoutes}
         </Routes>

@@ -1,18 +1,11 @@
 import { useState } from "react";
-import { getAdminRole } from "../useAdminRole";
 
 const PageEditor = () => {
-  const role = getAdminRole();
-
   const [title] = useState("About Us"); // locked for editor
   const [content, setContent] = useState("");
 
   const handleSave = () => {
-    if (role === "admin") {
-      alert("Page updated successfully");
-    } else {
-      alert("Page update request sent to admin for approval");
-    }
+    alert("Page updated successfully");
   };
 
   return (
@@ -20,11 +13,7 @@ const PageEditor = () => {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-serif">Edit Page</h1>
-        <p className="text-muted-foreground">
-          {role === "admin"
-            ? "Edit page content and settings"
-            : "Edit page content (admin approval required)"}
-        </p>
+        <p className="text-muted-foreground">Edit page content and settings</p>
       </div>
 
       {/* Page title (read-only for editor) */}
@@ -58,15 +47,9 @@ const PageEditor = () => {
           className="px-6 py-2 rounded-full bg-primary 
                      text-primary-foreground hover:opacity-90"
         >
-          {role === "admin" ? "Save Changes" : "Request Approval"}
+          Save Changes
         </button>
       </div>
-
-      {role === "editor" && (
-        <p className="text-xs text-muted-foreground">
-          Page updates made by editors require admin approval before publishing.
-        </p>
-      )}
     </div>
   );
 };

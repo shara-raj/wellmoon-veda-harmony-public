@@ -218,7 +218,7 @@ const Navigation = () => {
                     <p className="mt-3 text-[11px] text-muted-foreground text-center">
                       Don’t have an account?{" "}
                       <Link
-                        to="/signup"
+                        to="/sign-up"
                         className="text-primary hover:underline"
                       >
                         Sign up
