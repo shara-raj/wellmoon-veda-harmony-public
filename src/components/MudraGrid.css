@@ -23,38 +23,100 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* CARD */
 .mudra-card {
-  perspective: 1200px;
-  cursor: pointer;
-}
-
-.mudra-card-inner {
   position: relative;
-  height: 460px;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
+  transform: scale(1);
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+  cursor: pointer;
+  transform-origin: center center;
 }
 
-.mudra-card-inner.is-flipped {
-  transform: rotateY(180deg);
+.mudra-grid.has-expanded .mudra-card {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.mudra-grid.has-expanded .mudra-card.is-expanded {
+  opacity: 1;
+}
+
+.mudra-card.is-expanded {
+  z-index: 50;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+.mudra-grid.has-expanded .mudra-card:not(.is-expanded) {
+  filter: blur(1px);
+}
+
+.mudra-expanded-content {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  text-align: center;
+  background: #fff;
+  align-items: center;
+}
+
+.mudra-expanded-content ol {
+  padding-left: 1.8rem;
+  list-style: decimal;
+}
+
+.mudra-expanded-content li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.mudra-expanded-content li::marker {
+  color: #4b4a46;
 }
 
 /* FRONT & BACK */
-.mudra-card-front,
-.mudra-card-back {
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  backface-visibility: hidden;
-  overflow: hidden;
-}
 .mudra-card-front {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.mudra-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.mudra-close-btn:hover {
+  background: #ffffff;
+  transform: scale(1.1);
 }
 
 /* BLUR BACKGROUND */
@@ -76,12 +138,19 @@
 }
 
 .mudra-usedfor {
-  text-align: left;
+  position: relative;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+
+  background: #d4af375e; /* ✅ readability */
+  backdrop-filter: blur(4px); /* ✅ premium feel */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+  border-radius: 8px;
+  z-index: 2;
 }
 
 .mudra-usedfor span {
-  position: absolute;
-  left: 1rem;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -89,69 +158,10 @@
 }
 
 .mudra-usedfor p {
-  position: absolute;
-  bottom: 4rem;
-  left: 5.5rem;
-  color: #080808;
-  z-index: 2;
+  display: inline;
   font-weight: 500;
-  font-size: large;
-}
-
-/* BACK */
-.mudra-card-back {
-  background: #fff9f1;
-  transform: rotateY(180deg);
-  padding: 1.5rem;
-  overflow-y: auto;
-  text-align: center;
-  justify-items: center;
-  align-content: center;
-  border: 2px solid rgba(212, 175, 55, 0.5);
-}
-
-.mudra-card-back ul {
-  padding-left: 1.2rem;
-  justify-items: left;
-}
-
-.mudra-card-back li {
-  margin-bottom: 0.6rem;
-}
-
-.disease-name,
-.mudra-instructions {
-  font-size: larger;
-}
-
-.disease-name {
-  flex-shrink: 0;
-  margin-bottom: 2rem;
-}
-
-.mudra-instructions {
-  margin-top: auto;
-  margin-bottom: auto;
-  font-style: normal;
-}
-
-.disease-name h3 {
-  font-size: x-large;
-}
-
-.mudra-instructions ol {
-  padding-left: 1.2rem;
-  margin-top: 0.5rem;
-  list-style-type: decimal;
-  list-style-position: outside;
-  padding: 0 4.5rem;
-  margin-top: 0.75rem;
-}
-
-.mudra-instructions li {
-  text-align: left;
-  margin-bottom: 0.6rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0.25rem 0 0;
 }
 
 /* RESPONSIVE */
@@ -164,5 +174,41 @@
 @media (max-width: 640px) {
   .mudra-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .mudra-card.is-expanded .mudra-card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mudra-card.is-expanded {
+    transform: scale(1.05);
+    z-index: 50;
+    background: #fff9f1;
+    border-radius: 18px;
+    max-height: 85vh;
+    overflow: hidden;
+  }
+  .mudra-card.is-expanded img {
+    max-height: 250px; /* 👈 key control */
+    width: 100%;
+    object-fit: contain;
+  }
+  .mudra-card.is-expanded .mudra-expanded-content {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 👈 vertical centering */
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mudra-card.is-expanded {
+    width: 60vw;
   }
 }
