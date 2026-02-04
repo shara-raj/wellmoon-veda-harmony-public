@@ -1,0 +1,168 @@
+.mudra-section {
+  padding: 4rem 2rem;
+}
+
+.mudra-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mudra-search {
+  display: block;
+  margin: 0 auto 3rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* EXACTLY 3 PER ROW */
+.mudra-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* CARD */
+.mudra-card {
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.mudra-card-inner {
+  position: relative;
+  height: 460px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.mudra-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK */
+.mudra-card-front,
+.mudra-card-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+.mudra-card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BLUR BACKGROUND */
+.mudra-image-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(18px);
+  transform: scale(1.2);
+}
+
+.mudra-card-front img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.mudra-usedfor {
+  text-align: left;
+}
+
+.mudra-usedfor span {
+  position: absolute;
+  left: 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777;
+}
+
+.mudra-usedfor p {
+  position: absolute;
+  bottom: 4rem;
+  left: 5.5rem;
+  color: #080808;
+  z-index: 2;
+  font-weight: 500;
+  font-size: large;
+}
+
+/* BACK */
+.mudra-card-back {
+  background: #fff9f1;
+  transform: rotateY(180deg);
+  padding: 1.5rem;
+  overflow-y: auto;
+  text-align: center;
+  justify-items: center;
+  align-content: center;
+  border: 2px solid rgba(212, 175, 55, 0.5);
+}
+
+.mudra-card-back ul {
+  padding-left: 1.2rem;
+  justify-items: left;
+}
+
+.mudra-card-back li {
+  margin-bottom: 0.6rem;
+}
+
+.disease-name,
+.mudra-instructions {
+  font-size: larger;
+}
+
+.disease-name {
+  flex-shrink: 0;
+  margin-bottom: 2rem;
+}
+
+.mudra-instructions {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-style: normal;
+}
+
+.disease-name h3 {
+  font-size: x-large;
+}
+
+.mudra-instructions ol {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding: 0 4.5rem;
+  margin-top: 0.75rem;
+}
+
+.mudra-instructions li {
+  text-align: left;
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .mudra-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .mudra-grid {
+    grid-template-columns: 1fr;
+  }
+}
