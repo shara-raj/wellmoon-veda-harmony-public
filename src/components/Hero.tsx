@@ -63,7 +63,7 @@ const Hero = () => {
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-4">
                 <p className="text-sm font-medium tracking-wider uppercase text-foreground">
-                  Hollistic Woman's Wellness
+                  Holistic Woman's Wellness
                 </p>
                 <h1
                   className="text-2xl lg:text-4xl xl:text-5xl font-semibold text-foreground leading-tight"
@@ -71,13 +71,13 @@ const Hero = () => {
                     fontFamily: "'Lexend', system-ui, sans-serif",
                   }}
                 >
-                  Yoga Helps Calm The Mind
+                  Yogic Care for Menstrual Comfort and Balance
                 </h1>
                 <p className="text-base text-[#000000] max-w-xl leading-relaxed">
-                  At WellMoon Veda, we blend ancient Vedic practices with modern
-                  research to help women find balance, clarity, and inner calm.
-                  Explore yoga, mudra, pranayama, sound healing, and aura
-                  balancing — guided and science-informed.
+                  Yoga, Pranayama, and Mudra for Menstrual Comfort Gentle yogic
+                  practices can help ease menstrual cramps and discomfort, often
+                  within 10–15 minutes. Explore natural yogic techniques to
+                  support menstrual wellbeing.
                 </p>
               </div>
 
@@ -230,7 +230,7 @@ const Hero = () => {
                         startOffset="50%"
                         textAnchor="middle"
                       >
-                        UNITE THE MIND, BODY, AND SPIRIT WITH EVERY BREATH ⭐
+                        HOLISTIC CARE FOR BODY, MIND, ENERGY, AND SPIRIT ⭐
                       </textPath>
                     </text>
                   </svg>
