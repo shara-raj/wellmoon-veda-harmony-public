@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import SecondaryNavigation from "@/components/SecondaryNavigation";
+import MudraGrid from "@/components/MudraGrid";
 import React from "react";
 
 const MudraHealing = () => {
@@ -13,8 +14,7 @@ const MudraHealing = () => {
           backgroundRepeat: "repeat",
         }}
       >
-        {" "}
-        Aura Healing{" "}
+        <MudraGrid />;
       </div>
       <Footer />
     </>
