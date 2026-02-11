@@ -5,18 +5,21 @@ import { Link } from "react-router-dom";
 const Blog = () => {
   const importedImages = import.meta.glob(
     "/src/assets/featuredSectionImages/*.{png,jpg,jpeg,webp}",
-    { eager: true }
+    { eager: true },
   );
 
   const imagesMap: Record<string, string> = Object.entries(
-    importedImages
-  ).reduce((acc, [path, mod]) => {
-    const fileName = path.split("/").pop() || "";
-    const key = fileName.replace(/\.[^/.]+$/, ""); // remove extension
-    // mod.default is the resolved url in Vite when eager: true
-    acc[key] = (mod as any).default;
-    return acc;
-  }, {} as Record<string, string>);
+    importedImages,
+  ).reduce(
+    (acc, [path, mod]) => {
+      const fileName = path.split("/").pop() || "";
+      const key = fileName.replace(/\.[^/.]+$/, ""); // remove extension
+      // mod.default is the resolved url in Vite when eager: true
+      acc[key] = (mod as any).default;
+      return acc;
+    },
+    {} as Record<string, string>,
+  );
 
   // Also create an array ordered by filename (useful as fallback)
   const imagesArray = Object.keys(imagesMap)
@@ -113,7 +116,7 @@ const Blog = () => {
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
+          <h2 className="text-4xl lg:text-5xl  font-semibold text-foreground mb-6">
             Wellness Insights
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -140,20 +143,18 @@ const Blog = () => {
               </div>
 
               <div className="p-6 space-y-4">
-                <h3 className="text-xl font-serif font-semibold">
-                  {article.title}
-                </h3>
+                <h3 className="text-xl  font-semibold">{article.title}</h3>
 
                 <p className="text-muted-foreground">{article.excerpt}</p>
 
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-lg text-muted-foreground">
                     {article.readTime}
                   </span>
 
                   <Link
                     to={`/blog/${article.slug}`}
-                    className="flex items-center gap-2 text-sm font-medium"
+                    className="flex items-center gap-2 text-lg font-medium"
                   >
                     Read More
                   </Link>
@@ -165,7 +166,7 @@ const Blog = () => {
       </div>
       {/* Featured Guides - Horizontal Scroll */}
       <div className="max-w-6xl mx-auto mt-20">
-        <h3 className="text-3xl font-serif font-semibold text-center mb-8 text-foreground">
+        <h3 className="text-3xl  font-semibold text-center mb-8 text-foreground">
           Featured Guides for Women’s Wellness
         </h3>
 
@@ -215,19 +216,19 @@ const Blog = () => {
                     )}
 
                     {/* Title */}
-                    <h4 className="text-lg font-serif font-semibold text-foreground mb-3">
+                    <h4 className="text-lg  font-semibold text-foreground mb-3">
                       {post.title}
                     </h4>
 
                     {/* Excerpt */}
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                       {post.excerpt}
                     </p>
 
                     {/* CTA */}
                     <Link
                       to={`/blog/${post.slug}`}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-black hover:gap-3 transition-all"
+                      className="inline-flex items-center gap-2 text-lg font-medium text-black hover:gap-3 transition-all"
                     >
                       Explore Guide
                       <ArrowRight className="w-4 h-4" />

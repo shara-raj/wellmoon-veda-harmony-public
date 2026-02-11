@@ -7,7 +7,7 @@ const EditorPosts = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-4xl font-serif mb-2">Posts</h1>
+          <h1 className="text-4xl  mb-2">Posts</h1>
           <p className="text-muted-foreground">Manage blog posts and guides</p>
         </div>
 
@@ -21,7 +21,7 @@ const EditorPosts = () => {
 
       {/* Posts Table */}
       <div className="bg-white rounded-2xl border border-border overflow-hidden">
-        <table className="w-full text-sm">
+        <table className="w-full text-lg">
           <thead className="bg-muted">
             <tr>
               <th className="text-left px-6 py-3 font-medium">Title</th>
@@ -48,10 +48,10 @@ const EditorPosts = () => {
               </td>
               <td className="px-6 py-4">Sep 12, 2025</td>
               <td className="px-6 py-4 text-right space-x-4">
-                <button className="text-sm text-[#d4a373] hover:underline">
+                <button className="text-lg text-[#d4a373] hover:underline">
                   Edit
                 </button>
-                <button className="text-sm text-red-500 hover:underline">
+                <button className="text-lg text-red-500 hover:underline">
                   Delete
                 </button>
               </td>
@@ -72,10 +72,10 @@ const EditorPosts = () => {
               </td>
               <td className="px-6 py-4">Sep 10, 2025</td>
               <td className="px-6 py-4 text-right space-x-4">
-                <button className="text-sm text-[#d4a373] hover:underline">
+                <button className="text-lg text-[#d4a373] hover:underline">
                   Edit
                 </button>
-                <button className="text-sm text-red-500 hover:underline">
+                <button className="text-lg text-red-500 hover:underline">
                   Delete
                 </button>
               </td>
@@ -96,10 +96,10 @@ const EditorPosts = () => {
               </td>
               <td className="px-6 py-4">Sep 8, 2025</td>
               <td className="px-6 py-4 text-right space-x-4">
-                <button className="text-sm text-[#d4a373] hover:underline">
+                <button className="text-lg text-[#d4a373] hover:underline">
                   Edit
                 </button>
-                <button className="text-sm text-red-500 hover:underline">
+                <button className="text-lg text-red-500 hover:underline">
                   Delete
                 </button>
               </td>

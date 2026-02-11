@@ -14,7 +14,7 @@ export default function FeaturedPosts({ posts }: Props) {
         space-y-4
       "
     >
-      <h3 className="font-serif text-lg">Featured Guides</h3>
+      <h3 className=" text-lg">Featured Guides</h3>
 
       <ul className="space-y-3">
         {posts.map((post) => (
@@ -27,7 +27,7 @@ export default function FeaturedPosts({ posts }: Props) {
               />
             </div>
 
-            <p className="mt-2 text-base font-medium leading-snug group-hover:underline">
+            <p className="mt-2 font-body text-lg font-medium leading-snug group-hover:underline">
               {post.title}
             </p>
           </li>

@@ -33,16 +33,16 @@ const ResetPasswordModal = ({
   return (
     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
       <div className="bg-white w-full max-w-md rounded-2xl p-6 space-y-6">
-        <h2 className="text-xl font-serif">Reset Password</h2>
+        <h2 className="text-xl ">Reset Password</h2>
 
-        <p className="text-sm text-muted-foreground">
+        <p className="text-lg text-muted-foreground">
           A new temporary password will be generated for{" "}
           <strong>{editorName}</strong>. The editor will be required to change
           it on their next login.
         </p>
 
         <div>
-          <label className="text-sm">New Temporary Password</label>
+          <label className="text-lg">New Temporary Password</label>
           <div className="flex items-center gap-2 mt-1">
             <input
               value={password}
@@ -51,7 +51,7 @@ const ResetPasswordModal = ({
             />
             <button
               onClick={() => navigator.clipboard.writeText(password)}
-              className="px-3 py-2 border border-border rounded-lg text-sm"
+              className="px-3 py-2 border border-border rounded-lg text-lg"
             >
               Copy
             </button>

@@ -29,12 +29,12 @@ const AddNewPost = () => {
 
   return (
     <div className="space-y-8">
-      <h1 className="text-4xl font-serif">Add New Post</h1>
+      <h1 className="text-4xl ">Add New Post</h1>
 
       <div className="bg-white rounded-2xl border border-border p-6 space-y-6">
         {/* Title */}
         <div>
-          <label className="text-sm">Post Title</label>
+          <label className="text-lg">Post Title</label>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -45,7 +45,7 @@ const AddNewPost = () => {
 
         {/* Slug */}
         <div>
-          <label className="text-sm">Slug</label>
+          <label className="text-lg">Slug</label>
           <input
             value={slug}
             onChange={(e) => setSlug(e.target.value)}
@@ -56,7 +56,7 @@ const AddNewPost = () => {
 
         {/* Excerpt */}
         <div>
-          <label className="text-sm">Excerpt</label>
+          <label className="text-lg">Excerpt</label>
           <textarea
             value={excerpt}
             onChange={(e) => setExcerpt(e.target.value)}
@@ -68,7 +68,7 @@ const AddNewPost = () => {
 
         {/* Content */}
         <div>
-          <label className="text-sm">Content</label>
+          <label className="text-lg">Content</label>
           <textarea
             value={content}
             onChange={(e) => setContent(e.target.value)}
@@ -81,7 +81,7 @@ const AddNewPost = () => {
         {/* Options */}
         <div className="grid grid-cols-2 gap-6">
           <div>
-            <label className="text-sm">Status</label>
+            <label className="text-lg">Status</label>
             <select
               value={status}
               onChange={(e) => setStatus(e.target.value)}
@@ -93,7 +93,7 @@ const AddNewPost = () => {
           </div>
 
           <div>
-            <label className="text-sm">Access</label>
+            <label className="text-lg">Access</label>
             <select
               value={access}
               onChange={(e) => setAccess(e.target.value)}

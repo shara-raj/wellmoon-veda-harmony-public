@@ -2,157 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap");
+
 @layer base {
   :root {
+    /* Brand fonts */
+    --font-heading: "Nunito", sans-serif;
+    --font-body: "Alegreya", serif;
+
     /* Brand Colors */
     --brand: 30 45% 85%;
-    
+
     /* Base Colors */
     --background: 40 40% 98%;
     --foreground: 30 15% 20%;
-    
+
     --card: 40 30% 96%;
     --card-foreground: 30 15% 20%;
-    
+
     --popover: 40 40% 98%;
     --popover-foreground: 30 15% 20%;
-    
+
     --primary: 35 50% 65%;
     --primary-foreground: 30 15% 20%;
-    
+
     --secondary: 40 20% 90%;
     --secondary-foreground: 30 15% 20%;
-    
+
     --muted: 40 20% 92%;
     --muted-foreground: 30 15% 45%;
-    
+
     --accent: 35 45% 88%;
     --accent-foreground: 30 15% 20%;
-    
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 40 40% 98%;
-    
+
     --border: 40 20% 85%;
     --input: 40 20% 85%;
     --ring: 35 50% 65%;
-    
+
     --radius: 0.75rem;
-    
-    /* Custom Design Tokens */
-    --sage: 140 20% 85%;
-    --sage-dark: 140 25% 65%;
-    --gold: 45 60% 70%;
-    --gold-dark: 45 65% 55%;
-    --ivory: 40 30% 96%;
-    --beige: 35 25% 85%;
-    --taupe: 30 15% 65%;
-    
-    /* Gradients */
-    --gradient-subtle: linear-gradient(135deg, hsl(var(--background)), hsl(var(--ivory)));
-    --gradient-sage: linear-gradient(135deg, hsl(var(--sage)), hsl(var(--sage-dark)));
-    --gradient-warm: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--beige)));
-    
-    /* Shadows */
-    --shadow-soft: 0 2px 8px -2px hsl(var(--foreground) / 0.08);
-    --shadow-medium: 0 8px 24px -4px hsl(var(--foreground) / 0.12);
-    --shadow-glow: 0 0 32px hsl(var(--primary) / 0.15);
-    
-    /* Transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-gentle: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  @keyframes mudra-left {
-    0%, 100% { 
-      transform: translateX(-7px);
-    }
-    50% { 
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes mudra-right {
-    0%, 100% { 
-      transform: translateX(7px);
-    }
-    50% { 
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes bowl-stick {
-    0%, 100% { transform: translate(8px, -8px); }
-    50% { transform: translate(-4px, 4px); }
-  }
-
-  @keyframes rotate-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  .animate-mudra-left {
-    animation: mudra-left 4s ease-in-out infinite;
-  }
-
-  .animate-mudra-right {
-    animation: mudra-right 4s ease-in-out infinite;
-  }
-
-  .animate-bowl-stick {
-    animation: bowl-stick 2s ease-in-out infinite;
-  }
-
-  .animate-rotate-slow {
-    animation: rotate-slow 300s linear infinite;
   }
 
   .dark {
     --background: 30 20% 12%;
     --foreground: 40 30% 95%;
-    
     --card: 30 20% 15%;
     --card-foreground: 40 30% 95%;
-    
     --popover: 30 20% 12%;
     --popover-foreground: 40 30% 95%;
-    
-    --primary: 35 50% 65%;
-    --primary-foreground: 30 15% 20%;
-    
     --secondary: 30 20% 20%;
     --secondary-foreground: 40 30% 95%;
-    
     --muted: 30 15% 25%;
     --muted-foreground: 40 20% 65%;
-    
     --accent: 35 45% 30%;
     --accent-foreground: 40 30% 95%;
-    
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 40 30% 95%;
-    
     --border: 30 15% 25%;
     --input: 30 15% 25%;
     --ring: 35 50% 65%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
+
   body {
+    font-family: var(--font-body);
     @apply bg-background text-foreground;
+    line-height: 2rem;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fraunces', serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
   }
+
   p {
-    font-family: 'Quicksand', 'Poppins', sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
+    color: rgb(49, 47, 47);
+    font-size: 1.15rem;
   }
-  p strong, p b {
-    font-weight: 500;
+
+  p strong,
+  p b {
+    font-weight: 600;
+    font-size: 1.05rem;
   }
 }

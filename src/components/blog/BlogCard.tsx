@@ -48,9 +48,9 @@ export default function BlogCard({ post }: Props) {
         <div className="p-6 space-y-3">
           <p className="text-xs text-muted-foreground">{post.date}</p>
 
-          <h2 className="font-serif text-lg leading-snug">{post.title}</h2>
+          <h2 className=" text-lg leading-snug">{post.title}</h2>
 
-          <p className="text-sm text-muted-foreground line-clamp-3">
+          <p className="text-lg text-muted-foreground line-clamp-3">
             {post.excerpt}
           </p>
         </div>

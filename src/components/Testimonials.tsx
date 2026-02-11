@@ -54,7 +54,7 @@ const Testimonials = () => {
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
+          <h2 className="text-4xl lg:text-5xl  font-semibold text-foreground mb-6">
             Voices of Healing
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -90,7 +90,7 @@ const Testimonials = () => {
                         <p className="font-semibold text-foreground">
                           {testimonial.name}
                         </p>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-lg text-muted-foreground">
                           {testimonial.role}
                         </p>
                       </div>

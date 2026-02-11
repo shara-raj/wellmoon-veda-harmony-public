@@ -41,10 +41,10 @@ const AddEditorModal = ({ onClose, onAdd }: AddEditorModalProps) => {
   return (
     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
       <div className="bg-white w-full max-w-md rounded-2xl p-6 space-y-6">
-        <h2 className="text-xl font-serif">Add New Editor</h2>
+        <h2 className="text-xl ">Add New Editor</h2>
 
         <div>
-          <label className="text-sm">Name</label>
+          <label className="text-lg">Name</label>
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -53,7 +53,7 @@ const AddEditorModal = ({ onClose, onAdd }: AddEditorModalProps) => {
         </div>
 
         <div>
-          <label className="text-sm">Email</label>
+          <label className="text-lg">Email</label>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -62,7 +62,7 @@ const AddEditorModal = ({ onClose, onAdd }: AddEditorModalProps) => {
         </div>
 
         <div>
-          <label className="text-sm">Temporary Password</label>
+          <label className="text-lg">Temporary Password</label>
           <div className="flex items-center gap-2 mt-1">
             <input
               value={password}
@@ -71,7 +71,7 @@ const AddEditorModal = ({ onClose, onAdd }: AddEditorModalProps) => {
             />
             <button
               onClick={() => navigator.clipboard.writeText(password)}
-              className="px-3 py-2 border border-border rounded-lg text-sm"
+              className="px-3 py-2 border border-border rounded-lg text-lg"
             >
               Copy
             </button>

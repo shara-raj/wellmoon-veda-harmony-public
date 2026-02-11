@@ -32,11 +32,11 @@ export default function BlogPostPage({
         <div className="mx-auto max-w-4xl space-y-10">
           {/* Header */}
           <header className="space-y-4 text-center">
-            <h1 className="font-serif text-3xl md:text-4xl leading-tight">
+            <h1 className=" text-3xl md:text-4xl leading-tight">
               {post.title}
             </h1>
 
-            <p className="text-sm text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               {post.date} · 5 min read
             </p>
           </header>

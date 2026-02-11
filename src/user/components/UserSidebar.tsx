@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const UserSidebar = () => {
   const linkClasses = ({ isActive }: { isActive: boolean }) =>
-    `block px-4 py-2 rounded-lg text-base transition ${
+    `block px-4 py-2 rounded-lg font-body text-lg transition ${
       isActive
         ? "bg-muted font-medium"
         : "text-muted-foreground hover:bg-muted hover:text-black"

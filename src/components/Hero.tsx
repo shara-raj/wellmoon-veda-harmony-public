@@ -62,7 +62,7 @@ const Hero = () => {
             {/* Left Column - Content */}
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-4">
-                <p className="text-sm font-medium tracking-wider uppercase text-foreground">
+                <p className="text-lg font-medium tracking-wider uppercase text-foreground">
                   Holistic Woman's Wellness
                 </p>
                 <h1
@@ -73,7 +73,7 @@ const Hero = () => {
                 >
                   Yogic Care for Menstrual Comfort and Balance
                 </h1>
-                <p className="text-base text-[#000000] max-w-xl leading-relaxed">
+                <p className=" max-w-xl">
                   Yoga, Pranayama, and Mudra for Menstrual Comfort Gentle yogic
                   practices can help ease menstrual cramps and discomfort, often
                   within 10–15 minutes. Explore natural yogic techniques to
@@ -88,7 +88,7 @@ const Hero = () => {
                     <div className="w-12 h-12 rounded-full bg-white group-hover:bg-[#d4af37]/70 flex items-center justify-center transition-colors">
                       <Play className="w-5 h-5 text-primary-foreground " />
                     </div>
-                    <span className="text-sm font-medium text-foreground">
+                    <span className="text-lg font-medium text-foreground">
                       Watch Welcome Video
                     </span>
                   </button>
@@ -108,7 +108,7 @@ const Hero = () => {
                   variant="outline"
                   size="lg"
                   className="bg-[#d4af37]/70 hover:bg-white 
-            text-primary-foreground text-sm font-medium shadow-soft"
+            text-primary-foreground text-lg font-medium shadow-soft"
                   onClick={() =>
                     document
                       .getElementById("subscribe")
@@ -143,7 +143,7 @@ const Hero = () => {
                     />
                   ))}
                 </div>
-                <p className="text-sm text-[#000000]">
+                <p className="text-lg text-[#000000]">
                   <span className="font-semibold text-[#000000]">332+</span>{" "}
                   Happy Customers
                 </p>

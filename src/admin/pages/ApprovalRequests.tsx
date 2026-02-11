@@ -38,7 +38,7 @@ const ApprovalRequests = () => {
     <div className="space-y-8">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-serif">Approval Requests</h1>
+        <h1 className="text-3xl ">Approval Requests</h1>
         <p className="text-muted-foreground">
           Review and manage editor requests
         </p>
@@ -46,7 +46,7 @@ const ApprovalRequests = () => {
 
       {/* Requests table */}
       <div className="bg-white rounded-2xl border border-border overflow-x-auto">
-        <table className="w-full text-sm">
+        <table className="w-full text-lg">
           <thead>
             <tr className="text-left text-muted-foreground border-b">
               <th className="px-6 py-4">Request</th>
@@ -74,7 +74,7 @@ const ApprovalRequests = () => {
                 <td className="px-6 py-4 text-right space-x-3">
                   <button
                     onClick={() => handleApprove(req.id)}
-                    className="text-sm px-4 py-1 rounded-full 
+                    className="text-lg px-4 py-1 rounded-full 
                                bg-green-100 text-green-700 hover:bg-green-200"
                   >
                     Approve
@@ -82,7 +82,7 @@ const ApprovalRequests = () => {
 
                   <button
                     onClick={() => handleReject(req.id)}
-                    className="text-sm px-4 py-1 rounded-full 
+                    className="text-lg px-4 py-1 rounded-full 
                                bg-red-100 text-red-700 hover:bg-red-200"
                   >
                     Reject

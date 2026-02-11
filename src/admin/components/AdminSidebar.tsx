@@ -9,7 +9,7 @@ const AdminSidebar = () => {
         className="mb-5 p-1 border-2 border-muted-background rounded-sm"
       />
 
-      <nav className="space-y-4 text-sm">
+      <nav className="space-y-4 text-lg">
         <AdminNavLink to="/admin" end>
           Dashboard
         </AdminNavLink>

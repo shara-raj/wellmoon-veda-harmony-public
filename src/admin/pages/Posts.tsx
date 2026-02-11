@@ -30,14 +30,14 @@ const Posts = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-serif">Posts</h1>
+          <h1 className="text-3xl ">Posts</h1>
           <p className="text-muted-foreground">Manage blog posts and guides</p>
         </div>
 
         <button
           onClick={() => navigate("/admin/posts/new")}
           className="px-5 py-2 rounded-full bg-primary text-primary-foreground 
-                     text-sm hover:opacity-90 transition"
+                     text-lg hover:opacity-90 transition"
         >
           + Add New Post
         </button>
@@ -45,7 +45,7 @@ const Posts = () => {
 
       {/* Posts table */}
       <div className="bg-white rounded-2xl border border-border overflow-x-auto">
-        <table className="w-full text-sm">
+        <table className="w-full text-lg">
           <thead>
             <tr className="text-left text-muted-foreground border-b">
               <th className="px-6 py-4">Title</th>
@@ -87,10 +87,10 @@ const Posts = () => {
                 </td>
 
                 <td className="px-6 py-4 text-right space-x-3">
-                  <button className="text-sm text-primary hover:underline">
+                  <button className="text-lg text-primary hover:underline">
                     Edit
                   </button>
-                  <button className="text-sm text-destructive hover:underline">
+                  <button className="text-lg text-destructive hover:underline">
                     Delete
                   </button>
                 </td>

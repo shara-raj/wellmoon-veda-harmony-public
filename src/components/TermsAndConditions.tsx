@@ -27,14 +27,14 @@ const TermsAndConditions = () => {
         }}
       >
         <div className="container mx-auto px-4 lg:px-8 py-16">
-          <h1 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-12">
+          <h1 className="text-4xl md:text-5xl  font-semibold text-foreground mb-12">
             Terms and Conditions
           </h1>
 
           <div className="prose prose-lg max-w-none space-y-10 text-muted-foreground">
             {/* 1. Introduction */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 1. Introduction
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -54,7 +54,7 @@ const TermsAndConditions = () => {
 
             {/* 2. Use of Our Website */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 2. Use of Our Website
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -74,7 +74,7 @@ const TermsAndConditions = () => {
 
             {/* 3. General Conditions */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 3. General Conditions
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -87,7 +87,7 @@ const TermsAndConditions = () => {
 
             {/* 4. Products and Services */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 4. Products and Services
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -106,7 +106,7 @@ const TermsAndConditions = () => {
 
             {/* 5. Links to Third-Party Websites */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 5. Links to Third-Party Websites
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -119,7 +119,7 @@ const TermsAndConditions = () => {
 
             {/* 6. User Content & Submissions */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 6. User Content, Feedback & Submissions
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -136,7 +136,7 @@ const TermsAndConditions = () => {
 
             {/* 7. Personal Information */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 7. Personal Information
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -148,7 +148,7 @@ const TermsAndConditions = () => {
 
             {/* 8. Errors & Omissions */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 8. Errors and Omissions
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -160,7 +160,7 @@ const TermsAndConditions = () => {
 
             {/* 9. Limitation of Liability */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 9. Disclaimer & Limitation of Liability
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -174,7 +174,7 @@ const TermsAndConditions = () => {
 
             {/* 10. Indemnification */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 10. Indemnification
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -186,7 +186,7 @@ const TermsAndConditions = () => {
 
             {/* 11. Entire Agreement */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 11. Entire Agreement
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -198,7 +198,7 @@ const TermsAndConditions = () => {
 
             {/* 12. Waiver */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 12. Waiver
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -209,7 +209,7 @@ const TermsAndConditions = () => {
 
             {/* 13. Severability */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 13. Severability
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -221,7 +221,7 @@ const TermsAndConditions = () => {
 
             {/* 14. Governing Law */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 14. Governing Law
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -232,7 +232,7 @@ const TermsAndConditions = () => {
 
             {/* 15. Contact */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 15. Contact Information
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] leading-relaxed">
@@ -244,7 +244,7 @@ const TermsAndConditions = () => {
             </section>
 
             {/* Effective Date */}
-            <p className="text-sm mt-8 font-['Quicksand',_'Poppins',_sans-serif] text-foreground/70">
+            <p className="text-lg mt-8 font-['Quicksand',_'Poppins',_sans-serif] text-foreground/70">
               *These Terms and Conditions are effective as of{" "}
               <strong>{effectiveDate}</strong>.*
             </p>

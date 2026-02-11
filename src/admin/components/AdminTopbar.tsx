@@ -16,7 +16,7 @@ const AdminTopbar = () => {
       <div className="flex items-center gap-4">
         <button
           onClick={handleLogout}
-          className="text-sm px-4 py-2 rounded-full border border-border hover:bg-muted"
+          className="text-lg px-4 py-2 rounded-full border border-border hover:bg-muted"
         >
           Logout
         </button>

@@ -24,11 +24,11 @@ export default function PricingCard({
         }
       `}
     >
-      <h2 className="font-serif text-2xl">{title}</h2>
+      <h2 className=" text-2xl">{title}</h2>
       <p className="text-3xl font-medium">{price}</p>
-      <p className="text-sm text-muted-foreground">{description}</p>
+      <p className="text-lg text-muted-foreground">{description}</p>
 
-      <ul className="space-y-2 text-sm">
+      <ul className="space-y-2 text-lg">
         {features.map((feature) => (
           <li key={feature}>• {feature}</li>
         ))}

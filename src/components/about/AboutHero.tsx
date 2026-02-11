@@ -6,11 +6,11 @@ export default function AboutHero() {
       <div className="mx-auto max-w-7xl grid gap-16 lg:grid-cols-2 items-center">
         {/* LEFT — TEXT */}
         <div className="space-y-6 max-w-xl">
-          <span className="text-sm tracking-wide uppercase text-muted-foreground">
+          <span className="text-lg tracking-wide uppercase text-muted-foreground">
             About Us
           </span>
 
-          <h1 className="font-serif text-5xl leading-tight">
+          <h1 className=" text-5xl leading-tight">
             <div className="relative w-fit mb-3">
               <div
                 aria-hidden

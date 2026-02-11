@@ -78,7 +78,7 @@ const HealingPaths = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (sectionRef.current) {
@@ -137,7 +137,7 @@ const HealingPaths = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Heading */}
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
+          <h2 className="text-4xl lg:text-5xl  font-semibold text-foreground mb-6">
             Healing Rooted in Science and Spirit
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
@@ -185,7 +185,7 @@ const HealingPaths = () => {
                   <VideoIcon src={path.videoSrc} title={path.title} />
                 </div>
 
-                <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
+                <h3 className="text-xl  font-semibold text-foreground mb-4">
                   {path.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">

@@ -33,7 +33,7 @@ const Subscriptions = () => {
     <div className="space-y-8">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-serif">Subscriptions</h1>
+        <h1 className="text-3xl ">Subscriptions</h1>
         <p className="text-muted-foreground">
           View user subscription plans and status
         </p>
@@ -41,7 +41,7 @@ const Subscriptions = () => {
 
       {/* Subscriptions table */}
       <div className="bg-white rounded-2xl border border-border overflow-x-auto">
-        <table className="w-full text-sm">
+        <table className="w-full text-lg">
           <thead>
             <tr className="text-left text-muted-foreground border-b">
               <th className="px-6 py-4">User</th>
@@ -69,8 +69,8 @@ const Subscriptions = () => {
                       sub.plan === "Premium"
                         ? "bg-purple-100 text-purple-700"
                         : sub.plan === "Basic"
-                        ? "bg-blue-100 text-blue-700"
-                        : "bg-gray-100 text-gray-700"
+                          ? "bg-blue-100 text-blue-700"
+                          : "bg-gray-100 text-gray-700"
                     }`}
                   >
                     {sub.plan}

@@ -95,7 +95,7 @@ const Navigation = () => {
             <div className="hidden lg:flex items-center space-x-8">
               <a
                 href="/"
-                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+                className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Home
               </a>
@@ -103,7 +103,7 @@ const Navigation = () => {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-base font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-[#be9d31]">
+                    <NavigationMenuTrigger className="font-body text-lg font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-[#be9d31]">
                       Healing Path
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -115,7 +115,7 @@ const Navigation = () => {
                                 href={path.href}
                                 className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#d4af37]/70 hover:text-black"
                               >
-                                <div className="text-base font-medium leading-none">
+                                <div className="font-body text-lg font-medium leading-none">
                                   {path.name}
                                 </div>
                               </a>
@@ -130,25 +130,25 @@ const Navigation = () => {
 
               <a
                 href="/plan-and-pricing"
-                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+                className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Plans & Pricing
               </a>
               <a
                 href="/about"
-                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+                className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 About
               </a>
               <a
                 href="/blog"
-                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+                className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Blog
               </a>
               <a
                 href="/contact"
-                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+                className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Contact
               </a>
@@ -161,14 +161,14 @@ const Navigation = () => {
                   variant="outline"
                   size="sm"
                   onClick={() => setShowLoginCard((prev) => !prev)}
-                  className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 text-primary-foreground text-base font-medium"
+                  className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 text-primary-foreground font-body text-lg font-medium"
                 >
                   Login
                 </Button>
 
                 {showLoginCard && (
                   <div className="absolute right-0 mt-2 w-80 bg-white rounded-2xl shadow-xl border border-[#e5d8c8] p-4 z-50">
-                    <h3 className="text-sm font-semibold mb-3 text-foreground">
+                    <h3 className="text-lg font-semibold mb-3 text-foreground">
                       Log in to your account
                     </h3>
 
@@ -187,7 +187,7 @@ const Navigation = () => {
                         <input
                           type="email"
                           required
-                          className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-sm focus:ring-2 focus:ring-primary focus:outline-none"
+                          className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-lg focus:ring-2 focus:ring-primary focus:outline-none"
                           placeholder="you@example.com"
                         />
                       </div>
@@ -199,7 +199,7 @@ const Navigation = () => {
                         <input
                           type="password"
                           required
-                          className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-sm focus:ring-2 focus:ring-primary focus:outline-none"
+                          className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-lg focus:ring-2 focus:ring-primary focus:outline-none"
                           placeholder="••••••••"
                         />
                       </div>
@@ -228,7 +228,7 @@ const Navigation = () => {
               <Button
                 size="sm"
                 onClick={() => Navigate("/sign-up")}
-                className="bg-[#d4af37]/70 text-primary-foreground text-base font-medium hover:bg-[#d4af37]/40 hover:border-[hsl(35_50%_65%)]"
+                className="bg-[#d4af37]/70 text-primary-foreground font-body text-lg font-medium hover:bg-[#d4af37]/40 hover:border-[hsl(35_50%_65%)]"
               >
                 Sign Up
               </Button>

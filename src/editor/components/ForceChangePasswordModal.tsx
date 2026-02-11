@@ -34,15 +34,15 @@ const ForceChangePasswordModal = ({
   return (
     <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-[9999]">
       <div className="bg-white rounded-2xl p-6 w-full max-w-md space-y-4">
-        <h2 className="text-2xl font-serif">Change Your Password</h2>
+        <h2 className="text-2xl ">Change Your Password</h2>
 
-        <p className="text-sm text-muted-foreground">
+        <p className="text-lg text-muted-foreground">
           This is your first login. You must set a new password before
           continuing.
         </p>
 
         <div>
-          <label className="text-sm">New Password</label>
+          <label className="text-lg">New Password</label>
           <input
             type="password"
             value={password}
@@ -52,7 +52,7 @@ const ForceChangePasswordModal = ({
         </div>
 
         <div>
-          <label className="text-sm">Confirm Password</label>
+          <label className="text-lg">Confirm Password</label>
           <input
             type="password"
             value={confirmPassword}
