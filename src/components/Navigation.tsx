@@ -27,11 +27,11 @@ const Navigation = () => {
   }, []);
 
   const healingPaths = [
-    { name: "Wellness Yoga", to: "/wellness-yoga" },
-    { name: "Mudra Healing", to: "/mudra-healing" },
-    { name: "Aura Healing", to: "/aura-healing" },
-    { name: "Virtual Nature Healing", to: "/virtual-nature-healing" },
-    { name: "Sound Healing", to: "/sound-healing" },
+    { name: "Wellness Yoga", href: "/wellness-yoga" },
+    { name: "Mudra Healing", href: "/mudra-healing" },
+    { name: "Aura Healing", href: "/aura-healing" },
+    { name: "Virtual Nature Healing", href: "/virtual-nature-healing" },
+    { name: "Sound Healing", href: "/sound-healing" },
   ];
 
   const Navigate = useNavigate();
@@ -72,7 +72,7 @@ const Navigation = () => {
           `}
           >
             {/* Logo */}
-            <Link to="/" className="flex items-center flex-shrink-0">
+            <a href="/" className="flex items-center flex-shrink-0">
               <div
                 className={`logoClass flex items-center w-40 md:w-40 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                   isScrolled
@@ -91,21 +91,21 @@ const Navigation = () => {
                   className="w-auto max-w-full h-9 md:h-7"
                 />
               </div>
-            </Link>
+            </a>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              <Link
-                to="/"
-                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              <a
+                href="/"
+                className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Home
-              </Link>
+              </a>
 
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-base font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-[#be9d31]">
+                    <NavigationMenuTrigger className="font-body text-lg font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-[#be9d31]">
                       Healing Path
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -113,14 +113,14 @@ const Navigation = () => {
                         {healingPaths.map((path) => (
                           <li key={path.name}>
                             <NavigationMenuLink asChild>
-                              <Link
-                                to={path.to}
+                              <a
+                                href={path.href}
                                 className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#d4af37]/70 hover:text-black"
                               >
-                                <div className="text-base font-medium leading-none">
+                                <div className="font-body text-lg font-medium leading-none">
                                   {path.name}
                                 </div>
-                              </Link>
+                              </a>
                             </NavigationMenuLink>
                           </li>
                         ))}
@@ -130,30 +130,30 @@ const Navigation = () => {
                 </NavigationMenuList>
               </NavigationMenu>
 
-              <Link
-                to="/plan-and-pricing"
-                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              <a
+                href="/plan-and-pricing"
+                className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Plans & Pricing
-              </Link>
-              <Link
-                to="/about"
-                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              </a>
+              <a
+                href="/about"
+                className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 About
-              </Link>
-              <Link
-                to="/blog"
-                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              </a>
+              <a
+                href="/blog"
+                className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Blog
-              </Link>
-              <Link
-                to="/contact"
-                className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+              </a>
+              <a
+                href="/contact"
+                className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
               >
                 Contact
-              </Link>
+              </a>
             </div>
 
             {/* Auth Buttons */}
@@ -163,14 +163,14 @@ const Navigation = () => {
                   variant="outline"
                   size="sm"
                   onClick={() => setShowLoginCard((prev) => !prev)}
-                  className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 text-primary-foreground text-base font-medium"
+                  className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 text-primary-foreground font-body text-lg font-medium"
                 >
                   Login
                 </Button>
 
                 {showLoginCard && (
                   <div className="absolute right-0 mt-2 w-80 bg-white rounded-2xl shadow-xl border border-[#e5d8c8] p-4 z-50">
-                    <h3 className="text-sm font-semibold mb-3 text-foreground">
+                    <h3 className="text-lg font-semibold mb-3 text-foreground">
                       Log in to your account
                     </h3>
 
@@ -189,7 +189,7 @@ const Navigation = () => {
                         <input
                           type="email"
                           required
-                          className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-sm focus:ring-2 focus:ring-primary focus:outline-none"
+                          className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-lg focus:ring-2 focus:ring-primary focus:outline-none"
                           placeholder="you@example.com"
                         />
                       </div>
@@ -201,7 +201,7 @@ const Navigation = () => {
                         <input
                           type="password"
                           required
-                          className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-sm focus:ring-2 focus:ring-primary focus:outline-none"
+                          className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-lg focus:ring-2 focus:ring-primary focus:outline-none"
                           placeholder="••••••••"
                         />
                       </div>
@@ -230,7 +230,7 @@ const Navigation = () => {
               <Button
                 size="sm"
                 onClick={() => Navigate("/sign-up")}
-                className="bg-[#d4af37]/70 text-primary-foreground text-base font-medium hover:bg-[#d4af37]/40 hover:border-[hsl(35_50%_65%)]"
+                className="bg-[#d4af37]/70 text-primary-foreground font-body text-lg font-medium hover:bg-[#d4af37]/40 hover:border-[hsl(35_50%_65%)]"
               >
                 Sign Up
               </Button>

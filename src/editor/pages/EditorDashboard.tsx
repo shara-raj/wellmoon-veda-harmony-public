@@ -9,24 +9,24 @@ const EditorDashboard = () => {
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-white rounded-2xl border border-border p-6">
-          <p className="text-sm text-muted-foreground">My Posts</p>
-          <h2 className="text-3xl font-serif mt-2">12</h2>
+          <p className="text-lg text-muted-foreground">My Posts</p>
+          <h2 className="text-3xl  mt-2">12</h2>
         </div>
 
         <div className="bg-white rounded-2xl border border-border p-6">
-          <p className="text-sm text-muted-foreground">Draft Posts</p>
-          <h2 className="text-3xl font-serif mt-2">4</h2>
+          <p className="text-lg text-muted-foreground">Draft Posts</p>
+          <h2 className="text-3xl  mt-2">4</h2>
         </div>
 
         <div className="bg-white rounded-2xl border border-border p-6">
-          <p className="text-sm text-muted-foreground">Page Requests Pending</p>
-          <h2 className="text-3xl font-serif mt-2">2</h2>
+          <p className="text-lg text-muted-foreground">Page Requests Pending</p>
+          <h2 className="text-3xl  mt-2">2</h2>
         </div>
       </div>
 
       {/* Quick Actions */}
       <div className="bg-white rounded-2xl border border-border p-8 space-y-4">
-        <h2 className="text-2xl font-serif">Quick Actions</h2>
+        <h2 className="text-2xl ">Quick Actions</h2>
 
         <div className="flex flex-wrap gap-4">
           <button className="px-6 py-2 rounded-full bg-[#d4a373] text-white hover:opacity-90">
@@ -49,12 +49,12 @@ const EditorDashboard = () => {
 
       {/* Pending Page Requests */}
       <div className="bg-white rounded-2xl border border-border p-8 space-y-4">
-        <h2 className="text-2xl font-serif">Pending Page Requests</h2>
+        <h2 className="text-2xl ">Pending Page Requests</h2>
 
         <div className="flex items-center justify-between border border-border rounded-xl p-4">
           <div>
             <p className="font-medium">Add “Our Philosophy” page</p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               Awaiting admin approval
             </p>
           </div>

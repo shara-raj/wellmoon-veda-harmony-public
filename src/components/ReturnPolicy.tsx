@@ -28,14 +28,14 @@ const ReturnPolicy = () => {
         }}
       >
         <div className="container mx-auto px-4 lg:px-8 py-16">
-          <h1 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-12">
+          <h1 className="text-4xl md:text-5xl  font-semibold text-foreground mb-12">
             Refund and Returns Policy
           </h1>
 
           <div className="prose prose-lg max-w-none space-y-10 text-muted-foreground">
             {/* Refund Policy */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 REFUND POLICY
               </h2>
 
@@ -66,7 +66,7 @@ const ReturnPolicy = () => {
 
             {/* Returns Policy */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Returns Policy
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -80,7 +80,7 @@ const ReturnPolicy = () => {
 
             {/* Contact */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Contact for Refunds and Queries
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -89,7 +89,7 @@ const ReturnPolicy = () => {
               </p>
             </section>
 
-            <p className="text-sm mt-8 font-['Quicksand',_'Poppins',_sans-serif] text-foreground/70">
+            <p className="text-lg mt-8 font-['Quicksand',_'Poppins',_sans-serif] text-foreground/70">
               *This Refund and Returns Policy is effective as of{" "}
               <strong>{effectiveDate}</strong>.*
             </p>

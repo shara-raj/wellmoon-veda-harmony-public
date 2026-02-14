@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
         }}
       >
         <div className="container mx-auto px-4 lg:px-8 py-16">
-          <h1 className="text-4xl md:text-5xl font-serif font-semibold text-foreground text-center mb-12">
+          <h1 className="text-4xl md:text-5xl  font-semibold text-foreground text-center mb-12">
             Privacy Policy
           </h1>
 
@@ -41,7 +41,7 @@ const PrivacyPolicy = () => {
 
             {/* Introduction */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Introduction
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -54,7 +54,7 @@ const PrivacyPolicy = () => {
 
             {/* Identifying Purposes */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Identifying Purposes
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -72,7 +72,7 @@ const PrivacyPolicy = () => {
 
             {/* Consent */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Consent
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -90,7 +90,7 @@ const PrivacyPolicy = () => {
 
             {/* Limiting Collection */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Limiting Collection
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -104,7 +104,7 @@ const PrivacyPolicy = () => {
 
             {/* Limiting Use, Disclosure and Retention */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Limiting Use, Disclosure, and Retention
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -119,7 +119,7 @@ const PrivacyPolicy = () => {
 
             {/* Accuracy & Customer Access */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Accuracy and Customer Access
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -141,7 +141,7 @@ const PrivacyPolicy = () => {
 
             {/* Safeguarding Customer Information */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Safeguarding Customer Information
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -155,7 +155,7 @@ const PrivacyPolicy = () => {
 
             {/* Openness */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Openness
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -167,7 +167,7 @@ const PrivacyPolicy = () => {
 
             {/* Cookies */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Cookies
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -186,7 +186,7 @@ const PrivacyPolicy = () => {
 
             {/* Other Websites */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Other Websites
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -203,7 +203,7 @@ const PrivacyPolicy = () => {
 
             {/* Contact / Complaints */}
             <section>
-              <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-2xl  font-semibold text-foreground mb-4">
                 Contact Us / Handling Complaints and Suggestions
               </h2>
               <p className="font-['Quicksand',_'Poppins',_sans-serif] font-normal leading-relaxed">
@@ -215,7 +215,7 @@ const PrivacyPolicy = () => {
             </section>
 
             {/* Last updated */}
-            <p className="text-sm mt-8 font-['Quicksand',_'Poppins',_sans-serif]">
+            <p className="text-lg mt-8 font-['Quicksand',_'Poppins',_sans-serif]">
               Last updated: {new Date().toLocaleDateString()}
             </p>
           </div>

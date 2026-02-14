@@ -33,14 +33,14 @@ const SignUp = () => {
           />
         </Link>
         <div className="max-w-md w-full bg-white/90 backdrop-blur-md shadow-xl rounded-2xl p-8 border border-[#e5d8c8]">
-          <h2 className="text-3xl font-serif font-semibold text-center text-foreground mb-6">
+          <h2 className="text-3xl  font-semibold text-center text-foreground mb-6">
             Create Your Account
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name */}
             <div>
-              <label className="block text-sm font-medium text-[#000000]/70 mb-1">
+              <label className="block text-lg font-medium text-[#000000]/70 mb-1">
                 Full Name
               </label>
               <input
@@ -56,7 +56,7 @@ const SignUp = () => {
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-medium text-[#000000]/70 mb-1">
+              <label className="block text-lg font-medium text-[#000000]/70 mb-1">
                 Email Address
               </label>
               <input
@@ -72,7 +72,7 @@ const SignUp = () => {
 
             {/* Password */}
             <div>
-              <label className="block text-sm font-medium text-[#000000]/70 mb-1">
+              <label className="block text-lg font-medium text-[#000000]/70 mb-1">
                 Password
               </label>
               <input
@@ -97,7 +97,7 @@ const SignUp = () => {
           </form>
 
           {/* Already have account */}
-          <p className="text-center text-sm text-muted-foreground mt-6">
+          <p className="text-center text-lg text-muted-foreground mt-6">
             Already have an account?{" "}
             <Link to="/" className="text-primary hover:underline">
               Log in

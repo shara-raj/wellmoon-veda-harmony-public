@@ -12,13 +12,13 @@ const PageEditor = () => {
     <div className="space-y-8">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-serif">Edit Page</h1>
+        <h1 className="text-3xl ">Edit Page</h1>
         <p className="text-muted-foreground">Edit page content and settings</p>
       </div>
 
       {/* Page title (read-only for editor) */}
       <div>
-        <label className="block text-sm mb-1">Page Title</label>
+        <label className="block text-lg mb-1">Page Title</label>
         <input
           value={title}
           disabled
@@ -29,7 +29,7 @@ const PageEditor = () => {
 
       {/* Content editor */}
       <div>
-        <label className="block text-sm mb-1">Content</label>
+        <label className="block text-lg mb-1">Content</label>
         <textarea
           value={content}
           onChange={(e) => setContent(e.target.value)}

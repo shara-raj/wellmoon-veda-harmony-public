@@ -11,13 +11,13 @@ const UserDashboard = () => {
       {/* Subscription status */}
       <div className="bg-white rounded-2xl border border-border p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <p className="text-sm text-muted-foreground">Current Plan</p>
-          <p className="text-2xl font-serif mt-1">Basic Plan</p>
+          <p className="text-lg text-muted-foreground">Current Plan</p>
+          <p className="text-2xl  mt-1">Basic Plan</p>
         </div>
 
         <div>
-          <p className="text-sm text-muted-foreground">Valid till</p>
-          <p className="text-base mt-1">20 Sep 2025</p>
+          <p className="text-lg text-muted-foreground">Valid till</p>
+          <p className="font-body text-lg mt-1">20 Sep 2025</p>
         </div>
 
         <button
@@ -30,26 +30,26 @@ const UserDashboard = () => {
 
       {/* Available content */}
       <div>
-        <h2 className="text-2xl font-serif mb-4">Available Content</h2>
+        <h2 className="text-2xl  mb-4">Available Content</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Content card */}
           <div className="bg-white rounded-2xl border border-border p-5">
             <h3 className="font-medium mb-2">Understanding Pranayama</h3>
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-lg text-muted-foreground mb-4">
               Learn the basics of breathing techniques.
             </p>
-            <button className="text-sm text-primary hover:underline">
+            <button className="text-lg text-primary hover:underline">
               Read
             </button>
           </div>
 
           <div className="bg-white rounded-2xl border border-border p-5">
             <h3 className="font-medium mb-2">Sound Healing Basics</h3>
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-lg text-muted-foreground mb-4">
               Introduction to sound therapy and bowls.
             </p>
-            <button className="text-sm text-primary hover:underline">
+            <button className="text-lg text-primary hover:underline">
               Read
             </button>
           </div>
@@ -57,12 +57,12 @@ const UserDashboard = () => {
           {/* Locked content */}
           <div className="bg-muted rounded-2xl border border-border p-5">
             <h3 className="font-medium mb-2">Hormonal Balance Yoga</h3>
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-lg text-muted-foreground mb-4">
               Premium content – upgrade to access.
             </p>
             <button
               disabled
-              className="text-sm text-muted-foreground cursor-not-allowed"
+              className="text-lg text-muted-foreground cursor-not-allowed"
             >
               Locked
             </button>

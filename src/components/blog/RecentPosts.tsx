@@ -4,7 +4,7 @@ import { BlogPost } from "@/types/blog";
 export default function RecentPosts({ posts }: { posts: BlogPost[] }) {
   return (
     <section className="space-y-10">
-      <h2 className="font-serif text-2xl">Recent Posts</h2>
+      <h2 className=" text-2xl">Recent Posts</h2>
 
       <div
         className="

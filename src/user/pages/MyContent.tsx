@@ -30,7 +30,7 @@ const MyContent = () => {
     <div className="max-w-5xl space-y-10">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-serif mb-2">My Content</h1>
+        <h1 className="text-3xl  mb-2">My Content</h1>
         <p className="text-muted-foreground">
           Content available based on your subscription
         </p>
@@ -49,18 +49,18 @@ const MyContent = () => {
           >
             <h3 className="font-medium mb-2">{item.title}</h3>
 
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-lg text-muted-foreground mb-4">
               {item.description}
             </p>
 
             {item.access === "allowed" ? (
-              <button className="text-sm text-primary hover:underline">
+              <button className="text-lg text-primary hover:underline">
                 Read Now
               </button>
             ) : (
               <button
                 disabled
-                className="text-sm text-muted-foreground cursor-not-allowed"
+                className="text-lg text-muted-foreground cursor-not-allowed"
               >
                 Locked – Upgrade to access
               </button>
@@ -71,7 +71,7 @@ const MyContent = () => {
 
       {/* Upgrade hint */}
       <div className="bg-white rounded-2xl border border-border p-6 text-center">
-        <p className="text-sm text-muted-foreground mb-2">
+        <p className="text-lg text-muted-foreground mb-2">
           Want access to all content?
         </p>
         <button className="px-6 py-2 rounded-full border border-border hover:bg-muted">

@@ -8,7 +8,7 @@ type Props = {
 export default function FeaturedPostGrid({ posts }: Props) {
   return (
     <section className="space-y-5">
-      <h2 className="font-serif text-2xl text-center">Featured Guides</h2>
+      <h2 className=" text-2xl text-center">Featured Guides</h2>
 
       <div
         className="

@@ -3,17 +3,17 @@ const UserSettings = () => {
     <div className="max-w-4xl space-y-12">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-serif mb-2">Settings</h1>
+        <h1 className="text-3xl  mb-2">Settings</h1>
         <p className="text-muted-foreground">Manage your account information</p>
       </div>
 
       {/* Profile information */}
       <div className="bg-white rounded-2xl border border-border p-6 space-y-6">
-        <h2 className="text-xl font-serif">Profile Information</h2>
+        <h2 className="text-xl ">Profile Information</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm mb-1">Full Name</label>
+            <label className="block text-lg mb-1">Full Name</label>
             <input
               type="text"
               defaultValue="Ananya Sharma"
@@ -23,7 +23,7 @@ const UserSettings = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-1">Display Name</label>
+            <label className="block text-lg mb-1">Display Name</label>
             <input
               type="text"
               defaultValue="Ananya"
@@ -40,10 +40,10 @@ const UserSettings = () => {
 
       {/* Account information */}
       <div className="bg-white rounded-2xl border border-border p-6 space-y-6">
-        <h2 className="text-xl font-serif">Account Information</h2>
+        <h2 className="text-xl ">Account Information</h2>
 
         <div>
-          <label className="block text-sm mb-1">Email Address</label>
+          <label className="block text-lg mb-1">Email Address</label>
           <input
             type="email"
             value="ananya@gmail.com"
@@ -59,11 +59,11 @@ const UserSettings = () => {
 
       {/* Password */}
       <div className="bg-white rounded-2xl border border-border p-6 space-y-6">
-        <h2 className="text-xl font-serif">Change Password</h2>
+        <h2 className="text-xl ">Change Password</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm mb-1">New Password</label>
+            <label className="block text-lg mb-1">New Password</label>
             <input
               type="password"
               className="w-full border border-border rounded-xl px-4 py-2 
@@ -72,7 +72,7 @@ const UserSettings = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-1">Confirm New Password</label>
+            <label className="block text-lg mb-1">Confirm New Password</label>
             <input
               type="password"
               className="w-full border border-border rounded-xl px-4 py-2 
@@ -92,9 +92,9 @@ const UserSettings = () => {
       </p>
       {/* Danger Zone */}
       <div className="bg-white rounded-2xl border border-red-200 p-6 space-y-4">
-        <h2 className="text-xl font-serif text-red-600">Danger Zone</h2>
+        <h2 className="text-xl  text-red-600">Danger Zone</h2>
 
-        <p className="text-sm text-muted-foreground">
+        <p className="text-lg text-muted-foreground">
           Deleting your account is permanent. All your data and subscriptions
           will be removed and cannot be recovered.
         </p>
@@ -102,7 +102,7 @@ const UserSettings = () => {
         <button
           onClick={() =>
             alert(
-              "Account deletion request submitted. This action cannot be undone."
+              "Account deletion request submitted. This action cannot be undone.",
             )
           }
           className="px-6 py-2 rounded-full border border-red-300 

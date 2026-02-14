@@ -26,15 +26,15 @@ const RequestEmailChangeModal = ({
   return (
     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
       <div className="bg-white w-full max-w-md rounded-2xl p-6 space-y-6">
-        <h2 className="text-xl font-serif">Request Email Change</h2>
+        <h2 className="text-xl ">Request Email Change</h2>
 
-        <p className="text-sm text-muted-foreground">
+        <p className="text-lg text-muted-foreground">
           Enter your new email address and explain why you want to change it.
           The admin must approve this request.
         </p>
 
         <div>
-          <label className="text-sm">New Email Address</label>
+          <label className="text-lg">New Email Address</label>
           <input
             type="email"
             value={newEmail}
@@ -44,7 +44,7 @@ const RequestEmailChangeModal = ({
         </div>
 
         <div>
-          <label className="text-sm">Reason for Change</label>
+          <label className="text-lg">Reason for Change</label>
           <textarea
             value={reason}
             onChange={(e) => setReason(e.target.value)}

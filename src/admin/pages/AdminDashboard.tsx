@@ -37,7 +37,7 @@ const AdminDashboard = () => {
     <div className="space-y-12">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-serif mb-2">Dashboard</h1>
+        <h1 className="text-3xl  mb-2">Dashboard</h1>
         <p className="text-muted-foreground">
           Overview of your content and platform activity
         </p>
@@ -50,23 +50,23 @@ const AdminDashboard = () => {
             key={item.label}
             className="bg-white rounded-2xl p-6 border border-border"
           >
-            <p className="text-sm text-muted-foreground">{item.label}</p>
-            <p className="text-3xl font-serif mt-2">{item.value}</p>
+            <p className="text-lg text-muted-foreground">{item.label}</p>
+            <p className="text-3xl  mt-2">{item.value}</p>
           </div>
         ))}
       </div>
 
       {/* Content health */}
       <div>
-        <h2 className="text-xl font-serif mb-4">Content Health</h2>
+        <h2 className="text-xl  mb-4">Content Health</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {contentHealth.map((item) => (
             <div
               key={item.label}
               className="bg-white rounded-2xl p-6 border border-border"
             >
-              <p className="text-sm text-muted-foreground">{item.label}</p>
-              <p className="text-2xl font-serif mt-2">{item.value}</p>
+              <p className="text-lg text-muted-foreground">{item.label}</p>
+              <p className="text-2xl  mt-2">{item.value}</p>
             </div>
           ))}
         </div>
@@ -74,10 +74,10 @@ const AdminDashboard = () => {
 
       {/* Recent activity */}
       <div className="bg-white rounded-2xl p-6 border border-border">
-        <h2 className="text-xl font-serif mb-6">Recent Activity</h2>
+        <h2 className="text-xl  mb-6">Recent Activity</h2>
 
         <div className="overflow-x-auto">
-          <table className="w-full text-sm">
+          <table className="w-full text-lg">
             <thead>
               <tr className="text-left text-muted-foreground border-b">
                 <th className="pb-3">Title</th>

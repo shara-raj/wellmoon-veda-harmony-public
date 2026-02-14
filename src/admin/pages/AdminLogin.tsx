@@ -20,15 +20,15 @@ const AdminLogin = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#faf9f7] px-4">
       <div className="w-full max-w-md bg-white rounded-3xl border border-border p-8">
-        <h1 className="text-2xl font-serif text-center mb-2">Admin Login</h1>
+        <h1 className="text-2xl  text-center mb-2">Admin Login</h1>
 
-        <p className="text-sm text-muted-foreground text-center mb-8">
+        <p className="text-lg text-muted-foreground text-center mb-8">
           This login is for administrators only
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm mb-1">Email</label>
+            <label className="block text-lg mb-1">Email</label>
             <input
               type="email"
               required
@@ -40,7 +40,7 @@ const AdminLogin = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-1">Password</label>
+            <label className="block text-lg mb-1">Password</label>
             <input
               type="password"
               required

@@ -19,7 +19,7 @@ const PostEditor = () => {
     <div className="space-y-8">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-serif">Add New Post</h1>
+        <h1 className="text-3xl ">Add New Post</h1>
         <p className="text-muted-foreground">Create and manage your content</p>
       </div>
 
@@ -32,7 +32,7 @@ const PostEditor = () => {
             placeholder="Post title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="w-full text-2xl font-serif border border-border 
+            className="w-full text-2xl  border border-border 
                        rounded-xl px-4 py-3 focus:outline-none 
                        focus:ring-2 focus:ring-primary/30"
           />

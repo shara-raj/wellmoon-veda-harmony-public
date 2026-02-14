@@ -5,7 +5,7 @@ import { BlogPost } from "@/types/blog";
 export default function RelatedPosts({ posts }: { posts: BlogPost[] }) {
   return (
     <section className="space-y-8">
-      <h2 className="font-serif text-2xl text-center">Related Reading</h2>
+      <h2 className=" text-2xl text-center">Related Reading</h2>
 
       <div
         className="

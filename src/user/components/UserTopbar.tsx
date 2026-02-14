@@ -22,7 +22,7 @@ const UserTopbar = () => {
       {/* Logout */}
       <button
         onClick={handleLogout}
-        className="text-sm px-4 py-2 rounded-full 
+        className="text-lg px-4 py-2 rounded-full 
                    border border-border hover:bg-muted transition"
       >
         Logout

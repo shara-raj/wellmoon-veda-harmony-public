@@ -17,11 +17,11 @@ const SecondaryNavigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const healingPaths = [
-    { name: "Wellness Yoga", to: "/wellness-yoga" },
-    { name: "Mudra Healing", to: "/mudra-healing" },
-    { name: "Aura Healing", to: "/aura-healing" },
-    { name: "Virtual Nature Healing", to: "/virtual-nature-healing" },
-    { name: "Sound Healing", to: "/sound-healing" },
+    { name: "Wellness Yoga", href: "/wellness-yoga" },
+    { name: "Mudra Healing", href: "/mudra-healing" },
+    { name: "Aura Healing", href: "/aura-healing" },
+    { name: "Virtual Nature Healing", href: "/virtual-nature-healing" },
+    { name: "Sound Healing", href: "/sound-healing" },
   ];
 
   const Navigate = useNavigate();
@@ -32,7 +32,7 @@ const SecondaryNavigation = () => {
       <div className="container mx-auto px-4 lg:px-8 pb-[10px]">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 pt-1">
+          <a href="/" className="flex items-center space-x-2 pt-1">
             <img
               src={favicon}
               alt="Wellmoon Veda logo"
@@ -43,22 +43,22 @@ const SecondaryNavigation = () => {
               alt="Wellmoon Veda logo"
               className="h-5 w-auto md:h-6 lg:h-7 object-contain flex-shrink-0"
             />
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link
-              to="/"
-              className="text-base font-medium text-foreground hover:text-[#be9d31]
+            <a
+              href="/"
+              className="font-body text-lg font-medium text-foreground hover:text-[#be9d31]
               transition-colors"
             >
               Home
-            </Link>
+            </a>
 
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-base font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-[#be9d31]">
+                  <NavigationMenuTrigger className="font-body text-lg font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-[#be9d31]">
                     Healing Path
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -66,14 +66,14 @@ const SecondaryNavigation = () => {
                       {healingPaths.map((path) => (
                         <li key={path.name}>
                           <NavigationMenuLink asChild>
-                            <Link
-                              to={path.to}
+                            <a
+                              href={path.href}
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#d4af37]/70 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
-                              <div className="text-base font-medium leading-none">
+                              <div className="font-body text-lg font-medium leading-none">
                                 {path.name}
                               </div>
-                            </Link>
+                            </a>
                           </NavigationMenuLink>
                         </li>
                       ))}
@@ -83,30 +83,30 @@ const SecondaryNavigation = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Link
-              to="/plan-and-pricing"
-              className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+            <a
+              href="/plan-and-pricing"
+              className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
             >
               Plans & Pricing
-            </Link>
-            <Link
-              to="/about"
-              className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+            </a>
+            <a
+              href="/about"
+              className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
             >
               About
-            </Link>
-            <Link
-              to="/blog"
-              className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+            </a>
+            <a
+              href="/blog"
+              className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
             >
               Blog
-            </Link>
-            <Link
-              to="/contact"
-              className="text-base font-medium text-foreground hover:text-[#be9d31] transition-colors"
+            </a>
+            <a
+              href="/contact"
+              className="font-body text-lg font-medium text-foreground hover:text-[#be9d31] transition-colors"
             >
               Contact
-            </Link>
+            </a>
           </div>
 
           {/* Auth Buttons - Desktop */}
@@ -116,14 +116,14 @@ const SecondaryNavigation = () => {
                 variant="outline"
                 size="sm"
                 onClick={() => setShowLoginCard((prev) => !prev)}
-                className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 text-primary-foreground text-base font-medium"
+                className="bg-[#d4af37]/70 hover:bg-[#d4af37]/40 focus:bg-[#d4af37]/40 text-primary-foreground font-body text-lg font-medium"
               >
                 Login
               </Button>
 
               {showLoginCard && (
                 <div className="absolute right-0 mt-2 w-80 bg-white rounded-2xl shadow-xl border border-[#e5d8c8] p-4 z-50">
-                  <h3 className="text-sm font-semibold mb-3 text-foreground">
+                  <h3 className="text-lg font-semibold mb-3 text-foreground">
                     Log in to your account
                   </h3>
 
@@ -142,7 +142,7 @@ const SecondaryNavigation = () => {
                       <input
                         type="email"
                         required
-                        className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-sm focus:ring-2 focus:ring-primary focus:outline-none"
+                        className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-lg focus:ring-2 focus:ring-primary focus:outline-none"
                         placeholder="you@example.com"
                       />
                     </div>
@@ -154,7 +154,7 @@ const SecondaryNavigation = () => {
                       <input
                         type="password"
                         required
-                        className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-sm focus:ring-2 focus:ring-primary focus:outline-none"
+                        className="w-full px-3 py-2 rounded-lg border border-input bg-background text-foreground text-lg focus:ring-2 focus:ring-primary focus:outline-none"
                         placeholder="••••••••"
                       />
                     </div>
@@ -183,7 +183,7 @@ const SecondaryNavigation = () => {
             <Button
               size="sm"
               onClick={() => Navigate("/sign-up")}
-              className="bg-[#d4af37]/70 text-primary-foreground text-base font-medium hover:bg-[#d4af37]/40 hover:border-[hsl(35_50%_65%)]"
+              className="bg-[#d4af37]/70 text-primary-foreground font-body text-lg font-medium hover:bg-[#d4af37]/40 hover:border-[hsl(35_50%_65%)]"
             >
               Sign Up
             </Button>
@@ -203,58 +203,58 @@ const SecondaryNavigation = () => {
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border bg-card">
             <div className="flex flex-col space-y-4">
-              <Link
-                to="/home"
-                className="text-base font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
+              <a
+                href="/home"
+                className="font-body text-lg font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
-              </Link>
+              </a>
               <div className="px-4">
-                <p className="text-base font-medium text-muted-foreground mb-2">
+                <p className="font-body text-lg font-medium text-muted-foreground mb-2">
                   Healing Path
                 </p>
                 <div className="flex flex-col space-y-2 pl-4">
                   {healingPaths.map((path) => (
-                    <Link
+                    <a
                       key={path.name}
-                      to={path.to}
-                      className="text-base text-foreground hover:text-primary transition-colors py-1"
+                      href={path.href}
+                      className="font-body text-lg text-foreground hover:text-primary transition-colors py-1"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {path.name}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </div>
-              <Link
-                to="/pricing"
-                className="text-base font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
+              <a
+                href="/pricing"
+                className="font-body text-lg font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Plans & Pricing
-              </Link>
-              <Link
-                to="/about"
-                className="text-base font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
+              </a>
+              <a
+                href="/about"
+                className="font-body text-lg font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
-              </Link>
-              <Link
-                to="/blog"
-                className="text-base font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
+              </a>
+              <a
+                href="/blog"
+                className="font-body text-lg font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
-              </Link>
-              <Link
-                to="/contact"
-                className="text-base font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
+              </a>
+              <a
+                href="/contact"
+                className="font-body text-lg font-medium text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
-              </Link>
+              </a>
               <div className="flex flex-col space-y-2 px-4 pt-4 border-t border-border">
                 <Button
                   variant="ghost"

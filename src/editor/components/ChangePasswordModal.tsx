@@ -33,10 +33,10 @@ const ChangePasswordModal = ({ onClose }: ChangePasswordModalProps) => {
   return (
     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
       <div className="bg-white w-full max-w-md rounded-2xl p-6 space-y-6">
-        <h2 className="text-xl font-serif">Change Password</h2>
+        <h2 className="text-xl ">Change Password</h2>
 
         <div>
-          <label className="text-sm">Current Password</label>
+          <label className="text-lg">Current Password</label>
           <input
             type="password"
             value={currentPassword}
@@ -46,7 +46,7 @@ const ChangePasswordModal = ({ onClose }: ChangePasswordModalProps) => {
         </div>
 
         <div>
-          <label className="text-sm">New Password</label>
+          <label className="text-lg">New Password</label>
           <input
             type="password"
             value={newPassword}
@@ -56,7 +56,7 @@ const ChangePasswordModal = ({ onClose }: ChangePasswordModalProps) => {
         </div>
 
         <div>
-          <label className="text-sm">Confirm New Password</label>
+          <label className="text-lg">Confirm New Password</label>
           <input
             type="password"
             value={confirmPassword}

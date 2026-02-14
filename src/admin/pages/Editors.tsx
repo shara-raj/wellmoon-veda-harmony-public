@@ -91,7 +91,7 @@ const Editors = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-serif">Editors</h1>
+          <h1 className="text-3xl ">Editors</h1>
           <p className="text-muted-foreground">
             Manage editors and their access permissions
           </p>
@@ -130,7 +130,7 @@ const Editors = () => {
                   </button>
 
                   {openMenuId === editor.id && (
-                    <div className="absolute right-0 mt-2 w-40 bg-white border border-border rounded-lg shadow-md z-10 text-sm">
+                    <div className="absolute right-0 mt-2 w-40 bg-white border border-border rounded-lg shadow-md z-10 text-lg">
                       <button
                         onClick={() => {
                           setSelectedEditor(editor);
@@ -180,7 +180,7 @@ const Editors = () => {
               {/* Editor info */}
               <div className="space-y-2">
                 <h3 className="text-lg font-medium">{editor.name}</h3>
-                <p className="text-sm text-muted-foreground">{editor.email}</p>
+                <p className="text-lg text-muted-foreground">{editor.email}</p>
 
                 {/* Status */}
                 <div className="flex items-center gap-2">

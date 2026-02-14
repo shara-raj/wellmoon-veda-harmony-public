@@ -23,7 +23,7 @@ const Subscribe = () => {
           }
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     if (sectionRef.current) {
@@ -91,7 +91,7 @@ const Subscribe = () => {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center space-y-8 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-primary-foreground mb-6">
+          <h2 className="text-4xl lg:text-5xl  font-semibold text-primary-foreground mb-6">
             Begin Your Healing Journey
           </h2>
           <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">

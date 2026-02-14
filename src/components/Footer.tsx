@@ -16,7 +16,7 @@ const Footer = () => {
               alt=""
               className="h-7 w-auto md:h-7 lg:h-9 object-contain flex-shrink-0"
             />
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Blending ancient Vedic wisdom with modern science for women's
               holistic wellness.
             </p>
@@ -54,14 +54,14 @@ const Footer = () => {
 
           {/* Healing Paths */}
           <div className="">
-            <h4 className="font-semibold text-foreground mb-4">
+            <h4 className="font-bold text-xl text-foreground mb-4">
               Healing Paths
             </h4>
             <ul className="space-y-3">
               <li>
                 <a
                   href="/wellness-yoga"
-                  className="text-sm text-muted-foreground hover:text-black transition-colors"
+                  className="text-lg text-muted-foreground hover:text-black transition-colors"
                 >
                   Wellness Yoga
                 </a>
@@ -69,7 +69,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/mudra-healing"
-                  className="text-sm text-muted-foreground hover:text-black transition-colors"
+                  className="text-lg text-muted-foreground hover:text-black transition-colors"
                 >
                   Mudra Healing
                 </a>
@@ -77,7 +77,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/aura-healing"
-                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                  className="text-lg text-muted-foreground hover:text-black  transition-colors"
                 >
                   Aura Healing
                 </a>
@@ -85,7 +85,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/virtual-nature-healing"
-                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                  className="text-lg text-muted-foreground hover:text-black  transition-colors"
                 >
                   Virtual Nature Healing
                 </a>
@@ -93,7 +93,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/sound-healing"
-                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                  className="text-lg text-muted-foreground hover:text-black  transition-colors"
                 >
                   Sound Healing
                 </a>
@@ -103,12 +103,12 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Company</h4>
+            <h4 className="font-bold text-xl text-foreground mb-4">Company</h4>
             <ul className="space-y-3">
               <li>
                 <a
                   href="/about"
-                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                  className="text-lg text-muted-foreground hover:text-black  transition-colors"
                 >
                   About Us
                 </a>
@@ -116,7 +116,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/blog"
-                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                  className="text-lg text-muted-foreground hover:text-black  transition-colors"
                 >
                   Blog
                 </a>
@@ -124,7 +124,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/plan-and-pricing"
-                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                  className="text-lg text-muted-foreground hover:text-black  transition-colors"
                 >
                   Plans & Pricing
                 </a>
@@ -132,7 +132,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/contact"
-                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                  className="text-lg text-muted-foreground hover:text-black  transition-colors"
                 >
                   Contact
                 </a>
@@ -142,12 +142,12 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Legal</h4>
+            <h4 className="font-bold text-xl text-foreground mb-4">Legal</h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/terms-and-conditions"
-                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                  className="text-lg text-muted-foreground hover:text-black  transition-colors"
                 >
                   Terms and Conditions
                 </Link>
@@ -155,7 +155,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/privacy-policy"
-                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                  className="text-lg text-muted-foreground hover:text-black  transition-colors"
                 >
                   Privacy Policy
                 </Link>
@@ -163,7 +163,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/return-policy"
-                  className="text-sm text-muted-foreground hover:text-black  transition-colors"
+                  className="text-lg text-muted-foreground hover:text-black  transition-colors"
                 >
                   Return Policy
                 </Link>
@@ -172,7 +172,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
+        <div className="border-t border-border pt-8 text-center text-lg text-muted-foreground">
           <p>© {currentYear} WellMoon Veda. All rights reserved.</p>
         </div>
       </div>

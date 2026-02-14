@@ -23,15 +23,15 @@ const EditorLogin = () => {
     <div className="min-h-screen flex items-center justify-center bg-[#faf9f7]">
       <div className="bg-white rounded-2xl border border-border p-8 w-full max-w-md space-y-6">
         <div>
-          <h1 className="text-3xl font-serif mb-2">Editor Login</h1>
-          <p className="text-sm text-muted-foreground">
+          <h1 className="text-3xl  mb-2">Editor Login</h1>
+          <p className="text-lg text-muted-foreground">
             Sign in to manage your content
           </p>
         </div>
 
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
-            <label className="text-sm">Email</label>
+            <label className="text-lg">Email</label>
             <input
               type="email"
               value={email}
@@ -42,7 +42,7 @@ const EditorLogin = () => {
           </div>
 
           <div>
-            <label className="text-sm">Password</label>
+            <label className="text-lg">Password</label>
             <input
               type="password"
               value={password}
